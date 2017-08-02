@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<g>
+	<defs>
+		<rect id="SVGID_1_" width="60" height="60"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<rect style="clip-path:url(#SVGID_2_);fill:#ED2939;" width="90" height="30"/>
+	<rect y="30" style="clip-path:url(#SVGID_2_);fill:#FFFFFF;" width="90" height="30"/>
+	<path style="clip-path:url(#SVGID_2_);fill:#FFFFFF;" d="M30.9,15c0,6.2-5.1,11.3-11.3,11.3S8.3,21.2,8.3,15S13.4,3.7,19.6,3.7
+		S30.9,8.8,30.9,15z"/>
+	<path style="clip-path:url(#SVGID_2_);fill:#ED2939;" d="M34.4,15c0,5.9-4.8,10.7-10.7,10.7S13.1,20.9,13.1,15S17.9,4.3,23.8,4.3
+		S34.4,9.1,34.4,15z"/>
+</g>
+<path id="star" style="fill:#FFFFFF;" d="M21,15.3l-1.5-1.2l-1.5,1.2l0.6-1.9L17,12.2l1.9,0l0.6-1.9l0.6,1.9l1.9,0l-1.5,1.2L21,15.3
+	z"/>
+<path id="star_5_" style="fill:#FFFFFF;" d="M33,15.3l-1.5-1.2l-1.5,1.2l0.6-1.9L29,12.2l1.9,0l0.6-1.9l0.6,1.9l1.9,0l-1.5,1.2
+	L33,15.3z"/>
+<path id="star_6_" style="fill:#FFFFFF;" d="M30.7,22.4l-1.5-1.2l-1.5,1.2l0.6-1.9l-1.5-1.2l1.9,0l0.6-1.9l0.6,1.9l1.9,0l-1.5,1.2
+	L30.7,22.4z"/>
+<path id="star_7_" style="fill:#FFFFFF;" d="M23.2,22.5l-1.5-1.2l-1.5,1.2l0.6-1.9l-1.5-1.2l1.9,0l0.6-1.9l0.6,1.9l1.9,0l-1.5,1.2
+	L23.2,22.5z"/>
+<path id="star_1_" style="fill:#FFFFFF;" d="M27,10.8l-1.5-1.2l-1.5,1.2l0.6-1.9L23,7.7l1.9,0l0.6-1.9L26,7.7l1.9,0l-1.5,1.2
+	L27,10.8z"/>
+</svg>

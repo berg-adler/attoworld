@@ -1,0 +1,315 @@
+
+plugin.tx_attoworld_pi1 {
+	view {
+		# cat=plugin.tx_attoworld_pi1/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi1/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi1/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi1//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi2 {
+	view {
+		# cat=plugin.tx_attoworld_pi2/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi2/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi2/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi2//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi3 {
+	view {
+		# cat=plugin.tx_attoworld_pi3/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi3/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi3/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi3//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi4 {
+	view {
+		# cat=plugin.tx_attoworld_pi4/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi4/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi4/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi4//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi5 {
+	view {
+		# cat=plugin.tx_attoworld_pi5/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi5/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi5/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi5//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi6 {
+	view {
+		# cat=plugin.tx_attoworld_pi6/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi6/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi6/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi6//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi7 {
+	view {
+		# cat=plugin.tx_attoworld_pi7/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi7/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi7/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi7//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi8 {
+	view {
+		# cat=plugin.tx_attoworld_pi8/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi8/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi8/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi8//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi9 {
+	view {
+		# cat=plugin.tx_attoworld_pi9/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi9/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi9/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi9//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi10 {
+	view {
+		# cat=plugin.tx_attoworld_pi10/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi10/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi10/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi10//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi11 {
+	view {
+		# cat=plugin.tx_attoworld_pi11/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi11/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi11/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi11//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi12 {
+	view {
+		# cat=plugin.tx_attoworld_pi12/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi12/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi12/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi12//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi13 {
+	view {
+		# cat=plugin.tx_attoworld_pi13/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi13/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi13/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi13//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi14 {
+	view {
+		# cat=plugin.tx_attoworld_pi14/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi14/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi14/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi14//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi15 {
+	view {
+		# cat=plugin.tx_attoworld_pi15/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi15/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi15/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi15//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi16 {
+	view {
+		# cat=plugin.tx_attoworld_pi16/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi16/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi16/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi16//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi17 {
+	view {
+		# cat=plugin.tx_attoworld_pi17/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi17/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi17/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi17//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi18 {
+	view {
+		# cat=plugin.tx_attoworld_pi18/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi18/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi18/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi18//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi19 {
+	view {
+		# cat=plugin.tx_attoworld_pi19/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi19/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi19/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi19//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi20 {
+	view {
+		# cat=plugin.tx_attoworld_pi20/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi20/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi20/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi20//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
+
+plugin.tx_attoworld_pi23 {
+	view {
+		# cat=plugin.tx_attoworld_pi23/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:attoworld/Resources/Private/Templates/
+		# cat=plugin.tx_attoworld_pi23/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:attoworld/Resources/Private/Partials/
+		# cat=plugin.tx_attoworld_pi23/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:attoworld/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_attoworld_pi23//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

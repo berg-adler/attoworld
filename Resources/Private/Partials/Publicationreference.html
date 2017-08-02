@@ -1,0 +1,80 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<span class="title"><aw:Publicationtype publication="{ppublication}"/>:</span>
+<f:if condition="{0:'{ppublication.type}'} == {0:'paper'}">
+    <f:then>
+        <span class="journal">{ppublication.journal}</span>
+        <f:if condition="{ppublication.volume}">
+            <f:then>
+                <span class="volume">{ppublication.volume}, </span>
+                <span class="pageref">{ppublication.pageref}</span>
+                <span class="year">({ppublication.pubdate})</span>  
+            </f:then>
+            <f:else>
+                <span class="volume">{ppublication.doi}</span>   
+                <span class="year">({ppublication.pubdate})</span>  
+            </f:else>
+        </f:if>
+    </f:then>
+    <f:else>
+        <f:if condition="{0:'{ppublication.type}'} == {0:'thesis_phd'}">  
+            <f:then>
+                <span class="journal">{ppublication.locations.0.name}</span>
+                <span class="year">({ppublication.pubdate})</span>  
+            </f:then>
+            <f:else>
+                <f:if condition="{0:'{ppublication.type}'} == {0:'thesis_master'}">  
+                    <f:then>
+                        <span class="journal">{ppublication.locations.0.name}</span>
+                        <span class="year">({ppublication.pubdate})</span>  
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{0:'{ppublication.type}'} == {0:'thesis_diploma'}">  
+                            <f:then> 
+                                <span class="journal">{ppublication.locations.0.name}</span>
+                                <span class="year">({ppublication.pubdate})</span>  
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{0:'{ppublication.type}'} == {0:'thesis_bachelor'}">  
+                                    <f:then>
+                                        <span class="journal">{ppublication.locations.0.name}</span>
+                                        <span class="year">({ppublication.pubdate})</span>  
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{0:'{ppublication.type}'} == {0:'bookarticle'}"> 
+                                            <f:then>
+                                                <span class="journal">{ppublication.journal},</span>
+                                                <span class="editors"> Editors: {ppublication.editors}</span>
+                                                <span class="year">({ppublication.pubdate})</span>  
+
+                                                <div class="doi-isbn">
+                                                    <span class="title">ISBN:</span>
+                                                    <span class="doi">{ppublication.doi}</span>
+                                                </div>
+
+                                            </f:then>
+                                            <f:else>
+                                                <f:if condition="{0:'{ppublication.type}'} == {0:'book'}">
+                                                    <f:then>
+                                                        <span class="journal">{ppublication.journal},</span>
+                                                        <span class="editors"> Editors: {ppublication.editors}</span>
+                                                        <span class="year">({ppublication.pubdate})</span>  
+                                                        
+                                                        <div class="doi-isbn">
+                                                            <span class="title">ISBN:</span>
+                                                            <span class="doi">{ppublication.doi}</span>
+                                                        </div>
+                                                    </f:then>
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>
+

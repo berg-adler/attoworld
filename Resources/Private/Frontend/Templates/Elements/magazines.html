@@ -1,0 +1,68 @@
+<div class="plugin-magazin">
+    
+    <div class="search">
+        <input type="text" name="tx_attoworld_pi2[sword]" class="search-bar" placeholder="Search"/>
+        <input type="submit" name="tx_attoworld_pi2[submit]" class="search-button" value=""/>
+    </div>
+    <div class="text">
+        <p>Find us in the Press.</p>
+    </div>
+    <div class="filter clearfix">
+        <button class="first single-filter <f:if condition="{group}"><f:then></f:then><f:else>active</f:else></f:if>" data-filter="printonline"><span class="button-text">Print/Online</span></button>
+        <button class="single-filter" data-filter="audioorvideo"><span class="button-text">Audio/Video</span></button>
+        <button class="relative <f:if condition="{group}"><f:then>active</f:then><f:else></f:else></f:if>" <f:if condition="{group}"><f:then>style="height: 4rem;"</f:then><f:else></f:else></f:if> data-filter="dailypress"><span class="button-text">Dailypress</span></button>
+        <button class="relative" data-filter="magazine"><span class="button-text">Magazine</span></button>
+        <button class="relative" data-filter="year"><span class="button-text">Year</span></button>
+    </div>
+    <div class="filter-contents">
+        
+        <div class="filter-content <f:if condition="{group}"><f:then>show</f:then><f:else></f:else></f:if>" data-filter="author">
+            <ul>
+                <f:for each="{authors}" as="author" iteration="AuthorIterator">
+                    <li data-uid="{author.uid}" class="<f:for each="{members}" as="member"><f:if condition="{member.uid}=={author.uid}"><f:then>active</f:then></f:if></f:for>"><span class="title">{author.surname}, {author.forename}</span><span class="publications"></span></li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="filter-content" data-filter="year">
+            <ul>
+                <f:for each="{years}" as="year" iteration="YearIterator">
+                    <li data-uid="{year.date}" class="<f:for each="{prefilteredYears}" as="prefilteredyear"><f:if condition="{prefilteredyear}=={year.date}"><f:then>active</f:then></f:if></f:for>"><span class="title">{year.date}</span> <span class="publications">({year.counts} publications)</span></li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="filter-content" data-filter="subject">
+            <ul>
+                <f:for each="{publicationcategories}" as="publicationcategory" iteration="PublicationcategoryIterator">
+                    <li data-uid="{publicationcategory.uid}" class="<f:for each="{prefilteredCategories}" as="prefilteredcategory"><f:if condition="{prefilteredcategory}=={publicationcategory.uid}"><f:then>active</f:then></f:if></f:for>"><span class="title">{publicationcategory.title}</span><span class="publications"></span></li>
+                </f:for>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="listing">
+        <ul>
+        <f:for each="{magazines}" as="magazin" iteration="magazinIterator">
+            <li>
+                <div class="magazin magazin-{magazinIterator.index} clearfix verticalAlign">
+                    <div class="picture">
+                        <f:image src="fileadmin/user_upload/tx_attoworld/publicationpictures/{magazin.picture}" />
+                    </div>
+                    <div class="content">
+                        <div class="title">{magazin.title}</div>
+                        <div class="additional-info"><span class="type">{magazin.type}</span> <span class="journal">{magazin.journal}</span> <span class="pubdate">{magazin.pubdate}</span></div>
+                    </div>
+                    <div class="download">
+                        <a href="fileadmin/user_upload/tx_attoworld/publications/{magazin.file}" target="_blank">
+                            <img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf-download.svg"/>
+                        </a>
+                    </div>
+
+                </div>
+            </li>
+        
+        </f:for>
+            
+        </ul>
+    </div>
+    
+</div>

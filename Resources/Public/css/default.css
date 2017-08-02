@@ -1,0 +1,6403 @@
+* { box-sizing: border-box; }
+
+html {
+    background-color: #3c3c3b;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+
+    margin: 0rem;
+    padding-top: 4.5625rem;
+
+    opacity: 0;
+}
+
+.navigation-fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    top: 0rem;
+}
+
+.maincontent {
+    width: 80rem;
+}
+
+#header-slideshow {
+    overflow: hidden;
+    padding: 0 0 0 0;
+    position: relative;
+    text-align: center;
+}
+.bullet-menu {
+    height: 2.75rem;
+
+    position: relative;
+    top: 1px;
+    z-index: 1;
+}
+#c10 {
+    position: relative;
+    z-index: 2;
+}
+a.inline-link {
+    display: inline !important;
+}
+.bullet-menu ul.bullets {
+    list-style-type: none;
+    width: 80rem;
+    margin: 0rem;
+    padding: 0rem;
+    display: inline-block;
+    z-index: 1;
+}
+.bullet-menu ul.bullets li {
+    float: left;
+}
+
+.page-1 .bullet-menu ul.bullets li,
+.page-3 .bullet-menu ul.bullets li {
+    box-sizing: content-box;
+}
+
+.bullet-menu ul.bullets li {
+    /* padding: 0rem 0.4485rem; */
+}
+.bullet-menu.bullets .box {
+    background-color: #fff;
+}
+.bullet-menu .bullets .headline {
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+    text-align: center;
+    font-size: 1.025rem;
+    width: 100%;
+    height: 2.85rem;
+    color: #878786;
+}
+
+
+.bullet-menu ul.bullets li a.active .box .centered {
+    color: #3c3c3b;
+}
+
+.bullet-menu ul.bullets li a .box .textCentered {
+    padding: 0rem 0.5rem;
+    line-height: 1.1rem;
+}
+
+.bullet-menu ul.bullets li a {
+    display: block;
+}
+.bullet-menu ul.bullets li a.active .box {
+    background-color: #fff;
+}
+
+body.page-3 .bullet-menu ul.bullets li a.active .box {
+    background-color: #f2f2f2;
+}
+
+.bullet-menu .bullets li a.active .headline {
+    
+    color: #3c3c3b;
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+    font-size: 0.9375rem;
+    letter-spacing: 0.03rem;
+    line-height: 100%;
+
+}
+.bullet-menu .bullets a:link,
+.bullet-menu .bullets a:visited,
+.bullet-menu .bullets a:hover,
+.bullet-menu .bullets a:active,
+.bullet-menu .bullets a:focus { 
+    color: #fff;
+    text-decoration: none;
+}
+.bullet-menu .bullets .content {
+    height: 6.688rem;
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+.bullet-menu ul.bullets li .box {
+    background-color: #000;
+}
+
+body.page-81 .bullet-menu ul.bullets li .box,
+body.page-77 .bullet-menu ul.bullets li .box,
+body.page-78 .bullet-menu ul.bullets li .box,
+body.page-79 .bullet-menu ul.bullets li .box,
+body.page-80 .bullet-menu ul.bullets li .box,
+body.page-82 .bullet-menu ul.bullets li .box,
+body.page-83 .bullet-menu ul.bullets li .box {
+    background-color: #000;
+}
+body.page-81 .bullet-menu ul.bullets li a.active .box,
+body.page-77 .bullet-menu ul.bullets li a.active .box,
+body.page-78 .bullet-menu ul.bullets li a.active .box,
+body.page-79 .bullet-menu ul.bullets li a.active .box,
+body.page-80 .bullet-menu ul.bullets li a.active .box,
+body.page-82 .bullet-menu ul.bullets li a.active .box,
+body.page-83 .bullet-menu ul.bullets li a.active .box {
+    background-color: #fff;
+}
+
+body.page-81 .bullet-menu ul.bullets li .box .centered,
+body.page-77 .bullet-menu ul.bullets li .box .centered,
+body.page-78 .bullet-menu ul.bullets li .box .centered,
+body.page-79 .bullet-menu ul.bullets li .box .centered,
+body.page-80 .bullet-menu ul.bullets li .box .centered,
+body.page-82 .bullet-menu ul.bullets li .box .centered,
+body.page-83 .bullet-menu ul.bullets li .box .centered {
+    color: #fff !important;
+}
+
+body.page-81 .bullet-menu ul.bullets li a.active .box .centered,
+body.page-77 .bullet-menu ul.bullets li a.active .box .centered,
+body.page-78 .bullet-menu ul.bullets li a.active .box .centered,
+body.page-79 .bullet-menu ul.bullets li a.active .box .centered,
+body.page-80 .bullet-menu ul.bullets li a.active .box .centered,
+body.page-82 .bullet-menu ul.bullets li a.active .box .centered,
+body.page-83 .bullet-menu ul.bullets li a.active .box .centered {
+    color: #000 !important;
+}
+
+.bullet-menu ul.bullets li .content img {
+    width: 100%;
+    height: auto;
+}
+.bullet-menu ul.bullets li.first {
+    margin-left: 0rem;
+}
+.bullet-menu ul.bullets li.last {
+    margin-right: 0rem;
+}
+#header-slideshow .buttons {
+    border-radius: 2.1875rem;
+    display: block;
+    float: left;
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.1875rem;
+    text-decoration: none;
+    font-size: 1.375rem;
+    top: 50%;
+    z-index: 10;
+
+    width: 5.5625rem;
+    height: 5.5625rem;
+
+    margin-top: -2.78125rem;
+
+    display: none;
+}
+
+#header-slideshow .buttons.prev {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/slideshow-left.svg');
+    left: 2rem;
+}
+#header-slideshow .buttons.next {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/slideshow-right.svg');
+    right: 2rem;
+}
+
+#header-slideshow .viewport {
+    width: 100%;
+    height: 47.1875rem;
+    position: relative;
+    cursor: pointer;
+}
+#header-slideshow .viewport ul {
+    list-style: none;
+    position: absolute;
+    padding: 0rem;
+    height: 100%;
+    margin: 0rem;
+}
+#header-slideshow .viewport ul li {
+    float: left;
+    padding: 0rem;
+    margin: 0rem;
+    height: 100%;
+    position: relative;
+}
+#header-slideshow .viewport ul li img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+}
+
+/* ---- isotope ---- */
+/*
+.grid .color-shape.big {
+    width: 814px !important;
+}
+.grid .color-shape.small {
+    width: 407px !important;
+}
+.grid .color-shape.tall {
+    width: 407px !important;
+}
+*/
+.grid {
+    max-width: 81.375rem;
+    width: 81.375rem;
+    left: -0.6875rem;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ui group */
+
+.ui-group {
+    display: inline-block;
+}
+
+.ui-group h3 {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 2rem;
+    margin-right: 0.2em;
+    font-size: 1rem;
+}
+
+.ui-group .button-group {
+    display: inline-block;
+    margin-right: 1.25rem;
+}
+
+/* color-shape */
+
+.color-shape {
+    width: 25.8125rem;
+    height: 14.1875rem;
+    padding: 0.625rem;
+    float: left;
+}
+
+.color-shape.round {
+    border-radius: 2.1875rem;
+}
+
+.color-shape.big.round {
+    border-radius: 4.6875rem;
+}
+
+.color-shape.red div { background: transparent; height: 100%; width: 100%; }
+.color-shape.blue div { background: transparent; height: 100%; width: 100%; }
+.color-shape.yellow div { background: transparent; height: 100%; width: 100%; }
+
+.color-shape div.container-content.text-content {
+    background-color: #f2f2f2;
+}
+
+.color-shape.yellow div.container-content {
+    height: 100%;
+}
+.color-shape.red div.container-content {
+    height: 100%;
+}
+.color-shape.blue div.container-content {
+    height: 100%;
+}
+
+.color-shape div.container-content.linknextappearance .organizer,
+.color-shape div.container-content.linknextappearance .description,
+.color-shape div.container-content.linknextappearance .time,
+.color-shape div.container-content.linknextappearance .location,
+.color-shape div.container-content.linknextappearance .elementtitle {
+    background-color: transparent;
+    color: #fff;
+    line-height: 1.75rem;
+}
+
+.color-shape div.container-content .organizer {
+    height: auto;
+    background-color: #f2f2f2;
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    line-height: 160%;
+    font-variant: small-caps;
+    color: #3c3c3b;
+}
+.color-shape div.container-content .link {
+    margin-top: 1.4198125rem;
+}
+.color-shape div.container-content .link a {
+    font-family: 'CaslonClassicoW00-Itali';
+    font-size: 1.125rem;
+    color: #fff;
+    margin-top: 1.4198125rem;
+    text-decoration: underline;
+}
+.color-shape div.container-content .title {
+    height: auto;
+    background-color: #f2f2f2;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    margin-bottom: 0.9375rem;
+    color: #3c3c3b;
+}
+.color-shape div.container-content .description {
+    height: auto;
+    background-color: #f2f2f2;
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.color-shape div.container-content .date,
+.color-shape div.container-content .time {
+    height: auto;
+    background-color: #f2f2f2;
+    /*Previous Semibold*/
+    font-family: 'CaslonClassico W00 Bold';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.color-shape div.container-content .location {
+    height: auto;
+    background-color: #f2f2f2;
+    /*Previous Semibold*/
+    font-family: 'CaslonClassico W00 Bold';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.color-shape div.container-content.text-content .content,
+.color-shape div.container-content.text-content .content h2,
+.color-shape div.container-content.text-content .content h3 {
+    color: #3c3c3c;
+}
+.color-shape div.container-content.text-content .content h2 {
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    font-size: 1.625rem;
+    color: #3c3c3b;
+}
+.color-shape div.container-content.text-content .content h3 {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.25rem;
+    margin-bottom: 2.1875rem;
+    color: #3c3c3b;
+}
+
+.color-shape.wide, .color-shape.size-2 {
+    width: 52.875rem;
+    box-sizing: content-box;
+}
+.color-shape.size-1, .color-shape.size-2 { height: 28.375rem; }
+
+
+.attoworld-navigation {
+    font-family: 'AvenirNextRoundedW01-Re';
+    background-color: #000;
+    text-align: center;
+    height: 6.25rem;
+    position: relative;
+    color: #3c3c3b;
+    
+    overflow: visible !important;
+}
+
+.attoworld-navigation .logo {
+    color: #f6f5f1;
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 1.5rem;
+
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2.5625rem;
+    margin-top: 0.4rem;
+    z-index: 2;
+}
+.attoworld-navigation .centered {
+    position: absolute;
+    bottom: -0.25rem;
+    left: 50%;
+    margin-left: -27.65625rem;
+}
+.attoworld-navigation .logo-picture-LMU {
+    height: 100%;
+    width: auto;
+    float: right;
+    padding: 0.75rem 0.4rem;
+    margin-right: 2.5rem;
+}
+.attoworld-navigation .logo-picture-MPQ {
+    height: 100%;
+    width: auto;
+    float: right;
+    padding: 0.75rem 0.4rem;
+}
+.attoworld-navigation .logo a {
+    position: absolute;
+    top: 0.35rem;
+    left: 2.65rem;
+    width: 15rem;
+    font-family: 'AvenirNextRoundedW01-Re';
+    text-transform: uppercase;
+    font-size: 1.025rem;
+    letter-spacing: 0.2rem;
+    z-index: 2;
+}
+.attoworld-navigation .logo a .letter-4,
+.attoworld-navigation .logo a .letter-5 {
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+}
+.attoworld-navigation .logo a .letter-6,
+.attoworld-navigation .logo a .letter-7 {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+}
+.attoworld-navigation .logo a .letter-8,
+.attoworld-navigation .logo a .letter-9 {
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+}
+.attoworld-navigation .logo .logo-picture {
+    position: absolute;
+    top: 0.75rem;
+    left: -0.5rem;
+    height: 3.5rem;
+    z-index: 1;
+}
+
+.Tx-Formhandler .sended-message {
+    height: 21rem;
+    overflow: hidden;
+}
+.Tx-Formhandler p {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.3528125rem;
+    color: #878786;
+}    
+.Tx-Formhandler .sended-message {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #878786;
+}
+.Tx-Formhandler a.back,
+.Tx-Formhandler a.back-error {
+    background-color: #dadad9;
+    height: 2.875rem;
+    width: 15.707rem;
+    padding: 0rem 5.9375rem;
+    text-align: center;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    font-size: 1.125rem;
+    line-height: 1.8rem;
+    position: absolute;
+    bottom: 1.60275rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #3c3c3b;
+    outline: none;
+    border: none;
+    padding-top: 0.65rem;
+}
+.Tx-Formhandler form {
+    position: relative;
+    height: 100%;
+}
+.attoworld-navigation .logo a:link,
+.attoworld-navigation .logo a:visited,
+.attoworld-navigation .logo a:focus,
+.attoworld-navigation .logo a:active,
+.attoworld-navigation .logo a:hover {
+    color: #f6f5f1;
+    text-decoration: none;
+}
+
+.attoworld-navigation .attoworld-search {
+    position: absolute;
+    top: 50%;
+    right: 1.959125rem;
+    margin-top: -0.8509031rem;
+}
+
+.attoworld-navigation .attoworld-search button.search {
+    width: 1.9415625rem;
+    height: 1.625rem;
+
+    border: none;
+    background-color: transparent;
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/magnifier.svg');
+    background-repeat: no-repeat;
+
+    outline: 0rem;
+    cursor: pointer;
+}
+
+.attoworld-navigation ul {
+    list-style-type: none;
+    margin: 0rem;
+    padding: 0rem;
+}
+.attoworld-navigation ul li {
+    float: left;
+
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+    font-size: 1.025rem;
+    color: #878786;
+}
+.attoworld-navigation ul li a {
+    text-decoration: none;
+    color: #878786;
+    text-transform: uppercase;
+
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+    font-size: 1.025rem;
+    letter-spacing: 0.1rem;
+}
+.attoworld-navigation ul li a:hover {
+    color: #878786;
+
+    font-family: 'AvenirNextRoundedW01-De1075568';
+}
+.attoworld-navigation ul li a.selected {
+    color: #f2f2f2;
+
+    font-family: 'AvenirNextRoundedW01-De1075568';
+}
+.attoworld-projectnavigation {
+    text-align: center;
+    background-color: #f2f2f2;
+    display: none;
+    height: 2.8125rem;
+    position: relative;
+}
+.attoworld-projectnavigation ul {
+    list-style-type: none;
+    margin: 0rem;
+    padding: 0rem;
+}
+.attoworld-projectnavigation ul li {
+    float: left;
+
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 0.9375rem;
+    color: #878786;
+}
+.attoworld-projectnavigation ul li a {
+    text-decoration: none;
+    color: #878786;
+    text-transform: uppercase;
+
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+    font-size: 0.9375rem;
+    letter-spacing: 0.1rem;
+}
+.attoworld-projectnavigation ul li a:hover {
+    color: #878786;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+}
+.attoworld-projectnavigation ul li a.selected {
+    color: #3c3c3b;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    letter-spacing: 0.1rem;
+}
+nav.attoworld-navigation .verticalAlign {
+    height: 3.4375rem;
+    width: 100%;
+}
+nav.attoworld-projectnavigation .verticalAlign {
+    width: 100%;
+    height: 2.8125rem;
+}
+
+.verticalAlign {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+nav.attoworld-navigation .centered,
+nav.attoworld-projectnavigation .centered,
+.centered {
+    display: inline-block;
+   
+}
+nav.attoworld-navigation .centered{
+ margin-top: 3rem;   
+}
+ 
+
+.table {
+    display: table;
+    width: 100%;
+}
+
+.filters {
+    display: none;
+}
+
+li.divider {
+    width: 4.6875rem;
+    display: inline-block;
+}
+
+footer {
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    padding-top: 4rem;
+}
+footer .table {
+    background-color: #dadad9;
+}
+
+footer nav ul {
+    margin: 0rem;
+    padding: 0rem;
+    list-style-type: none;
+}
+footer nav ul li {
+    display: inline-block;
+    margin: 0rem 0rem;
+}
+footer nav .footer-navi-2 ul li a,
+footer nav .footer-navi-2 ul li a {
+    font-family: 'AvenirNextRoundedW01-Re' !important;
+    color: #3c3c3b;
+} 
+footer nav ul li a {
+    text-decoration: none;
+    color: #3c3c3b;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    letter-spacing: 0.1rem;
+}
+footer nav {
+    height: 9.409rem;
+}
+footer .footer-navi-1,
+footer .footer-navi-2 {
+    padding: 1rem 0rem;
+}
+footer div.copyright {
+    height: 5rem;
+    background-color: #3c3c3b;
+
+    color: #f2f2f2;
+    display: table;
+    width: 100%;
+    /*Previous Semibold*/
+    font-family: 'CaslonClassico W00 Bold';
+    font-size: 1.25rem;
+    letter-spacing: 0.03rem;
+}
+footer div.copyright p {
+    color: #dadad9;
+    font-family: 'CaslonClassico W00 Bold';
+}
+footer div.copyright p i {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-style: normal;
+    color: #dadad9;
+}
+footer .table .centered {
+    position: relative;
+    top: 0.5rem;
+}
+.filter-contents .filter-content {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
+    -webkit-column-gap: 2.5rem;
+    -moz-column-gap: 2.5rem;
+    column-gap: 2.5rem;
+
+    cursor: pointer;
+
+    padding: 1.125rem 2.625rem;
+    background-color: #dadad9;
+    display: none;
+
+    width: 100%;
+    
+    overflow: hidden;
+}
+
+.filter-contents .filter-content.project {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+}
+
+.filter-contents .filter-content.show {
+    display: block;
+}
+
+.plugin-progressreports {
+    padding: 4.1875rem 0rem;
+}
+
+.plugin-progressreports .center {
+    margin: auto;
+    display: table !important;
+    
+    width: 80rem !important;
+}
+
+
+.plugin-jobs .filter-contents .filter-content {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 2.5rem;
+    -moz-column-gap: 2.5rem;
+    column-gap: 2rem;
+
+    cursor: pointer;
+
+    padding: 1.125rem 2.625rem;
+    background-color: #dadad9;
+    display: none;
+}
+
+.filter-contents .filter-content ul {
+    margin: 0rem;
+    padding: 0rem;
+    list-style-type: none;
+}
+
+.filter-contents .filter-content ul li {
+    padding: 0.275rem 0rem;
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+    font-size: 1.05rem;
+    color: #878786;
+    
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/Inactive.svg);
+    
+    background-repeat: no-repeat;
+    background-position: 0rem 0.25rem;
+    /*
+    padding-left: 1.7rem;
+    */
+    background-size: 1.2rem;
+    line-height: 1.4rem;
+    
+    break-inside: avoid-column;
+    
+    padding-left: 1.5rem;
+    background-position: 0rem 0.3rem;
+    
+}
+
+.filter-contents .filter-content ul li.active {
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/Active.svg);
+}
+
+.filter-contents .filter-content[data-filter="author"] ul li {
+    white-space: nowrap;
+}
+
+.filter-contents .filter-content ul li.active {
+    /*
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/unselected_active.svg);
+    */
+}
+
+.filter-contents .filter-content ul li.active {
+    color: #3c3c3b;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';  
+}
+
+.attoworld-header {
+    position: fixed;
+    top: 3.25rem;
+    left: 0rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.attoworld-content {
+    position: relative;
+    z-index: 2;
+    /* margin-top: 47.06rem; */
+    margin-top: 41.4375rem;
+}
+
+.attoworld-content .loading-container {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+}
+.attoworld-content .loading-container .loading-layer {
+    background-color: #fff;
+    opacity: 0.75;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    z-index: 1;
+}
+.attoworld-content .loading-container img.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 7rem;
+    margin-left: -2.9825rem;
+    margin-top: -3.4740625rem;
+    opacity: 1;
+    display: block;
+    z-index: 2;
+}
+.bullet-menu {
+    width: 80rem;
+    margin: auto;
+}
+
+ul.bullets {
+    margin: 0rem;
+    padding: 0rem;
+    list-style-type: none;
+}
+
+ul.bullets .content {
+    display: none;
+}
+
+ul.bullets li {
+    float: left;
+}
+
+.show-filters {
+    display: none;
+}
+.plugin-jobs .show-filters {
+    display: block;
+}
+.show-filters button {
+    height: 2.875rem;
+    width: 15.4231875rem;
+    background-color: #f2f2f2;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    border: none;
+    outline: none;
+    margin: auto;
+    cursor: pointer;
+    display: block;
+    color: #3c3c3b;
+}
+
+.plugin-jobs .filter {
+    display: none;
+}
+
+.plugin-jobs .text p {
+    /*Previous Semibold Italic*/
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.25rem;
+    text-align: center;
+    color: #3c3c3b;
+}
+
+.plugin-jobs .listing ul li.list-element {
+    height: 10.625rem;
+    background-color: #f2f2f2;
+    margin-bottom: 1.625rem;
+    overflow: hidden;
+    padding: 1.375rem;
+    position: relative;
+
+    cursor: pointer;
+}
+.plugin-jobs .listing ul li.list-element .close {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/people-detail-close.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    display: none;
+    /*
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    */
+}
+.plugin-jobs .listing ul li.list-element .fulltext {
+
+}
+.plugin-jobs .listing ul li.list-element .fulltext p,
+.plugin-jobs .listing ul li.list-element .fulltext ul li {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.plugin-jobs .listing ul li.list-element .fulltext p {
+    margin: 0rem;
+    padding: 1rem 0rem;
+}
+
+
+.plugin-jobs .listing ul li.list-element .fulltext ul {
+    list-style-type: none;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.plugin-jobs .listing ul li.list-element .fulltext ul li {
+    padding-left: 1.3em;
+    line-height: 1.75rem;
+
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+.plugin-jobs .listing ul li.list-element .fulltext ul li:before {
+    content: "—";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+
+.plugin-jobs .listing ul li.list-element a {
+    margin: 0rem;
+    background-color: transparent;
+    padding: 0rem;
+    display: block;
+    height: 100%;
+    padding-top: 0.75rem;
+}
+
+.plugin-jobs .listing ul li.list-element .apply {
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    height: 2.875rem;
+    background-color: #dadad9;
+    width: 15.707rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3c3c3b;
+}
+.plugin-jobs .listing ul li.list-element .apply {
+    color: #878786;
+    margin-top: 3rem;
+}
+#maincontent {
+    width: 100%;
+    background-color: #fff;
+}
+
+.page-3 #maincontent {
+    padding-top: 0rem !important;
+}
+
+.page-3 #maincontent .content-middle {
+    width: 80rem;
+}
+
+#maincontent .content-middle {
+    margin: auto;
+    width: 80.5rem;
+
+    padding-bottom: 5rem;
+}
+
+.page-55 #maincontent .content-middle {
+    width: 81rem;
+}
+
+.page-1 #maincontent .content-middle {
+    width: 80rem;
+}
+
+#header-slideshow .viewport .overview div.text {
+    position: absolute;
+    z-index: 3;
+    bottom: 7.50031rem;
+    left: 50%;
+    color: #f2f2f2;
+    font-size: 2.9rem;
+    width: 102rem;
+    margin-left: -49rem;
+    letter-spacing: 0rem;
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+}
+
+.color-shape {
+    overflow: hidden;
+    
+}
+.page-1 .color-shape,
+.page-3 .color-shape {
+    box-sizing: content-box;
+}
+.color-shape h2 {
+    font-size: 1.625rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    letter-spacing: 0rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
+    color: #3c3c3b;
+}
+
+.color-shape h3 {
+    margin-top: 0.4rem !important;
+    font-size: 1.25rem;
+    /*Previous Semibold Italic*/
+    font-family: 'CaslonClassicoW00-BoldI';
+    letter-spacing: 0.03rem;
+    color: #3c3c3b;
+
+    line-height: 1.75rem;
+    position: relative;
+    top: -0.0rem;
+}
+
+.color-shape h2,
+.color-shape h3 {
+    margin: 0rem;
+    padding: 0rem;
+
+    color: #f2f2f2;
+}
+
+.color-shape .container-content .background {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 100%;
+    width: 100%;
+
+    background-size: auto !important;
+}
+
+.color-shape .container-content {
+    position: relative;
+
+    overflow: hidden;
+    height: 100%;
+}
+
+a .color-shape .container-content {
+    cursor: pointer;
+}
+
+.color-shape .container-content:hover h2,
+.color-shape .container-content:hover h3 {
+    color: #f2f2f2;
+} 
+
+
+.color-shape .container-content .dark-overlay {
+    opacity: 0.3;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: #000;
+    /*background: linear-gradient(to top, rgba(255,255,255,0) 20%, rgba(0,0,0,1) 80%);*/
+
+    -webkit-transition: all 0.5s linear; 
+    -moz-transition: all 0.5s linear; 
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.color-shape.no-link .container-content .dark-overlay {
+    background-color: #000;
+    opacity: 0.6;
+}
+
+a .color-shape .container-content:hover .dark-overlay {
+    background-color: #000;
+    opacity: 0.6;
+}
+
+.color-shape .container-content .content {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    padding: 1.4rem 1.5rem 1.5rem 1.5rem;
+    z-index: 2;
+    background-color: transparent;
+    background-size: auto;
+}
+
+
+.show-more-button-publication, 
+.show-more-button {
+    margin-top: 2rem;
+}
+
+.show-more-button-publication button, 
+.show-more-button button,
+.info-box a,
+.plugin-coverstories .button a,
+.plugin-breakingnews .content .moreinformation a,
+.linktopublications a {
+    display: block;
+    border: none;
+    background-color: #dadad9;
+    padding: 0.75rem;
+    width: 15.625rem;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    height: 2.75rem;
+    letter-spacing: 0.03rem;
+    outline: 0 none;
+    color: #3c3c3b;
+    margin-bottom: 2rem;
+}
+
+.plugin-coverstories .button {
+    position: absolute;
+    bottom: 0rem;
+}
+.plugin-coverstories .button a {
+    text-align: center;
+}
+
+.linktopublications a {
+    padding: 0.55rem;
+}
+
+.show-more-button-publication button, 
+.show-more-button button,
+.info-box a,
+.plugin-breakingnews .content .moreinformation a {
+    margin: auto;
+}
+
+.info-box a { 
+    margin: 0rem;
+    cursor: pointer;
+    padding: 0.75rem;
+    text-align: center;
+}
+
+.back-to-top {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/back-to-top.svg');
+    background-repeat: no-repeat;
+    
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    right: 3rem;
+    top: 5.75rem;
+
+    cursor: pointer;
+}
+
+.slide-box {
+    background-color: #f2f2f2;
+    width: 80rem;
+    margin: auto;
+
+    height: 22.9925625rem;
+
+    padding: 2.5rem 3.75rem 2rem 3.75rem;
+}
+
+.news {
+    width: 81.375rem;
+    height: 29.8125rem;
+    margin: auto;
+    padding-top: 0.625rem;
+}
+
+.news .news-item {
+    float: left;
+    width: 27.0625rem;
+    height: 29.8125rem;
+    padding: 0.625rem;
+}
+.news .news-item .container-inner {
+    background-color: #f2f2f2;
+    padding: 1.25rem;
+    height: 100%;
+}
+.news .news-item p {
+    font-size: 1rem;
+    font-family: 'CaslonClassico W00';
+    color: #3c3c3b;
+}
+.news .news-item p span.firstletters {
+    font-family: 'AvenirNextRoundedW01-Re';
+    color: #3c3c3b;
+    letter-spacing: 0.2rem;
+}
+
+.news .news-item h2 {
+    font-size: 1.5rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+}
+
+.news .news-item .content {
+    height: 82%;
+}
+
+.slide-box .content {
+    padding: 0rem 0rem 3rem 0rem;
+    height: 13.453125rem;
+}
+
+.slide-box .content p.bodytext {
+    margin-top: 0rem !important;
+}
+
+.slide-box p {
+    margin: 0rem;
+    font-size: 1.23rem;
+    line-height: 150%;
+    font-family: 'CaslonClassico W00';
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+}
+
+.slide-box p span.firstletters,
+.plugin-breakingnews-inner-container p.bodytext b {
+    font-variant: small-caps;
+    font-family: 'AvenirNextRoundedW01-Re';
+    letter-spacing: 0.2rem;
+    color: #3c3c3b;
+}
+
+body.page-2 #maincontent {
+    padding-top: 0rem;
+}
+
+.button-overlay-left {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 20rem;
+    height: 100%;
+    z-index: 10;
+}
+.button-overlay-right {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 20rem;
+    height: 100%;©854
+    z-index: 10;
+}
+
+#header-slideshow .dark-overlay {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+
+
+    /*
+    opacity: 0.6;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 20%, rgba(0,0,0,1) 80%);
+    */
+
+    /*
+    opacity: 0.2;
+    background-color: #000;
+    */
+
+    background: linear-gradient(3deg, rgba(0, 0, 0, 0.9) 0%, transparent 60%);
+
+    -webkit-transition: all 0.5s linear; 
+    -moz-transition: all 0.5s linear; 
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+#header-slideshow:hover .dark-overlay {
+    /*
+    background-color: rgba(0, 0, 0, 0.2);
+    */
+}
+
+.AvenirNextRoundedRegukar {
+    font-family: 'AvenirNextRoundedW01-Re';
+    color: #3c3c3b;
+}
+
+.breaking-news {
+    height: 24.375rem;
+    width: 80rem;
+    background-color: #f2f2f2;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.breaking-news .text  {
+    padding: 2.5rem;
+
+}
+.breaking-news .text p {
+    margin: 0rem;
+    font-size: 1.125rem;
+    line-height: 150%;
+    font-family: 'CaslonClassico W00';
+    leter-spacing: 0.02rem;
+    color: #3c3c3b;
+}
+.breaking-news h4 {
+    margin: 0rem;
+    padding: 0rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    margin-bottom: 1.875rem;
+    color: #3c3c3b;
+}
+
+.breaking-news .text {
+    padding-left: 2.5rem;
+    width: 47.375rem;
+    float: right;
+}
+
+.breaking-news .text p span.firstletters {
+    font-family: 'AvenirNextRoundedW01-Re';
+    letter-spacing: 0.2rem;
+    font-variant: small-caps;
+    color: #3c3c3b;
+}
+
+.data-set .info-box {
+    padding: 2.25rem 0rem 0rem 0rem;
+}
+
+/*
+.info-box:hover button,
+.slide-box:hover p,
+.slide-box:hover .info-box button {
+    color: #878786;
+}
+*/
+
+
+.breaking-news {
+    cursor: pointer;
+}
+
+.breaking-news .info-box {
+    padding: 3rem 0rem 0rem 0rem;
+}
+
+.breaking-news .picture {
+    width: 32.625rem;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.breaking-news .picture img {
+    width: 100%;
+}
+
+.breaking-news:hover h4,
+.breaking-news:hover p,
+.breaking-news:hover .info-box button {
+    color: #878786;
+}
+
+.filtercontent ul li {
+    cursor: pointer;
+}
+
+.filtercontent ul li.active {
+    font-weight: bold;
+}
+
+.plugin-latestnews-item.row-element {
+    margin-right: 0.85rem;
+}
+.plugin-latestnews-item {
+    height: 29.79475rem;
+    width: 25.81125rem;
+    float: left;
+    margin-top: 1rem;
+
+
+}
+.plugin-latestnews-item.first {
+    margin-left: 0rem;
+}
+
+.plugin-latestnews {
+
+    width: 100%;
+}
+.plugin-latestnews .show-more-button {
+
+}
+.plugin-latestnews-item .title {
+    font-size: 1.5rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+}
+.plugin-latestnews-item .text {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.plugin-latestnews-item .readmore {
+    /*Previous Semibold Italic*/
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+
+.plugin-latestnews h1,
+.plugin-linkonsubpage h1,
+.plugin-filtermaincontent h1 {
+    text-align: center;
+    font-size: 3.125rem;
+    font-family: 'Caslon Graphique W01 Regular';
+    margin: 3rem 0rem;
+    color: #3c3c3b;
+}
+
+
+.plugin-linkonsubpage .link-element .copyright {
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    margin-right: 1.428187rem;
+}
+
+.plugin-latestnews .plugin-latestnews-item .picture {
+    overflow: hidden;
+    height: 15.5615625rem;
+}
+.plugin-latestnews .plugin-latestnews-item .content {
+    padding: 1.3481875rem;
+}
+.plugin-latestnews .plugin-latestnews-item .content .content {
+    padding: 0rem;
+}
+
+/* Dennis Design */
+* {
+    /* color: #3c3c3b; */
+}
+a {
+    text-decoration: none;
+    color: #3c3c3b;
+}
+.designSet-backgroundColor-1 {
+    background-color: #f2f2f2;
+}
+.designSet-textColor-1 {
+    color: #878786
+}
+.attoworld-content .designSet-textColor-1 {
+    /* color: #3c3c3b; */
+    color: #f2f2f2;
+}
+ul.design-listing-gefriert {
+    list-style-type: none;
+    padding: 0rem;
+}
+.plugin-people .tab-content.team ul.design-listing-gefriert li {
+    cursor: pointer;
+}
+ul.design-listing-gefriert li {
+    overflow: visible;
+    position: relative;
+    padding: 0rem 0rem 0rem 1.5rem !important;
+
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+}
+ul.design-listing-gefriert li b {
+    font-weight: none;
+    font-family: 'CaslonClassico W00 Bold';
+}
+ul.design-listing-gefriert li:before {
+    /* content: "—"; */
+    content: "//";
+    left: 0;
+    position: absolute;
+}
+
+.page-81 .bullet-menu .bullets .designSet-textColor-1 {
+    color: #3c3c3b !important;
+    letter-spacing: 0.03rem;
+
+}
+.page-81 .bullet-menu .bullets a.bullet.active .designSet-textColor-1 {
+    color: #f6f5f1 !important;
+    letter-spacing: 0.03rem;
+}
+
+.plugin-linkonsubpage {
+    width: 80rem;
+    margin: auto;
+    
+    padding-top: 8rem;
+}
+.plugin-linkonsubpage .title {
+    /*height: 2rem;*/
+    /*overflow: hidden;*/
+    width: 100%;
+    /*text-overflow: ellipsis;*/
+    /*white-space: nowrap;*/
+}
+.element-listing {
+    height: 85rem;
+}
+
+.link-element {
+    float: left;
+    width: 39.3896875rem;
+    height: 39.87875rem;
+    margin-bottom: 2.03575rem;
+    background-color: #f2f2f2;
+
+
+}
+
+.link-element .title {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    color: #3c3c3b;
+}
+
+.link-element-odd {
+    margin-right: 1.221rem;
+}
+.link-element .picture {
+    height: 24.351375rem;
+    overflow: hidden;
+    position: relative;
+}
+.link-element .picture img {
+    /*
+    width: 100%;
+    height: auto;
+    */
+}
+.link-element .text .firstletters {
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+    font-variant: small-caps;
+    letter-spacing: 0.2rem;
+}
+.link-element .text {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+    line-height: 1.75rem;
+    overflow: hidden;
+}
+.link-element .readmore {
+    /*Previous Semibold Italic*/
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+
+    margin-top: -1rem;
+}
+.link-element p.bodytext {
+    margin: 0.5rem 0rem 0rem 0rem;
+    color: #3c3c3b;
+    line-height: 1.75rem;
+}
+
+.link-element .content {
+    padding: 1.4281875rem;
+}
+
+.plugin-publications .listing,
+.plugin-jobs .listing {
+    margin-top: 3.5rem;
+}
+
+.plugin-publications .additionalstaff ul {
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+.plugin-publications .additionalstaff ul li {
+    padding: 0.125rem 0rem;
+    color: #3c3c3b;
+    
+    
+    font-family: 'AvenirNextRoundedW01-De1075568';
+}
+
+.plugin-publications ul li div.container {
+    background-color: #f2f2f2;
+    padding: 1.375rem;
+}
+.plugin-publications ul li div.title a {
+    padding: 0rem !important;
+    display: inline !important;
+}
+
+.plugin-publications .additionalstaff ul li span.type {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+
+.plugin-publications .additionalstaff ul li .inline-link {
+    padding: 0rem;
+}
+    
+.listing .message,
+.project-listing .message, 
+.director-listing .message {
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+    font-size: 2rem;
+    text-align: center;
+    margin: 5rem;
+    color: #3c3c3b;
+}
+
+.listing ul,
+.project-listing ul,
+.director-listing ul {
+    list-style-type: none;
+    margin: 0rem;
+    padding: 0rem;
+    position: relative;
+}
+.listing ul li,
+.project-listing ul li,
+.director-listing ul li {
+    padding: 0.625rem 0rem;
+}
+
+.plugin-magazin .listing ul li {
+    display: table;
+    width: 100%;
+}
+
+.listing ul li a,
+.project-listing ul li a,
+.director-listing ul li a,
+.listing ul li div.nolink,
+.project-listing ul li div.nolink,
+.director-listing ul li div.nolink {
+    background-color: #f2f2f2;
+    padding: 1.375rem;
+    display: block;
+}
+
+
+
+.listing ul li.news-element a {
+    display: inline;
+    padding: 0rem;
+}
+
+.listing ul li a.innerlink,
+.project-listing ul li a.innerlink,
+.director-listing ul li a.innerlink {
+    display: inline;
+    padding: 0rem;
+    
+}
+
+.listing ul li div.title,
+.project-listing ul li div.title,
+.director-listing ul li div.title {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    /*height: 2rem;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+
+    margin-bottom: 0.25rem;
+
+    color: #3c3c3b;
+}
+
+.plugin-magazin .listing ul li div.title {
+    width: 60rem;
+}
+.plugin-magazin .additional-info .type {
+    font-family: 'AvenirNextRoundedW01-Re';
+    letter-spacing: 0.2rem;
+    font-size: 1.125rem;
+    color: #3c3c3b;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+.plugin-magazin .additional-info .journal {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.plugin-magazin .additional-info .pubdate {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.plugin-magazin .additional-info {
+
+}
+.plugin-magazin .magazin .picture,
+.plugin-magazin .magazin .content,
+.plugin-magazin .magazin .download {
+    float: left;
+}    
+.plugin-magazin .magazin .picture {
+    width: 14.2391875rem;
+}
+.plugin-magazin .magazin .content {
+    width: 60.3858125rem;
+}
+.plugin-magazin .magazin .picture {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.18rem;
+}
+.plugin-magazin .magazin .picture img {
+    max-height: 4.18rem;
+    width: auto;
+    max-width: 14rem;
+}  
+.listing ul li div.location,
+.listing ul li div.group,
+.listing ul li div.description,
+.listing ul li div.fulltext,
+.listing ul li div.apply,
+.project-listing ul li div.location,
+.project-listing ul li div.group,
+.project-listing ul li div.description,
+.project-listing ul li div.fulltext,
+.project-listing ul li div.apply,
+.director-listing ul li div.location,
+.director-listing ul li div.group,
+.director-listing ul li div.description,
+.director-listing ul li div.fulltext,
+.director-listing ul li div.apply {
+    color: #3c3c3b;
+}
+
+.listing ul li .authors,
+.project-listing ul li .authors,
+.director-listing ul li .authors {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+.plugin-publications .listing ul li .authors {
+    line-height: 1.75rem;
+}
+
+.listing ul li div.doi-isbn,
+.project-listing ul li div.doi-isbn,
+.director-listing ul li div.doi-isbn {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125em;
+    color: #3c3c3b;
+    margin-top: 0.2rem;
+}
+.listing ul li div.journal,
+.project-listing ul li div.journal,
+.director-listing ul li div.journal {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125em;
+    color: #3c3c3b;
+    margin-top: 0.2rem;
+}
+.listing ul li .authors .title,
+.project-listing ul li .authors .title,
+.director-listing ul li .authors .title {
+    font-family: 'AvenirNextRoundedW01-Re';
+    letter-spacing: 0.2rem;
+    font-size: 1.125em;
+    color: #3c3c3b;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+.listing ul li div.journal .title,
+.project-listing ul li div.journal .title,
+.director-listing ul li div.journal .title {
+    font-family: 'AvenirNextRoundedW01-Re';
+    letter-spacing: 0.2rem;
+    font-size: 1.125em;
+    color: #3c3c3b;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+.listing ul li div.doi-isbn .title,
+.project-listing ul li div.doi-isbn .title,
+.director-listing ul li div.doi-isbn .title {
+    font-family: 'AvenirNextRoundedW01-Re';
+    letter-spacing: 0.2rem;
+    font-size: 1.125em;
+    color: #3c3c3b;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+.listing ul li div.journal span.journal,
+.project-listing ul li div.journal span.journal,
+.director-listing ul li div.journal span.journal {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+.listing ul li div.journal span.volume,
+.project-listing ul li div.journal span.volume,
+.director-listing ul li div.journal span.volume {
+    font-family: 'CaslonClassico W00 Bold';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+.listing ul li div.journal span.pageref,
+.project-listing ul li div.journal span.pageref,
+.director-listing ul li div.journal span.pageref {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+.listing ul li div.journal span.year,
+.project-listing ul li div.journal span.year,
+.director-listing ul li div.journal span.year {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+.filter {
+    height: 3.0rem;
+    margin-bottom: 0.4591250000000002rem;
+}
+
+.plugin-jobs.mainFilter .filter button.first {
+    margin-left: 0rem;
+}
+.plugin-jobs.mainFilter .filter button {
+    margin-left: 0.8212rem;
+    /* width: 12.73239796066284090869rem; */
+    background-position: 10.75rem center;
+}
+
+.filter button {
+    /* height: 3.5196875rem; */
+
+    height: 2.875rem;
+    width: 15.4231875rem;
+    background-color: #f2f2f2;
+    /*font-size: 1.125rem;*/
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    border: none;
+    outline: none;
+    margin-left: 0.95rem;
+    cursor: pointer;
+
+    display: block;
+    float: left;
+    color: #3c3c3b;
+
+    padding: 0.35rem;
+}
+
+.plugin-magazin .filter button {
+    margin-left: 0.84rem;
+}
+
+.plugin-publications .filter button {
+    margin-left: 0.82rem;
+}
+
+.plugin-newsfilter .filter button {
+    margin-left: 0.75em;
+}
+
+.filter button.active.relative .button-text {
+    position: relative;
+    top: -0.25rem;
+}
+.filter button.first {
+    margin-left: 0rem;
+}
+
+.filter button.active,
+.filter button.beholdColor {
+    background-color: #dadad9;
+}
+
+
+
+.plugin-publications .text,
+.plugin-magazin .text,
+.plugin-newsfilter .text,
+.plugin-magazin .people {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.plugin-publications .search,
+.plugin-magazin .search,
+.plugin-newsfilter .search,
+.plugin-people .search {
+    /* height: 3.5196875rem; */
+    height: 2.875rem;
+
+    width: 15.4231875rem;
+    background-color: #dadad9;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    border: none;
+    outline: none;
+    margin: auto;
+    position: relative;
+    color: #3c3c3b;
+}
+
+.plugin-publications .text,
+.plugin-newsfilter .text {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.25rem;
+    text-align: center;
+    color: #3c3c3b;
+}
+
+.plugin-publications .text,
+.plugin-newsfilter .text,
+.plugin-people .text{
+    color: #3c3c3b;
+}
+.plugin-people .text{
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.25rem;
+    text-align: center;
+    color: #3c3c3b;
+}
+.plugin-publications .search input.search-bar,
+.plugin-newsfilter .search input.search-bar,
+.plugin-magazin .search input.search-bar,
+.plugin-people .search input.search-bar {
+    background-color: #dadad9;
+    border: none;
+    width: 100%;
+    height: 2rem;
+    margin-top: 0.5rem;
+    outline: none;
+
+    text-align: center;
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+    font-size: 1.125rem;
+
+    color: #878786;
+}
+
+.plugin-publications .search input.search-button,
+.plugin-newsfilter .search input.search-button,
+.plugin-magazin .search input.search-button,
+.plugin-people .search input.search-button {
+    position: absolute;
+    right: 0rem;
+    top: 0.125rem;
+    height: 2rem;
+    display: block;
+
+    margin-right: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.plugin-people .filter-contents .filter-content {
+    column-count: 2;
+}
+.filter-contents .filter-content .layout-5-col {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
+    -webkit-column-gap: 2.5rem;
+    -moz-column-gap: 2.5rem;
+    column-gap: 2.5rem;
+}
+.filter-contents .filter-content .layout-2-col {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 2.5rem;
+    -moz-column-gap: 2.5rem;
+    column-gap: 2.5rem;
+}
+.filter.publication-filter button,
+.filter.newsfilter-filter button{
+    background-position: 10.75rem center;
+}
+
+.filter button {
+
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/button-upper.svg);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 13rem center;
+
+    cursor: pointer;
+}
+
+.filter button span.test {
+    color: #3c3c3b;
+}
+
+.filter button.active {
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/button-lower_active.svg) !important;
+    color: #3c3c3b !important;
+}
+.filter button.active {
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/button-upper.svg)
+}
+.filter button.single-filter.active {
+    background-image: none !important;
+}
+
+.filter button.single-filter.transformlowercase {
+    text-transform: none;
+}
+
+.filter button.single-filter {
+    background-image: none;
+
+    background-size: 1.25rem;
+    background-position: 13rem center;
+
+    letter-spacing: 0.04rem;
+
+}
+.filter.publication-filter button.single-filter {
+    background-position: 10.75rem center;
+}
+.filter button {
+    color: #878786;
+}
+.filter button.smallerfontsize {
+    font-size: 0.9rem;
+}
+
+.show-filters button.active {
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/button-lower_active.svg);
+}
+
+.show-filters button {
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/button-upper_active.svg);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 13rem 1.25rem;
+
+    color: #3c3c3b;
+    letter-spacing: 0.04rem;
+}
+.show-filters .filter.publication-filter button {
+    background-position: 10.75rem center;
+}
+.plugin-filtermaincontent .organizer {
+    margin-top: 1.5rem;
+}
+.plugin-filtermaincontent .description {
+    margin-top: 1.4198125rem;
+}
+.plugin-filtermaincontent .elementtitle {
+    font-size: 1.5rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+}
+
+.plugin-breakingnews {
+    width: 80rem;
+    margin: auto;
+    margin-top: 6rem;
+}
+.plugin-breakingnews-inner-container {
+    height: 100%;
+
+    background-color: #f2f2f2;
+    height: 24.351375rem;
+}
+
+.plugin-breakingnews-inner-container {
+    display: none;
+}
+
+.plugin-breakingnews .picture {
+    width: 32.625rem;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+.plugin-breakingnews .picture img {
+    width: 100%;
+    height: auto;
+}
+.plugin-breakingnews .content {
+    height: 100%;
+    width: 47.35rem;
+    float: right;
+
+    padding: 2.7104375rem 3.75rem;
+}
+.plugin-breakingnews .content .title {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    color: #3c3c3b;
+    margin-bottom: 1rem;
+}
+.plugin-breakingnews .content .bodytext {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+    line-height: 2.125rem;
+    height: 13.5rem;
+    overflow: hidden;
+    
+}
+.plugin-breakingnews .content .moreinformation {
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    width: 15.707rem;
+    height: 2.875rem;
+    background-color: #dadad9;
+    text-align: center;
+    color: #3c3c3b;
+}
+
+.plugin-breakingnews:hover .moreinformation a {
+    color: #878786;
+}
+
+.firstletters {
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+    font-variant: small-caps;
+    letter-spacing: 0.2rem;
+}
+
+.listing .location,
+.project-listing .location,
+.director-listing .location {
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+    letter-spacing: 0.2rem;
+    text-transform: lowercase;
+    margin-bottom: 0.4rem;
+    font-variant: small-caps;
+    color: #3c3c3b;
+}
+.listing .group,
+.project-listing .group,
+.director-listing .group {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.listing .description,
+.project-listing .description,
+.director-listing .description {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    min-height: 4rem;
+    color: #3c3c3b;
+    line-height: 1.75rem;
+    margin-bottom: 0.1rem;
+}
+
+.listing .description a,
+.project-listing .description a,
+.director-listing .description a {
+    font-family: 'CaslonClassicoW00-Itali';
+    text-decoration: underline;
+    color: #3c3c3b;
+}
+
+.listing .description p,
+.project-listing .description p,
+.director-listing .description p {
+    margin: 0rem;
+}
+
+.listing .group .title,
+.project-listing .group .title,
+.director-listing .group .title {
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+    letter-spacing: 0.2rem;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    color: #3c3c3b;
+}
+
+.plugin-jobs .listing .list .list-element .fulltext p {
+    line-height: 1.75rem;
+}
+
+.plugin-publications .search-button,
+.plugin-magazin .search-button,
+.plugin-newsfilter .search-button,
+.plugin-people .search-button {
+    width: 2.2870625rem;
+    height: 2.0180625rem;
+    border: none;
+    background-color: transparent;
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/magnifier-black.svg);
+    background-repeat: no-repeat;
+    outline: 0rem;
+    cursor: pointer;
+}
+
+.plugin-linkonsubgroup h1 {
+    font-family: 'Caslon Graphique W01 Regular';
+    text-align: center;
+    margin: 4rem;
+    font-size: 3.125rem;
+    color: #3c3c3b;
+}
+
+.plugin-linkonsubgroup .link-single {
+    height: 24.625rem;
+    margin-bottom: 2.3651875rem;
+}
+
+.plugin-linkonsubgroup .link-single .picture {
+    width: 32.625rem;
+    height: 24.375rem;
+    float: left;
+    overflow: hidden;
+}
+
+.plugin-linkonsubgroup .link-single .picture img {
+    height: auto;
+    width: 100%;
+}
+
+.plugin-linkonsubgroup .link-single.even .picture {
+    float: right;
+}
+.plugin-linkonsubgroup .link-single {
+    background-color: #f2f2f2;
+}
+.plugin-linkonsubgroup .link-single .content {
+    width: 47.35rem;
+    height: 100%;
+    padding: 1.583625rem 2.75rem 2.583625rem 2.75rem;
+    background-color: #f2f2f2;
+}
+.plugin-linkonsubgroup .link-single.odd .content {
+    float: right;
+}
+.plugin-linkonsubgroup .link-single.even .content {
+    float: left;
+}
+
+.plugin-linkonsubgroup .link-single .content .button {
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    height: 2.875rem;
+    background-color: #dadad9;
+    width: 15.707rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3c3c3b;
+    
+    position: absolute;
+    bottom: 2.125rem;
+}
+
+.plugin-linkonsubgroup .link-single .content .button.button-1{
+    
+        margin-left: 20rem;
+}
+
+.plugin-linkonsubgroup .link-single .content .button a {
+    padding-top: 0.55rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.plugin-linkonsubgroup .link-single .content {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    
+    position: relative;
+    
+    color: #3b3c3c;
+    line-height: 1.8rem;
+}
+.plugin-linkonsubgroup .link-single .content h2 {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    margin: 0rem;
+    color: #3c3c3b;
+    padding-bottom: 0.75rem;
+}
+.plugin-linkonsubgroup .link-single .content {
+    overflow: hidden;
+    cursor: pointer;
+}
+.plugin-linkonsubgroup .link-single .content .text p {
+    color: #3c3c3b;
+    margin: 0rem 0rem;
+}
+.plugin-linkonsubgroup .link-single .content .firstletters {
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+
+.plugin-linkonsubgroup .link-single:hover .content .button a  {
+    display: block;
+}
+
+.plugin-linkonsubgroup .link-single:hover .content .button a,
+.plugin-linkonsubgroup .link-single:hover .content .firstletters,
+.plugin-linkonsubgroup .link-single:hover .content h2,
+.plugin-linkonsubgroup .link-single:hover .content p {
+    color: #878786;
+}
+
+.plugin-magazin {
+    padding-top: 3.4375rem;
+}
+
+.plugin-magazin .magazin {
+    margin-bottom: 1.25rem;
+    height: 5.6875rem;
+    background-color: #f2f2f2;
+}
+
+.plugin-magazin .magazin a {
+
+}
+
+.plugin-magazin .magazin a img {
+    height: 3.03125rem;
+    width: 2.29375rem;
+    margin-right: 0rem;
+    float: right;
+
+    margin-top: -3.2rem;
+}
+
+.plugin-magazin .magazin a img {
+    margin-top: -0.75rem;
+}
+
+.plugin-magazin .text p {
+    margin: 1.90725rem 0rem;
+} 
+
+.plugin-projectadresses .project {
+    width: 25.81125rem;
+    height: 29.7656875rem;
+
+    background-color: #f2f2f2;
+
+    margin-right: 0rem;
+    margin-bottom: 1.3125rem;
+
+    float: right;
+    padding: 2.125rem;
+
+    color: #878786;
+    line-height: 1.75rem;
+
+}
+
+.plugin-infoaddressbox div.title,
+.plugin-infoaddressbox div.content,
+.plugin-projectadresses .project p,
+.plugin-projectadresses .project .title {
+    -webkit-transition: all 0.5s linear; 
+    -moz-transition: all 0.5s linear; 
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+.plugin-infoaddressbox:hover div.title,
+.plugin-infoaddressbox:hover div.content,
+.plugin-projectadresses .project:hover p,
+.plugin-projectadresses .project:hover .title {
+    color: #3c3c3b;
+}
+
+.plugin-projectadresses .project p {
+    margin: 0.75rem 0rem;
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+}
+
+.plugin-projectadresses .project .title {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    margin-bottom: 2.75rem;
+}
+
+.plugin-projectadresses .project.row-element {
+    margin-left: 1.255rem;
+
+
+}
+.plugin-projectadresses {
+    margin-top: 1.3125rem;
+    margin-top: 1.3125rem;
+    height: 58rem;
+}
+
+div.search-bar {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    width: 0rem;
+    height: 100%;
+    background-color: #000;
+    display: none;
+}
+div.search-bar .tx-indexedsearch-searchbox-button {
+    position: absolute;
+    background-color: transparent;
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/magnifier.svg);
+    background-repeat: no-repeat;
+    width: 1.8415625rem;
+    height: 1.625rem;
+
+    top: 50%;
+    right: 5rem;
+    margin-top: -0.8509031rem;
+}
+div.search-bar .tx-indexedsearch-searchbox-button:focus {
+    outline: none;
+    border: none;
+}
+div.search-bar .close {
+    position: absolute;
+    background-color: transparent;
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/search-close.svg);
+    background-repeat: no-repeat;
+    width: 1.8415625rem;
+    height: 1.625rem;
+
+    top: 50%;
+    right: 1.959125rem;
+    margin-top: -0.8509031rem;
+
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+}
+/*
+div.search-bar #tx_indexedsearch .sword {
+    width: 80rem;
+    height: 2rem;
+    background-color: #000;
+    border: none;
+    
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    font-size: 0.9375rem;
+    color: #f2f2f2;
+    
+    text-align: center;
+    outline: none;
+    margin-top: 0.25rem;
+}
+*/
+div.search-bar #tx_indexedsearch .sword {
+    text-decoration: none;
+    color: #878786;
+    text-transform: uppercase;
+    font-family: 'AvenirNextRoundedW01-Md1075562';
+    font-size: 0.9375rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+
+    text-align: center;
+    outline: none;
+    background-color: #000;
+    border: none;
+}    
+.slideshow,
+.slideshow-withbullets {
+    padding: 0 0 0 0;
+    position: relative;
+    text-align: center;
+}
+
+.slideshow .buttons,
+.slideshow-withbullets .buttons {
+    border-radius: 2.1875rem;
+    display: block;
+    float: left;
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.1875rem;
+    text-decoration: none;
+    font-size: 1.375rem;
+    top: 50%;
+    z-index: 10;
+
+    width: 5.5625rem;
+    height: 5.5625rem;
+
+    margin-top: -2.78125rem;
+
+}
+
+.slideshow .buttons.prev,
+.slideshow-withbullets .buttons.prev {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/slideshow-left.svg');
+    left: -8rem;
+    background-repeat: no-repeat;
+}
+.slideshow .buttons.next,
+.slideshow-withbullets .buttons.next {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/slideshow-right.svg');
+    right: -8rem;
+    background-repeat: no-repeat;
+}
+
+.slideshow .viewport,
+.slideshow-withbullets .viewport {
+    overflow: hidden;
+    width: 100%;
+    height: 54.4508125rem;
+    position: relative;
+    
+}
+.fp-slideshow .viewport {
+    width: 80rem;
+}
+.slideshow .viewport ul,
+.slideshow-withbullets .viewport ul {
+    list-style: none;
+    position: absolute;
+    padding: 0rem;
+    height: 100%;
+    margin: 0rem;
+}
+.slideshow .viewport ul li,
+.slideshow-withbullets .viewport ul li {
+    float: left;
+    padding: 0rem;
+    margin: 0rem;
+    height: 100%;
+    position: relative;
+    width: 80rem;
+} 
+
+.slideshow.fullwidth .viewport ul li,
+.slideshow-withbullets.fullwidth .viewport ul li {
+    width: 100%;
+}
+
+.slideshow.fullwidth .buttons,
+.slideshow-withbullets.fullwidth .buttons {
+    /* display: block !important; */
+}
+.slideshow.fullwidth .buttons.prev,
+.slideshow-withbullets.fullwidth .buttons.prev {
+    left: 8rem;
+}
+.slideshow.fullwidth .buttons.next,
+.slideshow-withbullets.fullwidth .buttons.next {
+    right: 8rem;
+}
+.slideshow.fullwidth .button-overlay-right,
+.slideshow.fullwidth .button-overlay-left,
+.slideshow-withbullets.fullwidth .button-overlay-right ,
+.slideshow-withbullets.fullwidth .button-overlay-left {
+    height: 6rem !important;
+    
+    
+    
+}
+.slideshow.fullwidth div.image,
+.slideshow-withbullets.fullwidth div.image {
+    background-color: gray;
+}
+
+.plugin-milestones {
+    padding-bottom: 4rem;
+}
+.plugin-milestones h2,
+.plugin-coverstories h2 {
+    padding: 3.375rem;
+    font-size: 3.4375rem;
+    margin: 0rem;
+    text-align: center;
+    font-family: 'Caslon Graphique W01 Regular';
+}
+.plugin-milestones .slideshow.fullwidth .button-overlay-right,
+.plugin-milestones .slideshow.fullwidth .button-overlay-left,
+.plugin-milestones .slideshow-withbullets.fullwidth .button-overlay-right,
+.plugin-milestones .slideshow-withbullets.fullwidth .button-overlay-left {
+    top: 22rem !important;
+}
+.plugin-coverstories .slideshow.fullwidth .button-overlay-right,
+.plugin-coverstories .slideshow.fullwidth .button-overlay-left,
+.plugin-coverstories .slideshow-withbullets.fullwidth .button-overlay-right,
+.plugin-coverstories .slideshow-withbullets.fullwidth .button-overlay-left {
+    top: 23rem !important;
+}
+
+.plugin-milestones .slideshow .viewport ul li div.image,
+.plugin-milestones .slideshow-withbullets .viewport ul li div.image {
+    height: 41.4375rem;
+}
+
+.plugin-milestones .image {
+    margin-bottom: 2.5rem;
+}
+
+.plugin-milestones h4 {
+    font-size: 3.4375rem;
+    font-family: 'Caslon Graphique W01 Regular';
+    color: #3c3c3b;
+    width: 57rem;
+    
+    margin: 0rem auto 1rem auto;
+}
+.plugin-milestones p {
+    font-size: 1.5rem;
+    font-family: 'AdobeCaslonW01-Regular';
+    line-height: 2.125rem;
+    color: #3c3c3b;
+    
+    width: 40.75rem;
+    
+    margin: 0rem auto;
+    padding: 1rem;
+}
+
+.plugin-milestones p b {
+    font-family: 'Adobe Caslon W01 Bd';
+}
+.plugin-milestones p i {
+    font-family: 'Adobe Caslon W01 It';
+}
+.plugin-milestones p b i {
+    font-family: 'Adobe Caslon W01 Bd It';
+}
+.plugin-milestones p i b {
+    font-family: 'Adobe Caslon W01 Bd It';
+}
+.plugin-milestones sup {
+    font-family: 'CaslonClassico W00';
+}
+.plugin-milestones .text-content {
+    padding-top: 5rem;
+}
+.plugin-milestones .text-content p.footnote {
+    font-size: 1rem !important;
+    padding: 0rem;
+    line-height: 1.75rem;
+}
+.plugin-milestones hr.footnote-divider {
+    width: 8%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #3c3c3b;
+    border-width: 0.0625rem;
+}
+
+.slideshow.fullwidth .viewport,
+.slideshow-withbullets.fullwidth .viewport {
+    height: 95.450812rem;
+}
+.plugin-coverstories {
+    background-color: #f2f2f2;
+}
+.plugin-coverstories .slideshow.fullwidth .viewport,
+.plugin-coverstories .slideshow-withbullets.fullwidth .viewport {
+    height: 58rem;
+}
+.plugin-coverstories .inner-element {
+    width: 80rem;
+    margin: auto;
+    background-color: #fff;
+    
+    position: relative;
+    overflow: hidden;
+    
+    height: 52.315rem;
+}
+.plugin-coverstories .inner-element .text-content {
+    padding: 3.9040625rem 2rem;
+    text-align: left;
+}
+.plugin-coverstories .inner-element .text-content .metadata {
+    font-family: 'AdobeCaslonW01-Regular';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #878786;
+}
+.plugin-coverstories .inner-element .text-content h4 {
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #3c3c3b;
+    
+    margin: 0rem 0rem 1rem 0rem;
+}
+.plugin-coverstories .inner-element .text-content p {
+    font-family: 'AdobeCaslonW01-Regular';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #3c3c3b;
+}
+
+.plugin-progressreports.layout-0,
+.plugin-milestones.layout-0,
+.plugin-coverstories.layout-0 {
+    background-color: #fff;
+}
+.plugin-coverstories.layout-0 .inner-element,
+.plugin-progressreports.layout-0 ul.progress-reports li .progress-reports-content {
+    background-color: #f2f2f2;
+}
+
+.plugin-progressreports.layout-1,
+.plugin-milestones.layout-1,
+.plugin-coverstories.layout-1 {
+    background-color: #f2f2f2;
+}
+.plugin-coverstories.layout-1 .inner-element,
+.plugin-progressreports.layout-1 ul.progress-reports li .progress-reports-content {
+    background-color: #fff;
+}
+
+
+
+.slideshow .viewport ul li img,
+.slideshow-withbullets .viewport ul li img {
+    /* height: 100%; */
+
+    width: 100%;
+    height: auto;
+}
+.slideshow .viewport ul li .picture,
+.slideshow-withbullets .viewport ul li .picture {
+    height: 31.45825rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slideshow .viewport ul li .content,
+.slideshow-withbullets .viewport ul li .content {
+    height: 22.9925625rem;
+    background-color: #f2f2f2;
+
+    padding: 2.7975rem 3.75rem 1.5rem 3.75rem;
+}
+.slideshow .pressrelease .title,
+.slideshow-withbullets .pressrelease .title {
+    font-size: 1.5rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+}
+.slideshow .pressrelease .bodytext,
+.slideshow-withbullets .pressrelease .bodytext {
+    height: 8.5773125rem;
+    overflow: hidden;
+    line-height: 1.45rem;
+}
+.slideshow .pressrelease .bodytext,
+.slideshow .pressrelease .title,
+.slideshow .pressrelease .readmore,
+.slideshow .pressrelease .date,
+.slideshow-withbullets .pressrelease .bodytext,
+.slideshow-withbullets .pressrelease .title,
+.slideshow-withbullets .pressrelease .readmore,
+.slideshow-withbullets .pressrelease .date
+{
+    text-align: left;
+}
+.slideshow .pressrelease .date,
+.slideshow .pressrelease .bodytext,
+.slideshow-withbullets .pressrelease .date,
+.slideshow-withbullets .pressrelease .bodytext {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #3c3c3b;
+}
+.slideshow .pressrelease .bodytext,
+.slideshow-withbullets .pressrelease .bodytext{
+    line-height: 1.75rem;
+    letter-spacing: 0.02rem;
+}
+.slideshow .pressrelease .date,
+.slideshow-withbullets .pressrelease .date{
+    color: #878786;
+}
+.slideshow .pressrelease div.readmore,
+.slideshow-withbullets .pressrelease div.readmore{
+    display: block;
+    margin: 1rem 0rem 0rem 0rem;
+    border: none;
+    background-color: #dadad9;
+    padding-top: 0.65rem;
+    width: 15.625rem;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    height: 2.75rem;
+    letter-spacing: 0.03rem;
+    outline: 0 none;
+    text-align: center;
+    color: #3c3c3b;
+}
+.slideshow .pressrelease div.readmore a,
+.slideshow-withbullets .pressrelease div.readmore a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.slideshow .pressrelease .title,
+.slideshow-withbullets .pressrelease .title{
+    margin-bottom: 1.4375rem;
+    color: #3c3c3b;
+}
+.slideshow .pressrelease .bodytext,
+.slideshow-withbullets .pressrelease .bodytext{
+    color: #3c3c3b;
+}
+.slideshow .pressrelease .readmore,
+.slideshow-withbullets .pressrelease .readmore{
+    color: #3c3c3b;
+}
+.plugin-latestnews .news-item,
+.plugin-latestnewsfeature .news-item {
+    margin-left: 0rem;
+    background-color: #f2f2f2;
+    height: 29.79475rem;
+    width: 25.81125rem;
+
+    margin-right: 0rem;
+    margin-bottom: 1.25rem;
+    float: left;
+}
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+.plugin-latestnews .news-item .content,
+.plugin-latestnewsfeature .news-item .content {
+    padding: 1.2476875rem 1.5rem 0rem 1.5rem;
+}
+.plugin-latestnews .news-item .content .content,
+.plugin-latestnewsfeature .news-item .content .content {
+    padding: 0rem;
+    margin-top: 1.1375rem;
+    line-height: 1.75rem;
+
+    font-family: 'CaslonClassico W00';
+    color: #3c3c3b;
+    
+    height: 5.0625rem;
+    overflow: hidden;
+}
+.plugin-latestnews .news-item .picture,
+.plugin-latestnewsfeature .news-item .picture {
+    height: 15.5615625rem;
+    overflow: hidden;
+}
+.plugin-latestnews .news-item.row-element,
+.plugin-latestnewsfeature .news-item.row-element {
+    margin-right: 1.2540624999999974rem;
+}
+
+.plugin-latestnewsfeature {
+}
+
+.plugin-latestnewsfeature .hidden {
+    display: none;
+}
+
+.plugin-latestnewsfeature h1,
+.plugin-featuredpublication h1 {
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 3.125rem;
+    text-align: center;
+    margin: 0rem;
+    color: #3c3c3b;
+    /*
+    margin: 6.250625rem 0rem 4.8384375rem 0rem;  
+    */
+}
+
+.plugin-featuredpublication {
+    margin-bottom: 10rem;
+}
+
+.plugin-latestnews .date,
+.plugin-latestnewsfeature .date {
+    color: #878786;
+    font-family: 'CaslonClassico W00';
+
+}
+.plugin-latestnews .title,
+.plugin-latestnewsfeature .title {
+    color: #3c3c3b;
+    font-size: 1.5rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    line-height: 1.8rem;
+
+    height: 3.5rem;
+    overflow: hidden;
+}
+.plugin-latestnews .content,
+.plugin-latestnewsfeature .content {
+    color: #3c3c3b;
+}
+.plugin-latestnews .special-box .content,
+.plugin-latestnewsfeature .special-box .content {
+    height: 100%;
+}
+.plugin-latestnews .special-box,
+.plugin-latestnewsfeature .special-box {
+    height: 100%;
+    position: relative;
+}
+.plugin-latestnews .special-box .title,
+.plugin-latestnewsfeature .special-box .title {
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 2rem;
+    line-height: 1.25rem;
+    margin-bottom: 2.7048125rem;
+    height: auto;
+    line-heigght: normal;
+    overflow: visible;
+    margin-top: 1.4rem;
+    color: #3c3c3b;
+}
+.plugin-latestnews .special-box ul li,
+.plugin-latestnewsfeature .special-box ul li {
+    padding: 0rem;
+}
+.plugin-latestnews .special-box ul li .title,
+.plugin-latestnewsfeature .special-box ul li .title {
+    font-family: 'AvenirNextRoundedW01-De1075568' !important;
+    margin-bottom: 0rem !important;
+    font-size: 1.5rem !important;
+    color: #3c3c3b;
+}
+.plugin-latestnews .special-box ul li .info,
+.plugin-latestnewsfeature .special-box ul li .info {
+    margin-bottom: 1.75rem;
+    line-height: 2.5rem;
+    
+    height: 2.5625rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.plugin-latestnews .special-box ul li .info .type,
+.plugin-latestnewsfeature .special-box ul li .info .type {
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+    font-variant: small-caps;
+    letter-spacing: 0.2rem;
+    color: #3c3c3b;
+}
+.plugin-latestnews .special-box ul li .info .magazin,
+.plugin-latestnewsfeature .special-box ul li .info .magazin {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.plugin-latestnews .special-box ul li .info .date,
+.plugin-latestnewsfeature .special-box ul li .info .date {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.plugin-latestnewsfeature .special-box .readmore {
+    display: block;
+    border: none;
+    background-color: #dadad9;
+    
+    width: 15.625rem;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    height: 2.75rem;
+    letter-spacing: 0.03rem;
+    outline: 0 none;
+    color: #3c3c3b;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    position: absolute;
+    bottom: 0.75rem;
+    
+}
+.plugin-latestnewsfeature .special-box .readmore a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0.7125rem;
+}
+#c72 h2 {
+    font-size: 3.125rem;
+    font-family: 'Caslon Graphique W01 Regular';
+    padding: 6.40rem 0rem 3.2384375rem 0rem;
+    color: #3c3c3b;
+    margin: 0rem;
+    text-align: center;
+}
+
+/* Mailform */
+.csc-mailform {
+    padding: 2.38875rem 0rem 3.7003125rem 3.60775rem;
+    width: 52.905625rem;
+    background-color: #f2f2f2;
+    margin-bottom: 1.3125rem;
+    float: left;
+}
+
+.page-51 .content-middle {
+    width: 80rem !important;
+}
+
+.page-51 .Tx-Formhandler {
+    padding: 2.38875rem 3.75rem 1.60275rem 3.75rem;
+    width: 52.905625rem;
+    background-color: #f2f2f2;
+    margin-bottom: 1.3125rem;
+    float: left;
+    height: 29.775rem;
+    position: relative;
+}
+
+.page-51 .Tx-Formhandler .headline {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    line-height: 1.8rem; 
+    color: #3c3c3b;
+}
+
+.page-51 .Tx-Formhandler input,
+.page-51 .Tx-Formhandler textarea {
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+.page-51 .Tx-Formhandler textarea {
+    color: #3c3c3b;
+    margin: 1.800875rem 0rem;
+    width: 100%;
+    resize: none;
+    max-height: 12.25rem;
+}
+.page-51 .Tx-Formhandler input {
+    color: #878786;
+    width: 100%;
+}
+
+.page-51 .Tx-Formhandler dl {
+    margin: 0rem;
+}
+.page-51 .Tx-Formhandler dd {
+    margin: 0rem;
+}
+.page-51 .Tx-Formhandler input.name {
+    display: none;
+}
+.page-51 .Tx-Formhandler input.submit {
+    background-color: #dadad9;
+    height: 2.875rem;
+    width: 15.707rem;
+    padding: 0rem 5.9375rem;
+    text-align: center;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    font-size: 1.125rem;
+    line-height: 1.8rem;
+    position: absolute;
+    bottom: 1.60275rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #3c3c3b;
+}
+.page-51 .Tx-Formhandler .captcha {
+    position: absolute;
+    width: 13rem;
+    right: 3.60775rem;
+    bottom: 3.7003125rem;
+}
+.page-51 .Tx-Formhandler .captcha .edit {
+    width: 100%;
+}
+.page-51 .Tx-Formhandler .captcha .image {
+    text-align: center;
+}
+.page-51 .Tx-Formhandler .errors {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    z-index: 10;
+    
+    display: none;
+}
+#c73 {
+    float: right;
+    height: 29.7656875rem;
+    width: 26rem;
+    background-color: #f2f2f2;
+    margin-bottom: 1.3125rem;
+}
+
+#c74 {
+    clear: both;
+}
+
+.plugin-infoaddressbox {
+    padding: 2.14325rem;
+    color: #878786;
+}
+.plugin-infoaddressbox p.bodytext {
+    color: #878786;
+}
+.plugin-infoaddressbox .title {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.3528125rem;
+    color: #878786;
+}
+.plugin-infoaddressbox .content {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.attoworld-projectnavigation .projecttitle {
+    display: none;
+    color: #3c3c3b;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9375rem;
+    letter-spacing: 0.1rem;
+
+    position: absolute;
+    top: 28.5%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.projectcoordinator {
+    /*Previous Semibold Italic*/
+    font-family: 'CaslonClassicoW00-BoldI';
+    text-transform: none;
+    font-size: 1rem;
+    color: #3c3c3b;
+}
+
+/* ID- & Page-Styles */
+.page-83 .projectcoordinator {
+    display: none;
+}
+.page-83 h1 {
+    padding-top: 9.210625rem !important;
+}
+    
+/* Allgemein */
+p.bodytext,
+.plugin-latestnews .description {
+    margin: 0.5rem 0rem 0rem 0rem;
+    color: #3c3c3b;
+    line-height: 1.75rem;
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.plugin-latestnews .type-jobs .description {
+    height: 19.5rem;
+    overflow: hidden;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+sub {
+    font-size: 0.83em;
+    vertical-align: sub;
+    line-height: 0;
+}
+
+.content-middle h1 {
+    margin: 0rem;
+    /* padding: 6.40rem 0rem 3.2384375rem 0rem; */
+    padding: 6.40rem 0rem 3.2384375rem 0rem;
+}
+
+.plugin-filtermaincontent h1 {
+    padding: 3.0rem 0rem 3.2384375rem 0rem;
+}
+
+.plugin-jobs .inactive {
+    opacity: 0.5rem;
+}
+
+/*
+.plugin-jobs .inactive *,
+.plugin-jobs .inactive p,
+.plugin-jobs .inactive p span.firstletters,
+.plugin-jobs .inactive .title,
+.plugin-jobs .inactive a,
+.plugin-jobs .inactive .journal,
+.plugin-jobs .inactive div.authors span.title,
+.plugin-jobs .inactive div.journal span.title,
+.plugin-jobs .inactive div.journal span.journal,
+.plugin-jobs .inactive div.journal span.volume,
+.plugin-jobs .inactive div.journal span.pageref,
+.plugin-jobs .inactive div.journal span.year,
+.plugin-jobs .inactive div.location,
+.plugin-jobs .inactive div.group .title,
+.plugin-jobs .inactive div.group,
+.plugin-jobs .inactive div.description,
+.plugin-jobs .inactive div.fulltext,
+.plugin-jobs .inactive div.apply {
+    color: #878786;
+}
+*/
+
+/* Transitions */
+
+/* change text-color */
+.hoverTextOnly *,
+.hoverTextOnly p,
+.hoverTextOnly p span.firstletters,
+.hoverTextOnly .title,
+.hoverTextOnly a,
+.hoverTextOnly .journal,
+.hoverTextOnly div.authors span.title,
+.hoverTextOnly div.journal span.title,
+.hoverTextOnly div.journal span.journal,
+.hoverTextOnly div.journal span.volume,
+.hoverTextOnly div.journal span.pageref,
+.hoverTextOnly div.journal span.year,
+.hoverTextOnly div.location,
+.hoverTextOnly div.group .title,
+.hoverTextOnly div.group,
+.hoverTextOnly div.description,
+.hoverTextOnly div.fulltext,
+.hoverTextOnly div.content div.name,
+.hoverTextOnly div.content div.position,
+.hoverTextOnly div.apply,
+.hoverText *,
+.hoverText p,
+.hoverText p span.firstletters,
+.hoverText .title,
+.hoverText a,
+.hoverText button,
+.hoverText .journal,
+.hoverText div.authors span.title,
+.hoverText div.journal span.title,
+.hoverText div.journal span.journal,
+.hoverText div.journal span.volume,
+.hoverText div.journal span.pageref,
+.hoverText div.journal span.year,
+.hoverText div.location,
+.hoverText div.group .title,
+.hoverText div.group,
+.hoverText div.description,
+.hoverText div.fulltext,
+.hoverText div.title,
+.hoverText div.content,
+.hoverText div.content div.name,
+.hoverText div.content div.position,
+.hoverText div.apply,
+.plugin-people .person .content .name,
+.plugin-people .person .content .position {
+    -webkit-transition: color 0.5s linear; 
+    -moz-transition: color 0.5s linear; 
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+}	
+
+
+.hoverTextOnly:hover *,
+.hoverTextOnly:hover p,
+.hoverTextOnly:hover p span.firstletters,
+.hoverTextOnly:hover .title,
+.hoverTextOnly:hover a,
+.hoverTextOnly:hover .journal,
+.hoverTextOnly:hover div.authors span.title,
+.hoverTextOnly:hover div.journal span.title,
+.hoverTextOnly:hover div.journal span.journal,
+.hoverTextOnly:hover div.journal span.volume,
+.hoverTextOnly:hover div.journal span.pageref,
+.hoverTextOnly:hover div.journal span.year,
+.hoverTextOnly:hover div.location,
+.hoverTextOnly:hover div.group .title,
+.hoverTextOnly:hover div.group,
+.hoverTextOnly:hover div.description,
+.hoverTextOnly:hover div.fulltext,
+.hoverTextOnly:hover div.content div.name,
+.hoverTextOnly:hover div.content div.position,
+.hoverTextOnly:hover div.apply,
+.hoverText:hover *,
+.hoverText:hover p,
+.hoverText:hover p span.firstletters,
+.hoverText:hover .title,
+.hoverText:hover a,
+.hoverText:hover button,
+.hoverText:hover .journal,
+.hoverText:hover div.authors span.title,
+.hoverText:hover div.journal span.title,
+.hoverText:hover div.journal span.journal,
+.hoverText:hover div.journal span.volume,
+.hoverText:hover div.journal span.pageref,
+.hoverText:hover div.journal span.year,
+.hoverText:hover div.location,
+.hoverText:hover div.group .title,
+.hoverText:hover div.group,
+.hoverText:hover div.description,
+.hoverText:hover div.fulltext,
+.hoverText:hover div.content,
+.hoverText:hover div.title,
+.hoverText:hover div.content div.name,
+.hoverText:hover div.content div.position,
+.hoverText:hover div.apply,
+.plugin-people .person:hover .content .name,
+.plugin-people .person:hover .content .position {
+    color: #878786 !important;
+}
+
+/* pictures in the filter-elements on the mainsite */
+.color-shape .container-content img.background,
+.hoverText .picture img { 
+    /*
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    */
+
+    /*
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+    */
+
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+}
+
+.color-shape .container-content:hover img.background,
+.hoverText:hover .picture img {
+    
+    /*
+    -webkit-transform: scale(1.05,1.05);
+    -moz-transform: scale(1.05,1.05);
+    -o-transform: scale(1.05,1.05);
+    -ms-transform: scale(1.05,1.05);
+    transform: scale(1.05,1.05);
+    */
+
+    -webkit-transform: translate(-50%,-50%) scale(1.2);
+    -moz-transform: translate(-50%,-50%) scale(1.2);
+    -ms-transform: translate(-50%,-50%) scale(1.2);
+    -o-transform: translate(-50%,-50%) scale(1.2);
+    transform: translate(-50%,-50%) scale(1.2);
+
+    /*
+        -webkit-transform: scale(1.05);
+       -moz-transform: scale(1.05);
+       -o-transform: scale(1.05);
+       -ms-transform: scale(1.05);
+       transform: scale(1.05);
+       -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=1)";
+       filter: alpha(opacity=1);
+       opacity: 1;
+    */
+}
+
+/* Filter-Styles */
+.mainFilter {
+    padding-top: 5.19225rem;
+}
+
+.plugin-people .color-shape {
+    width: 20.224062500000002rem;
+    height: 27.475375rem;
+    padding: 1.3939375rem 0.478875rem;
+}
+.plugin-people .color-shape .picture img {
+    width: auto;
+    height: 100%;
+    display: block;
+}
+.plugin-people .color-shape .person {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.plugin-people .color-shape.technical-leader {
+    display: none;
+}
+.plugin-people .container-detail .curriculumvitae img,
+.plugin-people .container-detail .publicationsbefore img {
+    width: 2.209875rem;
+    height: 2.875rem;
+}
+.plugin-people .container-detail .curriculumvitae,
+.plugin-people .container-detail .publicationsbefore {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.25rem; 
+
+    bottom: 1.7173125rem;
+    position: absolute;
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .curriculumvitae a span,
+.plugin-people .container-detail .publicationsbefore a span {
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .curriculumvitae span,
+.plugin-people .container-detail .publicationsbefore span {
+    position: relative;
+    top: -0.9rem;
+    margin-left: 0.5rem;
+}
+.plugin-people .container-detail .publicationsbefore {
+    left: 14.0293125rem;
+}
+.plugin-people .color-shape .person .detail {
+    display: none;
+}
+.plugin-people .color-shape .person .picture {
+    width: 19.2663125rem;
+    height: 19.2663125rem;
+    /* text-align: center; */
+
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+.plugin-people .category .color-shape.lonely {
+    margin: auto;
+    float: initial;
+}
+.plugin-people .color-shape .person .content {
+    background-color: #f2f2f2;
+    min-height: 5.4691875rem;
+    padding: 0.875rem 1.2394375rem;
+}
+.plugin-people .color-shape .person .content .name {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.25rem;
+    color: #3c3c3b;
+}
+.plugin-people .color-shape .person .content .position {
+    font-family: 'CaslonClassico W00';
+    font-size: 0.9375rem;
+    color: #3c3c3b;
+
+    max-height: 1.625rem;;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.plugin-people .listing,
+.plugin-people .project-listing,
+.plugin-people .director-listing {
+    margin-top: 5.7003125rem;
+}
+.plugin-people .listing .category h2,
+.plugin-people .project-listing .category h2,
+.plugin-people .director-listing .category h2 {
+    text-align: center;
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 3.125rem;
+    margin-bottom: 4.286125rem;
+    margin-top: 8.056875rem;
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .detail .publications,
+.plugin-people .container-detail .detail .research,
+.plugin-people .container-detail .detail .team,
+.plugin-people .container-detail .detail .contacts {
+    display: none;
+}
+.plugin-people .container-detail .detail .contacts .contact {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.02rem;
+    margin-top: 1.25rem;
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .detail .contacts .contact.first {
+    margin-top: 0rem;
+}
+.plugin-people .container-detail .detail .contacts .name {
+    font-family: 'CaslonClassico W00' !important;
+    font-size: 1.125rem !important;
+    line-height: 1.75rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .detail .team {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 0.5rem;
+    -moz-column-gap: 0.5rem;
+    column-gap: 0.5rem;
+
+    -webkit-column-fill: auto;
+    -moz-column-fill: auto;
+    column-fill: auto;
+    
+    height: 95%;
+
+    padding-top: 0rem;
+
+    overflow: hidden;
+}
+
+.plugin-people .container-detail .detail .contacts .col-1 {
+    width: 25.25rem;
+    float: left;
+    padding: 0rem !important;
+    height: 100%;
+}
+.plugin-people .container-detail .detail .contacts .col-2 .contact-0 {
+    position: absolute;
+    top: 0rem;
+}
+.plugin-people .container-detail .detail .contacts .col-1 .contact-1,
+.plugin-people .container-detail .detail .contacts .col-2 .contact-1 {
+    position: absolute;
+    top: 8.75rem;
+}
+
+.plugin-people .container-detail .detail .contacts .col-1 .contact
+.plugin-people .container-detail .detail .contacts .col-2 .contact {
+    margin-top: 0rem;
+}
+
+.plugin-people .container-detail .detail .contacts .col-2 {
+    width: 18.4375rem;
+    float: right;
+    padding: 0rem 0rem 0rem 0rem !important;
+    height: 100%;
+}
+.plugin-people .container-detail .detail .contacts .col-2 .email {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+}
+
+.plugin-people .container-detail .detail .research p {
+    margin: 1rem 0rem 0rem 0rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.25rem;
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .detail .research ul li {
+    color: #3c3c3b;
+} 
+
+.plugin-people .container-detail {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding: 1.3939375rem 0.478875rem;
+} 
+
+.plugin-people .category.Director .container-detail .close {
+    display: none;
+}
+
+.plugin-people .container-detail .close {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/people-detail-close.svg');
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 0rem;
+    top: 3.75rem;
+    margin: 1.1875rem;
+    cursor: pointer;
+}
+.plugin-people .container-detail .detail {
+    background-color: #f2f2f2;
+}
+.plugin-people .container-detail .detail .col-1 {
+    width: 29.75rem;
+    float: left;
+}
+.plugin-people .container-detail .detail .col-2 {
+    width: 50rem;
+    float: right;
+    padding: 2.2375rem 3.125rem 0rem 3.125rem;
+    height: 29.75rem;
+
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+}
+
+.plugin-people .container-detail .detail .col-2 .room,
+.plugin-people .container-detail .detail .col-2 .phonenumber {
+    white-space: nowrap;
+}
+
+.plugin-people .container-detail .detail .col-2 .name {
+    font-size: 2rem;
+    font-family: 'Caslon Graphique W01 Regular';
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .detail .col-2 .position {
+    font-size: 1.125rem;
+    font-family: 'CaslonClassicoW00-BoldI';
+    color: #3c3c3b;
+
+    margin-top: 0.375rem;
+}
+.plugin-people .container-detail .tab-contents {
+    position: relative;
+    height: 22.25rem;
+    margin-top: 1.4295rem;
+}
+.plugin-people .container-detail .tab-contents .publication {
+    margin-top: 1rem;
+}
+.plugin-people .container-detail .tab-contents .publication.first {
+    margin-top: 0rem;
+}
+.plugin-people .container-detail .tab-contents .publication .title {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.25rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.5rem;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 1.7rem;
+    width: 100%;
+    white-space: nowrap;
+
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .tab-contents .publication .authors,
+.plugin-people .container-detail .tab-contents .publication .journal {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.5rem;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 1.7rem;
+    width: 100%;
+    white-space: nowrap;
+
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .tab-contents .publication .authors span.title,
+.plugin-people .container-detail .tab-contents .publication .journal span.title {
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.5rem;
+
+    font-variant: small-caps;
+    text-transform: lowercase;
+
+    color: #3c3c3b;
+}
+
+.plugin-people .container-detail .tab-contents .publication .journal span.journal {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .tab-contents .publication .journal span.volume {
+    font-family: 'CaslonClassico W00 Bold';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .tab-contents .publication .journal span.pageref {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .tab-contents .publication .journal span.year {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+.plugin-people .container-detail .tab-contents .tab-content {
+    height: 95%;
+    position: relative;
+    overflow: hidden;
+}
+
+.plugin-people .container-detail .tab-contents .tab-content .project-text p,
+.plugin-people .container-detail .tab-contents .tab-content .research-text p {
+    margin: 0rem;
+}
+.plugin-people .container-detail .tab-contents .tab-content .project-text {
+    margin-top: 1.875rem;
+}
+
+
+.plugin-people .container-detail .detail .image {
+    width: 29.75rem;
+    height: 29.75rem;
+    overflow: hidden;
+}
+.plugin-people .container-detail .detail .image img {
+    width: 100%;
+    height: auto;
+}
+.plugin-people .container-detail .tabs .tab {
+    font-family: 'AvenirNextRoundedW01-Re';
+
+    margin: 0rem 0.28125rem;
+    width: 10.9375rem;
+    height: 2.9366875rem;
+    text-align: center;
+    padding: 1rem;
+    color: #878786;
+    background-color: #000;
+    float: left;
+    cursor: pointer;
+}
+.plugin-people .container-detail .tabs .tab.first {
+    margin-left: 0rem;
+}
+
+.plugin-people .container-detail .tabs .tab.active {
+    background-color: #f2f2f2;
+    color: #3c3c3b;
+    font-family: 'Caslon Graphique W01 Regular';
+}
+.plugin-people .container-detail .tabs .tab.last {
+    margin-right: 0rem;
+}
+.plugin-people .container-detail .tab-contents .linktopublications {
+    /*margin-top: 1.5436875rem;*/
+    display: inline-block;
+    margin-top: 0.8rem;
+}
+.plugin-people .container-detail .tab-contents .linktopublications a {
+    margin-bottom: 0rem !important;
+    text-align: center;
+}
+
+.plugin-people .container-detail .tab-contents .tab-content .contact .personname {
+    text-decoration: underline;
+}
+
+.plugin-people .project-listing .category,
+.plugin-people .director-listing .category {
+    display: none;
+}
+
+.filter.publication-filter button {
+    width: 12.73239796066284090869rem;
+}
+
+.subsite-content-slideshow { height: 1%; overflow: hidden; padding: 0 0 10px; }
+.subsite-content-slideshow .viewport { float: left; width: 100%; height: 53.178625rem; overflow: hidden; position: relative; }
+.subsite-content-slideshow .buttons {
+    border-radius: 2.1875rem;
+    display: block;
+    float: left;
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.1875rem;
+    text-decoration: none;
+    font-size: 1.375rem;
+    top: 50%;
+    z-index: 10;
+    width: 5.5625rem;
+    height: 5.5625rem;
+    margin-top: -2.78125rem;
+}
+
+.subsite-content-slideshow .buttons.next {
+    float: right;
+    right: 0rem;
+}
+
+.subsite-content-slideshow .next {
+    margin: 30px 0 0 10px;
+}
+.subsite-content-slideshow .disable { visibility: hidden; }
+.subsite-content-slideshow .overview { list-style: none; position: absolute; padding: 0; margin: 0; width: 100%; left: 0; top: 0; height: 100%; }
+.subsite-content-slideshow .overview li { float: left; margin: 0 20px 0 0; padding: 1px; height: 100%; border: 1px solid #dcdcdc; width: 80rem; }
+.subsite-content-slideshow .overview li img { width: 100%; height: auto; }
+
+.page-49 #maincontent .content-middle,
+.page-118 #maincontent .content-middle,
+.page-114 #maincontent .content-middle,
+.page-116 #maincontent .content-middle,
+.page-121 #maincontent .content-middle,
+.page-112 #maincontent .content-middle,
+.page-113 #maincontent .content-middle,
+.page-115 #maincontent .content-middle,
+.page-111 #maincontent .content-middle {
+    width: 100%;
+}
+
+.subsite-content-slideshow .button-overlay-left a {
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/slideshow-left.svg);
+}
+.subsite-content-slideshow .button-overlay-right a {
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/slideshow-right.svg);
+}
+
+.plugin-picturewithscrolldown {
+    position: relative;
+}
+
+.plugin-picturewithscrolldown .header-line {
+    height: 44.44875rem;
+    color: #3c3c3b;
+}
+.plugin-picturewithscrolldown .header-line .description-text {
+    color: #fff;
+}
+.plugin-picturewithscrolldown .scroll-down {
+    position: absolute;
+    bottom: 1.6340625rem;
+    width: 8.357125rem;
+    height: 8.357125rem;
+    left: 50%;
+    margin-left: -4.1785625rem;
+    text-align: center;
+    
+    font-family: 'CaslonClassicoW00-Itali';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+    
+    cursor: pointer;
+}
+.plugin-picturewithscrolldown .scroll-down img {
+    height: 5.5625rem;
+    width: 5.5625rem;
+    
+    transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    
+    margin-top: 1.164rem;
+    display: inline-block;
+    color: #3c3c3b;
+}
+.plugin-picturewithscrolldown img {
+    width: 100%;
+    height: auto;
+}
+
+.page-49 .box a,
+.page-118 .box a {
+    color: #878786;
+    text-decoration: underline;
+}
+
+.page-49 .slidebox-headline,
+.page-118 .slidebox-headline,
+.page-114 .slidebox-headline,
+.page-116 .slidebox-headline,
+.page-121 .slidebox-headline,
+.page-112 .slidebox-headline,
+.page-113 .slidebox-headline,
+.page-115 .slidebox-headline,
+.page-111 .slidebox-headline {
+    font-family: 'CaslonClassico W00 Bold';
+    
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+    
+    padding: 1.03125rem 0rem;
+    
+    text-align: center;
+}
+
+.page-49 .slidebox-headline,
+.page-118 .slidebox-headline {
+    width: 41.1rem !important;
+    margin: auto;
+}
+
+.page-49 .slidebox,
+.page-118 .slidebox {
+    width: 56.75rem;
+}
+
+.page-49 .slidebox-toggle,
+.page-118 .slidebox-toggle,
+.page-114 .slidebox-toggle,
+.page-116 .slidebox-toggle,
+.page-121 .slidebox-toggle,
+.page-112 .slidebox-toggle,
+.page-113 .slidebox-toggle,
+.page-115 .slidebox-toggle,
+.page-111 .slidebox-toggle {
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/slidebox-toggle.svg);
+    text-align: center;
+    width: 2.625rem;
+    height: 2.635rem;
+    margin: 1rem auto 0rem auto;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    
+    -webkit-transition-property: opacity, -webkit-transform, color, background-color;
+    transition-property: opacity, transform, color, background-color;
+    -webkit-transition-duration: 1s,1s,.35s,.35s;
+    transition-duration: 1s,1s,.35s,.35s;
+    -webkit-transition-timing-function: cubic-bezier(0.6, 0, 0.48, 1),cubic-bezier(0.6, 0, 0.48, 1),linear,linear;
+    transition-timing-function: cubic-bezier(0.6, 0, 0.48, 1),cubic-bezier(0.6, 0, 0.48, 1),linear,linear;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.page-49 .slidebox-content,
+.page-118 .slidebox-content,
+.page-114 .slidebox-content,
+.page-116 .slidebox-content,
+.page-121 .slidebox-content,
+.page-112 .slidebox-content,
+.page-113 .slidebox-content,
+.page-115 .slidebox-content,
+.page-111 .slidebox-content {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+    
+    padding: 1.03125rem 0rem;
+    
+    text-align: center;
+    
+    display: none;
+}
+
+.page-49 .attoworld-header,
+.page-118 .attoworld-header,
+.page-114 .attoworld-header,
+.page-116 .attoworld-header,
+.page-121 .attoworld-header,
+.page-112 .attoworld-header,
+.page-113 .attoworld-header,
+.page-115 .attoworld-header,
+.page-111 .attoworld-header {
+    height: 41.4375rem;
+}
+
+.page-112 #c10 .introtext,
+.page-113 #c10 .introtext,
+.page-115 #c10 .introtext,
+.page-116 #c10 .introtext,
+.page-121 #c10 .introtext,
+.page-111 #c10 .introtext,
+.page-114 #c10 .introtext,
+.page-118 #c10 .introtext,
+.page-49 #c10 .introtext,
+.attoworld-gridelements header h1 {
+    
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+    letter-spacing: 0.2rem;
+    color: #3c3c3b;
+}
+
+.page-49 #c10 .small-caps,
+.page-118 #c10 .small-caps,
+.page-114 #c10 .small-caps,
+.page-116 #c10 .small-caps,
+.page-121 #c10 .small-caps,
+.page-112 #c10 .small-caps,
+.page-113 #c10 .small-caps,
+.page-115 #c10 .small-caps,
+.page-111 #c10 .small-caps,
+.attoworld-gridelements header h1 {
+    font-variant: small-caps;
+    font-size: 1.25rem;
+    line-height: 2.125rem;
+    letter-spacing: 0.2rem;
+    color: #3c3c3b;
+    
+    font-family: 'AvenirNextRoundedW01-Re';
+    letter-spacing: 0.2rem;
+}
+
+.attoworld-gridelements header h1 {
+    padding: 0rem;
+}
+
+.page-49 #c10 .pc,
+.page-118 #c10 .pc,
+.page-114 #c10 .pc,
+.page-116 #c10 .pc,
+.page-121 #c10 .pc,
+.page-112 #c10 .pc,
+.page-113 #c10 .pc,
+.page-115 #c10 .pc,
+.page-111 #c10 .pc {
+    font-family: 'CaslonClassicoW00-Itali';
+    font-size: 1.25rem;
+    color: #3c3c3b;
+    letter-spacing: 0.02rem;
+    
+    margin-top: 0.5rem;
+}
+
+.attoworld-gridelements header h2 {
+    font-family: 'CaslonClassicoW00-Itali' !important;
+    font-size: 1.25rem !important;
+    color: #3c3c3b !important;
+    letter-spacing: 0.02rem !important;
+    
+    margin-top: 0.5rem !important;
+    
+    padding: 0rem !important;
+}
+
+.page-114 #c10 .header-line,
+.page-111 #c10 .header-line,
+.page-116 #c10 .header-line,
+.page-121 #c10 .header-line,
+.page-112 #c10 .header-line,
+.page-113 #c10 .header-line,
+.page-115 #c10 .header-line,
+.page-118 #c10 .header-line,
+.page-49 #c10 .header-line {
+    overflow: hidden;
+}
+.page-114 #c10 .header-line img,
+.page-111 #c10 .header-line img,
+.page-116 #c10 .header-line img,
+.page-121 #c10 .header-line img,
+.page-112 #c10 .header-line img,
+.page-113 #c10 .header-line img,
+.page-115 #c10 .header-line img,
+.page-118 #c10 .header-line img,
+.page-49 #c10 .header-line img {
+    width: 100%;
+}
+.page-114 #c10 .headline,
+.page-111 #c10 .headline,
+.page-116 #c10 .headline,
+.page-121 #c10 .headline,
+.page-112 #c10 .headline,
+.page-113 #c10 .headline,
+.page-115 #c10 .headline,
+.page-118 #c10 .headline,
+.page-49 #c10 .headline,
+.attoworld-gridelements h2 {
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 3.4375rem;
+    line-height: 4.125rem;
+    color: #3c3c3b;
+    
+    padding: 2.5683125rem 0rem;
+}
+.page-114 #c10 .text,
+.page-111 #c10 .text,
+.page-116 #c10 .text,
+.page-121 #c10 .text,
+.page-112 #c10 .text,
+.page-113 #c10 .text,
+.page-115 #c10 .text,
+.page-118 #c10 .text,
+.page-49 #c10 .text,
+.gridelements-column .ce-bodytext p {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+    
+    padding: 1.03125rem 0rem;
+}
+.page-114 #c10 .text.italic,
+.page-111 #c10 .text.italic,
+.page-116 #c10 .text.italic,
+.page-121 #c10 .text.italic,
+.page-112 #c10 .text.italic,
+.page-113 #c10 .text.italic,
+.page-115 #c10 .text.italic,
+.page-118 #c10 .text.italic,
+.page-49 #c10 .text.italic,
+.gridelements-column .ce-bodytext p i {
+    font-family: 'CaslonClassicoW00-BoldI';
+    color: #3c3c3b;
+}
+.page-114 #c10 .text span.italic.bold,
+.page-111 #c10 .text span.italic.bold,
+.page-116 #c10 .text span.italic.bold,
+.page-121 #c10 .text span.italic.bold,
+.page-112 #c10 .text span.italic.bold,
+.page-113 #c10 .text span.italic.bold,
+.page-115 #c10 .text span.italic.bold,
+.page-118 #c10 .text span.italic.bold,
+.page-49 #c10 .text span.italic.bold,
+.gridelements-column .ce-bodytext p b i,
+.gridelements-column .ce-bodytext p i b {
+    font-family: 'CaslonClassicoW00-BoldI';
+    color: #3c3c3b;
+}
+.page-114 #c10 .text.italic.bold,
+.page-111 #c10 .text.italic.bold,
+.page-116 #c10 .text.italic.bold,
+.page-121 #c10 .text.italic.bold,
+.page-112 #c10 .text.italic.bold,
+.page-113 #c10 .text.italic.bold,
+.page-115 #c10 .text.italic.bold,
+.page-118 #c10 .text.italic.bold,
+.page-49 #c10 .text.italic.bold {
+    font-family: 'CaslonClassicoW00-BoldI';
+    color: #3c3c3b;
+}
+.page-114 #c10 .text.withoutTopPadding,
+.page-111 #c10 .text.withoutTopPadding,
+.page-116 #c10 .text.withoutTopPadding,
+.page-121 #c10 .text.withoutTopPadding,
+.page-112 #c10 .text.withoutTopPadding,
+.page-113 #c10 .text.withoutTopPadding,
+.page-115 #c10 .text.withoutTopPadding,
+.page-118 #c10 .text.withoutTopPadding,
+.page-49 #c10 .text.withoutTopPadding {
+    padding-top: 0rem !important;
+}
+
+.page-114 #c10 .text a,
+.page-111 #c10 .text a,
+.page-116 #c10 .text a,
+.page-121 #c10 .text a,
+.page-112 #c10 .text a,
+.page-113 #c10 .text a,
+.page-115 #c10 .text a,
+.page-118 #c10 .text a,
+.page-49 #c10 .text a {
+    font-family: 'CaslonClassicoW00-BoldI';
+    text-decoration: underline;
+}
+
+.page-114 #c10 .text.bold,
+.page-111 #c10 .text.bold,
+.page-116 #c10 .text.bold,
+.page-121 #c10 .text.bold,
+.page-112 #c10 .text.bold,
+.page-113 #c10 .text.bold,
+.page-115 #c10 .text.bold,
+.page-118 #c10 .text.bold,
+.page-49 #c10 .text.bold,
+.page-114 #c10 .text .bold,
+.page-111 #c10 .text .bold,
+.page-116 #c10 .text .bold,
+.page-121 #c10 .text .bold,
+.page-112 #c10 .text .bold,
+.page-113 #c10 .text .bold,
+.page-115 #c10 .text .bold,
+.page-118 #c10 .text .bold
+.page-49 #c10 .text .bold,
+.gridelements-column .ce-bodytext p b {
+    font-family: 'CaslonClassico W00 Bold' !important;
+    color: #3c3c3b;
+}
+
+.page-114 #c10 .text.bold .italic,
+.page-111 #c10 .text.bold .italic,
+.page-116 #c10 .text.bold .italic,
+.page-121 #c10 .text.bold .italic,
+.page-112 #c10 .text.bold .italic,
+.page-113 #c10 .text.bold .italic,
+.page-115 #c10 .text.bold .italic,
+.page-118 #c10 .text.bold .italic,
+.page-49 #c10 .text.bold .italic,
+.gridelements-column .ce-bodytext p b i,
+.gridelements-column .ce-bodytext p i b{
+    font-family: 'CaslonClassicoW00-BoldI';
+}
+
+#header-slideshow .text .italic,
+#header-slideshow .text .italic,
+#header-slideshow .text .italic,
+#header-slideshow .text .italic,
+#header-slideshow .text .italic,
+#header-slideshow .text .italic,
+#header-slideshow .text .italic,
+#header-slideshow .text .italic, {
+    font-family: 'AvenirNextRoundedW01-Md1075565';
+}
+
+.page-114 #c10 .text .italic,
+.page-111 #c10 .text .italic,
+.page-116 #c10 .text .italic,
+.page-121 #c10 .text .italic,
+.page-112 #c10 .text .italic,
+.page-113 #c10 .text .italic,
+.page-115 #c10 .text .italic,
+.page-118 #c10 .text .italic,
+.page-49 #c10 .text .italic,
+.gridelements-column .ce-bodytext p i {
+    font-family: 'CaslonClassicoW00-Itali';
+}
+
+.page-114 #c10 .text,
+.page-111 #c10 .text,
+.page-116 #c10 .text,
+.page-121 #c10 .text,
+.page-112 #c10 .text,
+.page-113 #c10 .text,
+.page-115 #c10 .text,
+.page-118 #c10 .text,
+.page-49 #c10 .text,
+.gridelements-column .ce-bodytext p
+{
+    width: 41.1rem;
+    margin: auto;
+}
+.page-114 #c10 .timeline-slideitem.wide .text,
+.page-111 #c10 .timeline-slideitem.wide .text,
+.page-116 #c10 .timeline-slideitem.wide .text,
+.page-121 #c10 .timeline-slideitem.wide .text,
+.page-112 #c10 .timeline-slideitem.wide .text,
+.page-113 #c10 .timeline-slideitem.wide .text,
+.page-115 #c10 .timeline-slideitem.wide .text,
+.page-118 #c10 .timeline-slideitem.wide .text,
+.page-49 #c10 .timeline-slideitem.wide .text {
+    width: 54.048rem;
+    margin: auto;
+}
+
+.timeline-slideitem .text span.bolditalic {
+    font-family: 'CaslonClassicoW00-BoldI';
+}
+.timeline-slideitem .text span.smallcaps,
+.text span.smallcaps {
+    font-family: 'CaslonClassico W00 SC';
+}
+
+.timeline-slideitem .hoverTextOnly {
+    margin-bottom: 2rem;
+}
+
+.page-118 #c10 .text.large,
+.page-49 #c10 .text.large {
+    width: 100%;
+    margin: auto;
+}
+
+.page-118 #c10 .text.gray,
+.page-49 #c10 .text.gray {
+    color: #878786;
+}
+
+.page-118 #c10 .text.small
+.page-49 #c10 .text.small {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.02rem;
+}
+
+.page-118 #c10 .text.AvenirNextRoundedRegular,
+.page-49 #c10 .text.AvenirNextRoundedRegular {
+    font-family: 'AvenirNextRoundedW01-Re';
+    color: #3c3c3b;
+}
+
+.page-114 #c10 .center.text,
+.page-111 #c10 .center.text,
+.page-112 #c10 .center.text,
+.page-113 #c10 .center.text,
+.page-115 #c10 .center.text,
+.page-116 #c10 .center.text,
+.page-121 #c10 .center.text,
+.page-118 #c10 .center.text, 
+.page-49 #c10 .center.text {
+    margin: auto;
+    width: 40.75rem;
+}
+.page-114 #c10 .imagecaption,
+.page-111 #c10 .imagecaption,
+.page-112 #c10 .imagecaption,
+.page-113 #c10 .imagecaption,
+.page-115 #c10 .imagecaption,
+.page-116 #c10 .imagecaption,
+.page-121 #c10 .imagecaption,
+.page-118 #c10 .imagecaption,
+.page-49 #c10 .imagecaption {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    color: #3c3c3b;
+    margin-top: 1rem;
+}
+
+.page-49 #c10 .jump,
+.page-49 #c10 .link,
+.page-118 #c10 .jump,
+.page-118 #c10 .link,
+.page-114 #c10 .jump,
+.page-114 #c10 .link,
+.page-116 #c10 .jump,
+.page-116 #c10 .link,
+.page-121 #c10 .jump,
+.page-121 #c10 .link,
+.page-112 #c10 .jump,
+.page-112 #c10 .link,
+.page-113 #c10 .jump,
+.page-113 #c10 .link,
+.page-115 #c10 .jump,
+.page-115 #c10 .link,
+.page-111 #c10 .jump,
+.page-111 #c10 .link  {
+    font-family: 'CaslonClassicoW00-Itali';
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+    letter-spacing: 0.02rem;
+    
+    text-decoration: none;
+    color: #3c3c3b;
+}
+.text-jump {
+    font-family: 'CaslonClassicoW00-Itali';
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+    letter-spacing: 0.02rem;
+    text-decoration: underline;
+    color: #3c3c3b;
+    
+    text-decoration: underline;
+}
+/*
+.page-114 #c10 .picture,
+.page-112 #c10 .picture,
+.page-113 #c10 .picture,
+.page-115 #c10 .picture,
+.page-116 #c10 .picture,
+.page-121 #c10 .picture,
+.page-111 #c10 .picture,
+.page-49 #c10 .picture {
+    margin-top: 1.5rem;
+}
+*/
+.page-114 #c10 .link,
+.page-112 #c10 .link,
+.page-113 #c10 .link,
+.page-115 #c10 .link,
+.page-116 #c10 .link,
+.page-121 #c10 .link,
+.page-111 #c10 .link,
+.page-118 #c10 .link,
+.page-49 #c10 .link {
+    margin-bottom: 1rem;
+    display: block;
+}
+.page-114 #c10 .smalltext,
+.page-112 #c10 .smalltext,
+.page-113 #c10 .smalltext,
+.page-115 #c10 .smalltext,
+.page-116 #c10 .smalltext,
+.page-121 #c10 .smalltext,
+.page-111 #c10 .smalltext,
+.page-118 #c10 .smalltext,
+.page-49 #c10 .smalltext {
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+    
+    width: 75.75rem;
+    margin: auto;
+}
+.page-114 #c10 .smalltext.bold,
+.page-112 #c10 .smalltext.bold,
+.page-113 #c10 .smalltext.bold,
+.page-115 #c10 .smalltext.bold,
+.page-116 #c10 .smalltext.bold,
+.page-121 #c10 .smalltext.bold,
+.page-111 #c10 .smalltext.bold,
+.page-118 #c10 .smalltext.bold,
+.page-49 #c10 .smalltext.bold {
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    color: #3c3c3b;
+}
+.page-114 #c10 h2,
+.page-111 #c10 h2,
+.page-116 #c10 h2,
+.page-121 #c10 h2,
+.page-112 #c10 h2,
+.page-113 #c10 h2,
+.page-115 #c10 h2,
+.page-118 #c10 h2,
+.page-49 #c10 h2,
+.plugin-graphicalabstract h2 {
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 3.4375rem;
+    line-height: 4.125rem;
+    color: #3c3c3b;
+    
+    margin: 0rem;
+    padding: 1.6875rem 0rem;
+    
+    text-align: center;
+}
+.plugin-coverstories h2,
+.plugin-milestones h2 {
+    padding: 4.1875rem 0rem !important;
+}
+
+.plugin-progressreports h2 {
+    padding: 0rem 0rem 4.1875rem 0rem !important;
+}
+
+.plugin-zitat p {
+    margin: 0rem;
+}
+
+.plugin-graphicalabstract h2 {
+    padding: 0rem 0rem 1.6875rem 0rem !important;
+}
+
+.plugin-graphicalabstract .smalltext {
+    text-align: center;
+}
+
+.page-114 #c10 blockquote,
+.page-116 #c10 blockquote,
+.page-121 #c10 blockquote,
+.page-112 #c10 blockquote,
+.page-113 #c10 blockquote,
+.page-115 #c10 blockquote,
+.page-111 #c10 blockquote,
+.page-118 #c10 blockquote,
+.page-49 #c10 blockquote {
+    font-size: 1.5rem;
+    font-family: 'CaslonClassicoW00-BoldI';
+    line-height: 2.25rem;
+    color: #3c3c3b;
+    
+    width: 34rem;
+    margin: auto;
+}
+.page-114 #c10 blockquote:before,
+.page-116 #c10 blockquote:before,
+.page-121 #c10 blockquote:before,
+.page-112 #c10 blockquote:before,
+.page-113 #c10 blockquote:before,
+.page-115 #c10 blockquote:before,
+.page-111 #c10 blockquote:before,
+.page-118 #c10 blockquote:before,
+.page-49 #c10 blockquote:before {
+    content: '»';
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 4.625rem;
+    color: #878786;
+    
+    display: block;
+    position: relative;
+    top: -0.9rem;
+    
+    /*
+    position: relative;
+    top: 0.65rem;
+    right: 0.25rem;
+    */
+}
+.page-114 #c10 blockquote:after,
+.page-112 #c10 blockquote:after,
+.page-113 #c10 blockquote:after,
+.page-115 #c10 blockquote:after,
+.page-116 #c10 blockquote:after,
+.page-121 #c10 blockquote:after,
+.page-111 #c10 blockquote:after,
+.page-118 #c10 blockquote:after,
+.page-49 #c10 blockquote:after {
+    content: '«';
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 4.625rem;
+    color: #878786;
+    
+    display: block;
+    
+    position: relative;
+    top: 0.5rem;
+    
+    /*
+    position: relative;
+    top: 0.65rem;
+    left: 0.25rem;
+    */
+}
+.page-114 #c10 .source,
+.page-112 #c10 .source,
+.page-113 #c10 .source,
+.page-115 #c10 .source,
+.page-116 #c10 .source,
+.page-121 #c10 .source,
+.page-111 #c10 .source,
+.page-118 #c10 .source,
+.page-49 #c10 .source {
+    font-family: 'CaslonClassico W00 SC';
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+}
+.page-114 #c10 .box,
+.page-112 #c10 .box,
+.page-113 #c10 .box,
+.page-115 #c10 .box,
+.page-116 #c10 .box,
+.page-121 #c10 .box,
+.page-111 #c10 .box,
+.page-118 #c10 .box,
+.page-49 #c10 .box,
+.plugin-graphicalabstract,
+.attoworld-gridelements .gridelements-row {
+    padding: 4.1875rem 0rem;
+    
+    display: table;
+}
+.page-114 #c10 .box.marginauto,
+.page-112 #c10 .box.marginauto,
+.page-113 #c10 .box.marginauto,
+.page-115 #c10 .box.marginauto,
+.page-116 #c10 .box.marginauto,
+.page-121 #c10 .box.marginauto,
+.page-111 #c10 .box.marginauto,
+.page-118 #c10 .box.marginauto,
+.page-49 #c10 .box.marginauto {
+    margin: auto;
+    width: 80rem;
+}
+.page-114 #c10 .box.grey,
+.page-112 #c10 .box.grey,
+.page-113 #c10 .box.grey,
+.page-115 #c10 .box.grey,
+.page-116 #c10 .box.grey,
+.page-121 #c10 .box.grey,
+.page-111 #c10 .box.grey,
+.page-118 #c10 .box.grey,
+.page-49 #c10 .box.grey,
+.attoworld-gridelements .layout-1-odd,
+.attoworld-gridelements .layout-0-even,
+.plugin-graphicalabstract.layout-1{
+    background-color: #f2f2f2;
+}
+.page-114 #c10 .box.white,
+.page-112 #c10 .box.white,
+.page-113 #c10 .box.white,
+.page-115 #c10 .box.white,
+.page-116 #c10 .box.white,
+.page-121 #c10 .box.white,
+.page-111 #c10 .box.white,
+.page-118 #c10 .box.white,
+.page-49 #c10 .box.white,
+.attoworld-gridelements .layout-1-even,
+.attoworld-gridelements .layout-0-odd {
+    background-color: #fff;
+}
+.page-114 #c10 .center,
+.page-112 #c10 .center,
+.page-113 #c10 .center,
+.page-115 #c10 .center,
+.page-116 #c10 .center,
+.page-121 #c10 .center,
+.page-111 #c10 .center,
+.page-118 #c10 .center,
+.page-49 #c10 .center,
+.attoworld-gridelements .column-1 {
+    width: 56.75rem;
+    
+    display: table-cell;
+    text-align: center;
+}
+.page-114 #c10 .center,
+.page-112 #c10 .center,
+.page-113 #c10 .center,
+.page-115 #c10 .center,
+.page-116 #c10 .center,
+.page-121 #c10 .center,
+.page-111 #c10 .center,
+.page-118 #c10 .center,
+.page-49 #c10 .center,
+.attoworld-gridelements .column-1 {
+    width: 56.75rem;
+}
+.page-114 #c10 .marginauto .center,
+.page-112 #c10 .marginauto .center,
+.page-113 #c10 .marginauto .center,
+.page-115 #c10 .marginauto .center,
+.page-116 #c10 .marginauto .center,
+.page-121 #c10 .marginauto .center,
+.page-111 #c10 .marginauto .center,
+.page-118 #c10 .marginauto .center,
+.page-49 #c10 .marginauto .center {
+    width: 100% !important;
+}
+.page-114 #c10 .center.sub-slideshow-container,
+.page-112 #c10 .center.sub-slideshow-container,
+.page-113 #c10 .center.sub-slideshow-container,
+.page-115 #c10 .center.sub-slideshow-container,
+.page-116 #c10 .center.sub-slideshow-container,
+.page-121 #c10 .center.sub-slideshow-container,
+.page-111 #c10 .center.sub-slideshow-container,
+.page-118 #c10 .center.sub-slideshow-container,
+.page-49 #c10 .center.sub-slideshow-container,
+.page-118 #c10 .center.timeline-slideshow-container,
+.page-49 #c10 .center.timeline-slideshow-container {
+    width: 100%;
+}
+
+.page-49 #c10 .left,
+.page-49 #c10 .right,
+.page-118 #c10 .left,
+.page-118 #c10 .right,
+.page-112 #c10 .left,
+.page-112 #c10 .right,
+.page-113 #c10 .left,
+.page-113 #c10 .right,
+.page-115 #c10 .left,
+.page-115 #c10 .right,
+.page-116 #c10 .left,
+.page-116 #c10 .right,
+.page-121 #c10 .left,
+.page-121 #c10 .right,
+.page-111 #c10 .left,
+.page-111 #c10 .right,
+.page-114 #c10 .left,
+.page-114 #c10 .right,
+.attoworld-gridelements .column-0,
+.attoworld-gridelements .column-2 {
+    width: 33.5rem;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+.page-114 #c10 img.ga,
+.page-112 #c10 img.ga,
+.page-113 #c10 img.ga,
+.page-115 #c10 img.ga,
+.page-116 #c10 img.ga,
+.page-121 #c10 img.ga,
+.page-111 #c10 img.ga,
+.page-118 #c10 img.ga,
+.page-49 #c10 img.ga {
+    margin-top: 1.8756875000000002rem;
+    margin-bottom: 3.2211875rem;
+    width: 100%;
+}
+.page-114 #c10 .svg-type-1,
+.page-112 #c10 .svg-type-1,
+.page-113 #c10 .svg-type-1,
+.page-115 #c10 .svg-type-1,
+.page-116 #c10 .svg-type-1,
+.page-121 #c10 .svg-type-1,
+.page-111 #c10 .svg-type-1,
+.page-118 #c10 .svg-type-1,
+.page-49 #c10 .svg-type-1 {
+    width: auto;
+    height: 11.25rem;
+    /*margin-top: 2rem;*/
+}
+.page-114 #c10 .paddingTop,
+.page-112 #c10 .paddingTop,
+.page-113 #c10 .paddingTop,
+.page-115 #c10 .paddingTop,
+.page-116 #c10 .paddingTop,
+.page-121 #c10 .paddingTop,
+.page-111 #c10 .paddingTop,
+.page-118 #c10 .paddingTop,
+.page-49 #c10 .paddingTop {
+    /* padding-top: 1.5625rem; */
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    margin-bottom: 0.125rem;
+    
+    text-decoration: none;
+}
+.page-114 #c10 #ga,
+.page-112 #c10 #ga,
+.page-113 #c10 #ga,
+.page-115 #c10 #ga,
+.page-116 #c10 #ga,
+.page-121 #c10 #ga,
+.page-111 #c10 #ga,
+.page-118 #c10 #ga,
+.page-49 #c10 #ga {
+    width: 100%;
+}
+.page-49 #c10 #ga .left,
+.page-49 #c10 #ga .right,
+.page-118 #c10 #ga .left,
+.page-118 #c10 #ga .right,
+.page-112 #c10 #ga .left,
+.page-112 #c10 #ga .right,
+.page-113 #c10 #ga .left,
+.page-113 #c10 #ga .right,
+.page-115 #c10 #ga .left,
+.page-115 #c10 #ga .right,
+.page-116 #c10 #ga .left,
+.page-116 #c10 #ga .right,
+.page-121 #c10 #ga .left,
+.page-121 #c10 #ga .right,
+.page-111 #c10 #ga .left,
+.page-111 #c10 #ga .right,
+.page-114 #c10 #ga .left,
+.page-114 #c10 #ga .right {
+    display: none !important;
+}
+.page-49 #c10 #ga .center,
+.page-118 #c10 #ga .center,
+.page-112 #c10 #ga .center,
+.page-113 #c10 #ga .center,
+.page-115 #c10 #ga .center,
+.page-121 #c10 #ga .center,
+.page-116 #c10 #ga .center,
+.page-111 #c10 #ga .center,
+.page-114 #c10 #ga .center {
+    width: 100% !important;
+    display: block !important;
+}
+
+.page-49 #c10 .hoverTextOnly .picture,
+.page-118 #c10 .hoverTextOnly .picture,
+.page-112 #c10 .hoverTextOnly .picture,
+.page-113 #c10 .hoverTextOnly .picture,
+.page-115 #c10 .hoverTextOnly .picture,
+.page-116 #c10 .hoverTextOnly .picture,
+.page-121 #c10 .hoverTextOnly .picture,
+.page-111 #c10 .hoverTextOnly .picture,
+.page-114 #c10 .hoverTextOnly .picture {
+    
+    width: 14.5798125rem !important;
+    overflow: hidden !important;
+    position: relative !important;
+    
+    margin: 2.1561875rem auto 0.75rem auto;
+    
+}
+.page-49 #c10 .picture.round,
+.page-118 #c10 .picture.round,
+.page-112 #c10 .picture.round,
+.page-113 #c10 .picture.round,
+.page-115 #c10 .picture.round,
+.page-116 #c10 .picture.round,
+.page-121 #c10 .picture.round,
+.page-111 #c10 .picture.round,
+.page-114 #c10 .picture.round {
+    height: 14.5798125rem !important;
+    border-radius: 50% !important;
+}
+.page-49 #c10 .left .picture.round,
+.page-118 #c10 .left .picture.round {
+    margin-left: 13.375rem;
+}
+.page-118 #c10 .right .picture.round
+.page-49 #c10 .right .picture.round {
+    margin-right: 13.375rem;
+}
+.page-118 #c10 .right .paddingTop,
+.page-118 #c10 .right .text-jump,
+.page-49 #c10 .right .paddingTop,
+.page-49 #c10 .right .text-jump {
+    margin-right: 8.5rem;
+}
+.page-118 #c10 .left .paddingTop,
+.page-118 #c10 .left .text-jump,
+.page-49 #c10 .left .paddingTop,
+.page-49 #c10 .left .text-jump {
+    margin-left: 8.5rem;
+}
+
+    
+
+.page-49 #c10 img.round,
+.page-118 #c10 img.round,
+.page-112 #c10 img.round,
+.page-113 #c10 img.round,
+.page-115 #c10 img.round,
+.page-116 #c10 img.round,
+.page-121 #c10 img.round,
+.page-111 #c10 img.round,
+.page-114 #c10 img.round {
+    /*
+    border-radius: 50%;
+    width: 14.5798125rem;
+    */
+    width: auto !important;
+    height: 14.5798125rem !important;
+    
+}
+
+.page-118 #c10 .timeline-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-118 #c10 .sub-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-49 #c10 .timeline-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-49 #c10 .sub-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-112 #c10 .sub-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-113 #c10 .sub-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-115 #c10 .sub-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-116 #c10 .sub-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-121 #c10 .sub-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-111 #c10 .sub-slideshow .viewport ul li .hoverTextOnly .picture,
+.page-114 #c10 .sub-slideshow .viewport ul li .hoverTextOnly .picture {
+    height: 14.5798125rem !important;
+}
+
+.page-49 #c137,
+.page-118 #c137,
+.page-112 #c137,
+.page-113 #c137,
+.page-115 #c137,
+.page-116 #c137,
+.page-121 #c137,
+.page-111 #c137,
+.page-114 #c137 {
+    height: 100%;
+}
+.page-49 .plugin-picturewithscrolldown,
+.page-118 .plugin-picturewithscrolldown,
+.page-112 .plugin-picturewithscrolldown,
+.page-113 .plugin-picturewithscrolldown,
+.page-115 .plugin-picturewithscrolldown,
+.page-121 .plugin-picturewithscrolldown,
+.page-116 .plugin-picturewithscrolldown,
+.page-111 .plugin-picturewithscrolldown,
+.page-114 .plugin-picturewithscrolldown {
+    height: 100%;
+}
+
+
+/* Standard-Styles zum schnellen ändern einzelner Komponenten NUR für die Sub-Slideshow - BEGINN */
+.page-49 #c10 .sub-slideshow,
+.page-49 #c10 .timeline-slideshow,
+.page-118 #c10 .sub-slideshow,
+.page-118 #c10 .timeline-slideshow,
+.page-112 #c10 .sub-slideshow,
+.page-113 #c10 .sub-slideshow,
+.page-115 #c10 .sub-slideshow,
+.page-116 #c10 .sub-slideshow,
+.page-121 #c10 .sub-slideshow,
+.page-111 #c10 .sub-slideshow,
+.page-114 #c10 .sub-slideshow {
+    padding: 0 0 0 0;
+    position: relative;
+    text-align: center;
+}
+.page-118 #c10 .sub-slideshow .buttons,
+.page-118 #c10 .timeline-slideshow .buttons,
+.page-49 #c10 .sub-slideshow .buttons,
+.page-49 #c10 .timeline-slideshow .buttons,
+.page-112 #c10 .sub-slideshow .buttons,
+.page-113 #c10 .sub-slideshow .buttons,
+.page-115 #c10 .sub-slideshow .buttons,
+.page-116 #c10 .sub-slideshow .buttons,
+.page-121 #c10 .sub-slideshow .buttons,
+.page-111 #c10 .sub-slideshow .buttons,
+.page-114 #c10 .sub-slideshow .buttons {
+    border-radius: 2.1875rem;
+    display: block;
+    float: left;
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.1875rem;
+    text-decoration: none;
+    font-size: 1.375rem;
+    top: 50%;
+    z-index: 10;
+
+    width: 5.5625rem;
+    height: 5.5625rem;
+
+    margin-top: -2.78125rem;
+
+}
+.page-118 #c10 .sub-slideshow .buttons.prev,
+.page-118 #c10 .timeline-slideshow .buttons.prev,
+.page-49 #c10 .sub-slideshow .buttons.prev,
+.page-49 #c10 .timeline-slideshow .buttons.prev,
+.page-112 #c10 .sub-slideshow .buttons.prev,
+.page-113 #c10 .sub-slideshow .buttons.prev,
+.page-115 #c10 .sub-slideshow .buttons.prev,
+.page-116 #c10 .sub-slideshow .buttons.prev,
+.page-121 #c10 .sub-slideshow .buttons.prev,
+.page-111 #c10 .sub-slideshow .buttons.prev,
+.page-114 #c10 .sub-slideshow .buttons.prev {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/slideshow-left.svg');
+    left: -8rem;
+    background-repeat: no-repeat;
+}
+.page-118 #c10 .sub-slideshow .buttons.next,
+.page-118 #c10 .timeline-slideshow .buttons.next,
+.page-49 #c10 .sub-slideshow .buttons.next,
+.page-49 #c10 .timeline-slideshow .buttons.next,
+.page-112 #c10 .sub-slideshow .buttons.next,
+.page-113 #c10 .sub-slideshow .buttons.next,
+.page-115 #c10 .sub-slideshow .buttons.next,
+.page-116 #c10 .sub-slideshow .buttons.next,
+.page-121 #c10 .sub-slideshow .buttons.next,
+.page-111 #c10 .sub-slideshow .buttons.next,
+.page-114 #c10 .sub-slideshow .buttons.next {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/slideshow-right.svg');
+    right: -8rem;
+    background-repeat: no-repeat;
+}
+.page-118 #c10 .sub-slideshow .viewport,
+.page-118 #c10 .timeline-slideshow .viewport,
+.page-49 #c10 .sub-slideshow .viewport,
+.page-49 #c10 .timeline-slideshow .viewport,
+.page-112 #c10 .sub-slideshow .viewport,
+.page-113 #c10 .sub-slideshow .viewport,
+.page-115 #c10 .sub-slideshow .viewport,
+.page-116 #c10 .sub-slideshow .viewport,
+.page-121 #c10 .sub-slideshow .viewport,
+.page-111 #c10 .sub-slideshow .viewport,
+.page-114 #c10 .sub-slideshow .viewport {
+    overflow: hidden;
+    width: 100%;
+    height: 47.1875rem;
+    position: relative;
+}
+.page-118 #c10 .sub-slideshow .viewport ul,
+.page-118 #c10 .timeline-slideshow .viewport ul,
+.page-49 #c10 .sub-slideshow .viewport ul,
+.page-49 #c10 .timeline-slideshow .viewport ul,
+.page-112 #c10 .sub-slideshow .viewport ul,
+.page-113 #c10 .sub-slideshow .viewport ul,
+.page-115 #c10 .sub-slideshow .viewport ul,
+.page-116 #c10 .sub-slideshow .viewport ul,
+.page-121 #c10 .sub-slideshow .viewport ul,
+.page-111 #c10 .sub-slideshow .viewport ul,
+.page-114 #c10 .sub-slideshow .viewport ul {
+    list-style: none;
+    position: absolute;
+    padding: 0rem;
+    height: 100%;
+    margin: 0rem;
+}
+.page-118 #c10 .sub-slideshow .viewport ul li,
+.page-118 #c10 .timeline-slideshow .viewport ul li,
+.page-49 #c10 .sub-slideshow .viewport ul li,
+.page-49 #c10 .timeline-slideshow .viewport ul li,
+.page-112 #c10 .sub-slideshow .viewport ul li,
+.page-115 #c10 .sub-slideshow .viewport ul li,
+.page-113 #c10 .sub-slideshow .viewport ul li,
+.page-116 #c10 .sub-slideshow .viewport ul li,
+.page-121 #c10 .sub-slideshow .viewport ul li,
+.page-111 #c10 .sub-slideshow .viewport ul li,
+.page-114 #c10 .sub-slideshow .viewport ul li {
+    float: left;
+    padding: 0rem;
+    margin: 0rem;
+    height: 100%;
+    position: relative;
+    width: 80rem;
+} 
+
+.page-49 #c10 .timeline-slideshow .viewport ul li,
+.page-118 #c10 .timeline-slideshow .viewport ul li {
+    height: auto !important;
+}
+
+.page-118 #c10 .sub-slideshow .viewport ul li img,
+.page-118 #c10 .timeline-slideshow .viewport ul li img,
+.page-49 #c10 .sub-slideshow .viewport ul li img,
+.page-49 #c10 .timeline-slideshow .viewport ul li img,
+.page-112 #c10 .sub-slideshow .viewport ul li img,
+.page-113 #c10 .sub-slideshow .viewport ul li img,
+.page-115 #c10 .sub-slideshow .viewport ul li img,
+.page-116 #c10 .sub-slideshow .viewport ul li img,
+.page-121 #c10 .sub-slideshow .viewport ul li img,
+.page-111 #c10 .sub-slideshow .viewport ul li img,
+.page-114 #c10 .sub-slideshow .viewport ul li img {
+    /* height: 100%; */
+
+    width: 100%;
+    height: auto;
+}
+.page-118 #c10 .sub-slideshow .viewport ul li .picture,
+.page-118 #c10 .timeline-slideshow .viewport ul li .picture,
+.page-49 #c10 .sub-slideshow .viewport ul li .picture,
+.page-49 #c10 .timeline-slideshow .viewport ul li .picture,
+.page-112 #c10 .sub-slideshow .viewport ul li .picture,
+.page-113 #c10 .sub-slideshow .viewport ul li .picture,
+.page-115 #c10 .sub-slideshow .viewport ul li .picture,
+.page-116 #c10 .sub-slideshow .viewport ul li .picture,
+.page-121 #c10 .sub-slideshow .viewport ul li .picture,
+.page-111 #c10 .sub-slideshow .viewport ul li .picture {
+    height: 24.3445625rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.page-114 #c10 .sub-slideshow .viewport ul li .picture {
+    
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.page-118 #c10 .sub-slideshow .viewport ul li .content,
+.page-118 #c10 .timeline-slideshow .viewport ul li .content,
+.page-49 #c10 .sub-slideshow .viewport ul li .content,
+.page-49 #c10 .timeline-slideshow .viewport ul li .content,
+.page-111 #c10 .sub-slideshow .viewport ul li .content,
+.page-112 #c10 .sub-slideshow .viewport ul li .content,
+.page-113 #c10 .sub-slideshow .viewport ul li .content,
+.page-115 #c10 .sub-slideshow .viewport ul li .content,
+.page-116 #c10 .sub-slideshow .viewport ul li .content,
+.page-121 #c10 .sub-slideshow .viewport ul li .content,
+.page-114 #c10 .sub-slideshow .viewport ul li .content {
+    height: 22.9925625rem;
+    background-color: #f2f2f2;
+
+    padding: 2.7975rem 3.75rem 1.5rem 3.75rem;
+}
+.page-118 #c10 .sub-slideshow .pressrelease .title,
+.page-118 #c10 .timeline-slideshow .pressrelease .title,
+.page-49 #c10 .sub-slideshow .pressrelease .title,
+.page-49 #c10 .timeline-slideshow .pressrelease .title,
+.page-111 #c10 .sub-slideshow .pressrelease .title,
+.page-112 #c10 .sub-slideshow .pressrelease .title,
+.page-113 #c10 .sub-slideshow .pressrelease .title,
+.page-115 #c10 .sub-slideshow .pressrelease .title,
+.page-116 #c10 .sub-slideshow .pressrelease .title,
+.page-121 #c10 .sub-slideshow .pressrelease .title,
+.page-114 #c10 .sub-slideshow .pressrelease .title {
+    font-size: 1.5rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+}
+.page-118 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-118 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-49 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-49 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-111 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-112 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-113 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-115 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-116 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-121 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-114 #c10 .sub-slideshow .pressrelease .bodytext {
+    height: 8.5773125rem;
+    overflow: hidden;
+    line-height: 1.45rem;
+}
+
+.page-118 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-118 #c10 .timeline-slideshow .pressrelease .title,
+.page-118 #c10 .timeline-slideshow .pressrelease .readmore,
+.page-118 #c10 .timeline-slideshow .pressrelease .date,
+.page-118 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-118 #c10 .sub-slideshow .pressrelease .title,
+.page-118 #c10 .sub-slideshow .pressrelease .readmore,
+.page-118 #c10 .sub-slideshow .pressrelease .date,
+.page-49 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-49 #c10 .timeline-slideshow .pressrelease .title,
+.page-49 #c10 .timeline-slideshow .pressrelease .readmore,
+.page-49 #c10 .timeline-slideshow .pressrelease .date,
+.page-49 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-49 #c10 .sub-slideshow .pressrelease .title,
+.page-49 #c10 .sub-slideshow .pressrelease .readmore,
+.page-49 #c10 .sub-slideshow .pressrelease .date,
+.page-112 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-112 #c10 .sub-slideshow .pressrelease .title,
+.page-112 #c10 .sub-slideshow .pressrelease .readmore,
+.page-112 #c10 .sub-slideshow .pressrelease .date,
+.page-113 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-113 #c10 .sub-slideshow .pressrelease .title,
+.page-113 #c10 .sub-slideshow .pressrelease .readmore,
+.page-113 #c10 .sub-slideshow .pressrelease .date,
+.page-115 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-115 #c10 .sub-slideshow .pressrelease .title,
+.page-115 #c10 .sub-slideshow .pressrelease .readmore,
+.page-115 #c10 .sub-slideshow .pressrelease .date,
+.page-116 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-116 #c10 .sub-slideshow .pressrelease .title,
+.page-116 #c10 .sub-slideshow .pressrelease .readmore,
+.page-116 #c10 .sub-slideshow .pressrelease .date,
+.page-121 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-121 #c10 .sub-slideshow .pressrelease .title,
+.page-121 #c10 .sub-slideshow .pressrelease .readmore,
+.page-121 #c10 .sub-slideshow .pressrelease .date,
+.page-111 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-111 #c10 .sub-slideshow .pressrelease .title,
+.page-111 #c10 .sub-slideshow .pressrelease .readmore,
+.page-111 #c10 .sub-slideshow .pressrelease .date,
+.page-114 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-114 #c10 .sub-slideshow .pressrelease .title,
+.page-114 #c10 .sub-slideshow .pressrelease .readmore,
+.page-114 #c10 .sub-slideshow .pressrelease .date
+{
+    text-align: left;
+}
+.page-118 #c10 .timeline-slideshow .pressrelease .date,
+.page-118 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-118 #c10 .sub-slideshow .pressrelease .date,
+.page-118 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-49 #c10 .timeline-slideshow .pressrelease .date,
+.page-49 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-49 #c10 .sub-slideshow .pressrelease .date,
+.page-49 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-111 #c10 .sub-slideshow .pressrelease .date,
+.page-111 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-112 #c10 .sub-slideshow .pressrelease .date,
+.page-112 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-113 #c10 .sub-slideshow .pressrelease .date,
+.page-113 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-115 #c10 .sub-slideshow .pressrelease .date,
+.page-115 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-116 #c10 .sub-slideshow .pressrelease .date,
+.page-116 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-121 #c10 .sub-slideshow .pressrelease .date,
+.page-121 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-114 #c10 .sub-slideshow .pressrelease .date,
+.page-114 #c10 .sub-slideshow .pressrelease .bodytext{
+    font-family: 'CaslonClassico W00';
+    color: #3c3c3b;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+.page-118 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-118 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-49 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-49 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-111 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-112 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-113 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-115 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-116 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-121 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-114 #c10 .sub-slideshow .pressrelease .bodytext {
+    line-height: 1.75rem;
+    letter-spacing: 0.02rem;
+}
+.page-118 #c10 .timeline-slideshow .pressrelease .date,
+.page-118 #c10 .sub-slideshow .pressrelease .date,
+.page-49 #c10 .timeline-slideshow .pressrelease .date,
+.page-49 #c10 .sub-slideshow .pressrelease .date,
+.page-111 #c10 .sub-slideshow .pressrelease .date,
+.page-112 #c10 .sub-slideshow .pressrelease .date,
+.page-113 #c10 .sub-slideshow .pressrelease .date,
+.page-115 #c10 .sub-slideshow .pressrelease .date,
+.page-116 #c10 .sub-slideshow .pressrelease .date,
+.page-121 #c10 .sub-slideshow .pressrelease .date,
+.page-114 #c10 .sub-slideshow .pressrelease .date {
+    color: #878786;
+}
+.page-118 #c10 .timeline-slideshow .pressrelease div.readmore,
+.page-118 #c10 .sub-slideshow .pressrelease div.readmore,
+.page-49 #c10 .timeline-slideshow .pressrelease div.readmore,
+.page-49 #c10 .sub-slideshow .pressrelease div.readmore,
+.page-111 #c10 .sub-slideshow .pressrelease div.readmore,
+.page-112 #c10 .sub-slideshow .pressrelease div.readmore,
+.page-113 #c10 .sub-slideshow .pressrelease div.readmore,
+.page-115 #c10 .sub-slideshow .pressrelease div.readmore,
+.page-116 #c10 .sub-slideshow .pressrelease div.readmore,
+.page-121 #c10 .sub-slideshow .pressrelease div.readmore,
+.page-114 #c10 .sub-slideshow .pressrelease div.readmore {
+    display: block;
+    margin: 1rem 0rem 0rem 0rem;
+    border: none;
+    background-color: #dadad9;
+    padding-top: 0.65rem;
+    width: 15.625rem;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+    height: 2.75rem;
+    letter-spacing: 0.03rem;
+    outline: 0 none;
+    text-align: center;
+}
+.page-118 #c10 .timeline-slideshow .pressrelease div.readmore a,
+.page-118 #c10 .sub-slideshow .pressrelease div.readmore a,
+.page-49 #c10 .timeline-slideshow .pressrelease div.readmore a,
+.page-49 #c10 .sub-slideshow .pressrelease div.readmore a,
+.page-111 #c10 .sub-slideshow .pressrelease div.readmore a,
+.page-112 #c10 .sub-slideshow .pressrelease div.readmore a,
+.page-113 #c10 .sub-slideshow .pressrelease div.readmore a,
+.page-115 #c10 .sub-slideshow .pressrelease div.readmore a,
+.page-116 #c10 .sub-slideshow .pressrelease div.readmore a,
+.page-121 #c10 .sub-slideshow .pressrelease div.readmore a,
+.page-114 #c10 .sub-slideshow .pressrelease div.readmore a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.page-118 #c10 .timeline-slideshow .pressrelease .title,
+.page-118 #c10 .sub-slideshow .pressrelease .title,
+.page-49 #c10 .timeline-slideshow .pressrelease .title,
+.page-49 #c10 .sub-slideshow .pressrelease .title,
+.page-111 #c10 .sub-slideshow .pressrelease .title,
+.page-112 #c10 .sub-slideshow .pressrelease .title,
+.page-113 #c10 .sub-slideshow .pressrelease .title,
+.page-115 #c10 .sub-slideshow .pressrelease .title,
+.page-116 #c10 .sub-slideshow .pressrelease .title,
+.page-121 #c10 .sub-slideshow .pressrelease .title,
+.page-114 #c10 .sub-slideshow .pressrelease .title {
+    margin-bottom: 1.4375rem;
+    color: #3c3c3b;
+}
+.page-49 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-49 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-118 #c10 .timeline-slideshow .pressrelease .bodytext,
+.page-118 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-111 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-112 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-113 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-115 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-116 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-121 #c10 .sub-slideshow .pressrelease .bodytext,
+.page-114 #c10 .sub-slideshow .pressrelease .bodytext {
+    color: #3c3c3b;
+}
+.page-49 #c10 .timeline-slideshow .pressrelease .readmore,
+.page-49 #c10 .sub-slideshow .pressrelease .readmore,
+.page-118 #c10 .timeline-slideshow .pressrelease .readmore,
+.page-118 #c10 .sub-slideshow .pressrelease .readmore,
+.page-111 #c10 .sub-slideshow .pressrelease .readmore,
+.page-112 #c10 .sub-slideshow .pressrelease .readmore,
+.page-113 #c10 .sub-slideshow .pressrelease .readmore,
+.page-115 #c10 .sub-slideshow .pressrelease .readmore,
+.page-116 #c10 .sub-slideshow .pressrelease .readmore,
+.page-121 #c10 .sub-slideshow .pressrelease .readmore,
+.page-114 #c10 .sub-slideshow .pressrelease .readmore {
+    color: #3c3c3b;
+}
+.page-49 #c10 .timeline-slideshow,
+.page-49 #c10 .sub-slideshow,
+.page-118 #c10 .timeline-slideshow,
+.page-118 #c10 .sub-slideshow,
+.page-111 #c10 .sub-slideshow,
+.page-112 #c10 .sub-slideshow,
+.page-113 #c10 .sub-slideshow,
+.page-115 #c10 .sub-slideshow,
+.page-116 #c10 .sub-slideshow,
+.page-121 #c10 .sub-slideshow,
+.page-114 #c10 .sub-slideshow {
+    width: 100%;
+}
+.page-49 #c10 .timeline-slideshow .buttons.prev,
+.page-49 #c10 .sub-slideshow .buttons.prev,
+.page-118 #c10 .timeline-slideshow .buttons.prev,
+.page-118 #c10 .sub-slideshow .buttons.prev,
+.page-111 #c10 .sub-slideshow .buttons.prev,
+.page-112 #c10 .sub-slideshow .buttons.prev,
+.page-113 #c10 .sub-slideshow .buttons.prev,
+.page-115 #c10 .sub-slideshow .buttons.prev,
+.page-116 #c10 .sub-slideshow .buttons.prev,
+.page-121 #c10 .sub-slideshow .buttons.prev,
+.page-114 #c10 .sub-slideshow .buttons.prev {
+    left: 1.9714375rem;
+}
+.page-49 #c10 .sub-slideshow .buttons.next,
+.page-118 #c10 .sub-slideshow .buttons.next,
+.page-111 #c10 .sub-slideshow .buttons.next,
+.page-112 #c10 .sub-slideshow .buttons.next,
+.page-113 #c10 .sub-slideshow .buttons.next,
+.page-115 #c10 .sub-slideshow .buttons.next,
+.page-116 #c10 .sub-slideshow .buttons.next,
+.page-121 #c10 .sub-slideshow .buttons.next,
+.page-114 #c10 .sub-slideshow .buttons.next {
+    right: 1.9714375rem;
+}
+.page-49 #c10 .timeline-slideshow .viewport,
+.page-118 #c10 .timeline-slideshow .viewport
+/*,
+.page-49 #c10 .sub-slideshow .viewport,
+.page-112 #c10 .sub-slideshow .viewport
+*/ {
+    height: 43.75rem;
+}
+
+.page-49 #c10 .sub-slideshow .viewport .picturecaption,
+.page-118 #c10 .sub-slideshow .viewport .picturecaption,
+.page-111 #c10 .sub-slideshow .viewport .picturecaption,
+.page-112 #c10 .sub-slideshow .viewport .picturecaption,
+.page-113 #c10 .sub-slideshow .viewport .picturecaption,
+.page-115 #c10 .sub-slideshow .viewport .picturecaption,
+.page-116 #c10 .sub-slideshow .viewport .picturecaption,
+.page-121 #c10 .sub-slideshow .viewport .picturecaption,
+.page-114 #c10 .sub-slideshow .viewport .picturecaption {
+    padding-top: 3.3946875rem;
+}
+
+.page-49 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-headline,
+.page-118 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-headline,
+.page-111 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-headline,
+.page-112 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-headline,
+.page-113 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-headline,
+.page-115 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-headline,
+.page-116 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-headline,
+.page-121 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-headline,
+.page-114 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-headline {
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    letter-spacing: 0.02rem;
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+
+.page-49 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-text,
+.page-118 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-text,
+.page-111 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-text,
+.page-112 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-text,
+.page-113 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-text,
+.page-115 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-text,
+.page-116 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-text,
+.page-121 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-text,
+.page-114 #c10 .sub-slideshow .viewport .picturecaption .picturecaption-text {
+    font-family: 'AvenirNextRoundedW01-Re';
+    padding: 0rem 4rem;
+    letter-spacing: 0.02rem;
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+
+.page-49 #c10 .sub-slideshow .viewport,
+.page-118 #c10 .sub-slideshow .viewport,
+.page-111 #c10 .sub-slideshow .viewport,
+.page-112 #c10 .sub-slideshow .viewport,
+.page-113 #c10 .sub-slideshow .viewport,
+.page-115 #c10 .sub-slideshow .viewport,
+.page-116 #c10 .sub-slideshow .viewport,
+.page-121 #c10 .sub-slideshow .viewport,
+.page-114 #c10 .sub-slideshow .viewport {
+    height: 57.7696875rem;
+}
+
+.page-49 #c10 .timeline-slideshow .viewport ul li .picture,
+.page-49 #c10 .sub-slideshow .viewport ul li .picture,
+.page-118 #c10 .timeline-slideshow .viewport ul li .picture,
+.page-118 #c10 .sub-slideshow .viewport ul li .picture,
+.page-111 #c10 .sub-slideshow .viewport ul li .picture,
+.page-112 #c10 .sub-slideshow .viewport ul li .picture,
+.page-113 #c10 .sub-slideshow .viewport ul li .picture,
+.page-115 #c10 .sub-slideshow .viewport ul li .picture,
+.page-116 #c10 .sub-slideshow .viewport ul li .picture,
+.page-121 #c10 .sub-slideshow .viewport ul li .picture {
+    height: auto;
+}
+
+.page-118 .timeline-sub-slideshow .viewport ul li,
+.page-118 #c10 .sub-slideshow .viewport ul li,
+.page-49 .timeline-sub-slideshow .viewport ul li,
+.page-49 #c10 .sub-slideshow .viewport ul li,
+.page-111 #c10 .sub-slideshow .viewport ul li,
+.page-112 #c10 .sub-slideshow .viewport ul li,
+.page-113 #c10 .sub-slideshow .viewport ul li,
+.page-115 #c10 .sub-slideshow .viewport ul li,
+.page-116 #c10 .sub-slideshow .viewport ul li,
+.page-121 #c10 .sub-slideshow .viewport ul li,
+.page-114 #c10 .sub-slideshow .viewport ul li {
+    padding: 0rem 0.5336875rem;
+    width: 81.6969rem !important;
+}
+
+.page-49 .timeline-sub-slideshow .viewport ul li .picture,
+.page-118 .timeline-sub-slideshow .viewport ul li .picture {
+    width: 80.63rem;
+}
+.page-118 #maincontent .content-middle,
+.page-49 #maincontent .content-middle,
+.page-111 #maincontent .content-middle,
+.page-112 #maincontent .content-middle,
+.page-113 #maincontent .content-middle,
+.page-115 #maincontent .content-middle,
+.page-116 #maincontent .content-middle,
+.page-121 #maincontent .content-middle,
+.page-114 #maincontent .content-middle {
+    padding-bottom: 0rem;
+}
+.page-118 .attoworld-projectnavigation,
+.page-49 .attoworld-projectnavigation,
+.page-111 .attoworld-projectnavigation,
+.page-112 .attoworld-projectnavigation,
+.page-113 .attoworld-projectnavigation,
+.page-115 .attoworld-projectnavigation,
+.page-116 .attoworld-projectnavigation,
+.page-121 .attoworld-projectnavigation,
+.page-114 .attoworld-projectnavigation {
+    display: block !important;
+}
+.page-118 .site-navi,
+.page-49 .site-navi,
+.page-111 .site-navi,
+.page-112 .site-navi,
+.page-113 .site-navi,
+.page-115 .site-navi,
+.page-116 .site-navi,
+.page-121 .site-navi,
+.page-114 .site-navi {
+    display: inline-block !important;
+}
+.page-118 .attoworld-projectnavigation .projecttitle ul li a.active,
+.page-49 .attoworld-projectnavigation .projecttitle ul li a.active,
+.page-114 .attoworld-projectnavigation .projecttitle ul li a.active,
+.page-111 .attoworld-projectnavigation .projecttitle ul li a.active,
+.page-112 .attoworld-projectnavigation .projecttitle ul li a.active,
+.page-113 .attoworld-projectnavigation .projecttitle ul li a.active,
+.page-115 .attoworld-projectnavigation .projecttitle ul li a.active,
+.page-116 .attoworld-projectnavigation .projecttitle ul li a.active,
+.page-121 .attoworld-projectnavigation .projecttitle ul li a.active {
+    color: #3c3c3b;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    letter-spacing: 0.1rem;
+}
+.page-118 .timeline .bullet .point,
+.page-49 .timeline .bullet .point {
+    width: 0.8125rem;
+    height: 0.8125rem;
+    border: 0.2rem solid #3c3c3b;
+    border-radius: 0.40625rem;
+    background-color: #3c3c3b;
+}
+.page-118 .timeline .bullet.active .point,
+.page-49 .timeline .bullet.active .point {
+    background-color: transparent;
+}
+.page-118 .box.timeline,
+.page-49 .box.timeline {
+    display: block;
+    width: 100%;
+    
+    padding-top: 1.883875rem !important;
+}
+/*
+.page-49 .timeline .timeline-slideshow ul.overview li {
+    width: 100% !important;
+}
+*/
+.page-118 .timeline .timeline-slideshow .buttons.next,
+.page-49 .timeline .timeline-slideshow .buttons.next {
+    right: 1.9714375rem !important;
+}
+.page-118 .timeline .timeline-slideshow ul.bullets,
+.page-49 .timeline .timeline-slideshow ul.bullets {
+    display: inline-block;
+}
+.page-118 .timeline .timeline-slideshow ul.bullets li
+.page-49 .timeline .timeline-slideshow ul.bullets li {
+    width: 4.375rem;
+}
+.page-118 .timeline .timeline-slideshow ul.bullets li a .year
+.page-49 .timeline .timeline-slideshow ul.bullets li a .year {
+    display: none;
+    
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    
+    padding-top: 0.3196875rem;
+    font-size: 1.125rem;
+    letter-spacing: 0.4rem;
+    
+    text-indent: 0.25rem;
+}
+.page-118 .timeline .timeline-slideshow .text,
+.page-49 .timeline .timeline-slideshow .text {
+    padding: 1.125rem 0rem !important;
+}
+.page-118 .timeline .timeline-slideshow img.round,
+.page-49 .timeline .timeline-slideshow img.round {
+    cursor: pointer;
+}
+.page-118 .timeline .timeline-slideshow .noLink img.round,
+.page-49 .timeline .timeline-slideshow .noLink img.round,
+a.noLink {
+    cursor: default !important;
+}
+.page-118 .timeline .timeline-slideshow ul.overview .year,
+.page-49 .timeline .timeline-slideshow ul.overview .year {
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 3.4375rem;
+    margin-top: 2.4033125rem;
+    color: #3c3c3b;
+}
+.page-118 .timeline .timeline-slideshow ul.overview .year-headline,
+.page-49 .timeline .timeline-slideshow ul.overview .year-headline {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+}
+.page-118 .timeline .timeline-slideshow ul.overview .year-teaser,
+.page-49 .timeline .timeline-slideshow ul.overview .year-teaser {
+    margin-top: 0.9175625rem;
+    font-size: 1.5rem;
+    font-family: 'CaslonClassicoW00-BoldI';
+    padding-bottom: 1.125rem;
+    letter-spacing: 0.02rem;
+    color: #3c3c3b;
+}
+.page-118 .timeline .timeline-slideshow ul.bullets li:hover a.bullet .point,
+.page-49 .timeline .timeline-slideshow ul.bullets li:hover a.bullet .point {
+    background-color: transparent;
+}
+.page-118 .timeline .timeline-slideshow ul.bullets li:hover a.bullet .year,
+.page-49 .timeline .timeline-slideshow ul.bullets li:hover a.bullet .year {
+    display: block;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+}
+.page-118 .timeline .timeline-slideshow ul.bullets li a.bullet
+.page-49 .timeline .timeline-slideshow ul.bullets li a.bullet {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.page-118 .timeline .timeline-slideshow ul.bullets li a.bullet .point,
+.page-49 .timeline .timeline-slideshow ul.bullets li a.bullet .point {
+    margin: auto;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #3c3c3b;
+}
+
+/* Standard-Styles zum schnellen ändern einzelner Komponenten NUR für die Sub-Slideshow - ENDE */
+
+.plugin-newsfilter .listing,
+.plugin-magazin .listing {
+    margin-top: 6.0895625rem;
+}
+.plugin-newsfilter .listing ul.list li.news-element {
+    height: 13.9536875rem;
+    background-color: #f2f2f2;
+    margin: 1.3635625rem 0rem;
+    padding: 0rem;
+    
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.listing .list .loading {
+    display: block;
+    margin: auto;
+    
+    height: 12.375rem;
+    width: 10.625rem;
+}
+
+.plugin-newsfilter .listing .list li .picture {
+    height: 13.9536875rem;
+    width: 22.5708125rem;
+    overflow: hidden;
+    float: left;
+}
+.plugin-newsfilter .listing .list li .picture img {
+    width: 100%;
+    height: auto;
+}
+.plugin-newsfilter .listing .list li .content {
+    float: right;
+    width: 57.820812rem;
+    padding: 1.3635625rem 2.0541875rem;
+}
+
+.plugin-newsfilter .listing .list li.news-element .content .date {
+    width: 100%;
+    font-family: 'CaslonClassico W00';
+    color: #878786;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.02rem;
+}
+.plugin-newsfilter .listing .list li.news-element .content .title {
+    width: 100%;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    color: #3b3c3c;
+    line-height: 1.8rem;
+}
+.plugin-newsfilter .listing .list li.news-element .content .text {
+    width: 100%;
+    font-size: 1.125rem;
+    color: #3b3c3c;
+    line-height: 1.8rem;
+    font-family: 'CaslonClassico W00';
+    text-align: left;
+    
+    height: 6.8231875rem;
+    overflow: hidden;
+}
+.plugin-newsfilter .listing .list li.news-element.active,
+.plugin-jobs .listing .list li.list-element.active {
+    opacity: 1 !important;
+}
+.plugin-newsfilter .listing.oneIsActive .list li.news-element,
+.plugin-jobs .listing.oneIsActive .list li.list-element {
+    opacity: 0.5;
+}
+
+.attoworld-search {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* UNBEDINT NACHARBEITEN -- NICHT DRIN LASSEN !!!! */
+.detail[data-uid="1814"] .tab-content.contacts .contact-0:before {
+    /*
+    content: "—";
+    */
+}
+
+
+
+.page-3 .bullet-menu,
+.page-1 .bullet-menu {
+    height: 2.8125rem;
+}
+.page-3 .bullet-menu,
+.page-1 .bullet-menu,
+.page-3 .bullet-menu .bullets,
+.page-1 .bullet-menu .bullets {
+    width: 112.2563rem !important;
+}
+.page-1 .bullet-menu .bullets li,
+.page-3 .bullet-menu .bullets li {
+    width: 16.4186rem;
+    padding: 0rem 0.320357rem 0rem 0rem;
+}
+.page-1 .bullet-menu .bullets li .headline.table,
+.page-3 .bullet-menu .bullets li .headline.table {
+    height: 2.8125rem;
+}
+.page-1 .slide-box .firstletters,
+.page-3 .slide-box .firstletters {
+    display: block !important;
+    margin: auto !important;
+    text-align: center !important;
+    
+    font-family: 'CaslonClassicoW00-Itali' !important;
+    font-size: 1.5rem !important;
+    color: #3c3c3b !important;
+    letter-spacing: 0.02rem !important;
+    
+    position: relative;
+    top: -1.5rem;
+    
+    font-variant: normal !important;
+}
+.slide-box .firstletters:before {
+    content: '— ';
+}
+.slide-box .content {
+    
+    padding: 1.03125rem 0rem !important;
+    width: 68.75rem !important;
+    margin: auto !important;
+    text-align: center !important;
+    
+    height: 13.63125rem !important
+    overflow: hidden;
+}
+.slide-box .content p {
+    margin-top: 0.2rem;
+    font-family: 'CaslonClassico W00' !important;
+    font-size: 1.5rem !important;
+    line-height: 2.125rem !important;
+    letter-spacing: 0.02rem !important;
+    color: #3c3c3b !important;
+}
+.slide-box .content .hoverText {
+    height: 2.8125rem;
+}
+.slide-box .content .hoverText .button {
+    height: 2.8125rem;
+}
+.slide-box .content .hoverText .button a {
+    height: 2.8125rem;
+    width: 16.4186rem;
+}
+.slide-box {
+    width: 100%;
+}
+.page-3 .content-middle {
+    width: 100% !important;
+}
+.slide-box .button a {
+    margin: auto;
+}
+
+
+
+
+
+
+ul.progress-reports {
+    list-style-type: none;
+    margin: 2rem 0rem;
+    padding: 0rem;
+}
+ul.progress-reports li {
+    display: table;
+    width: 100%;
+    margin: 1.2645625rem 0rem;
+    height: 5.6875rem;
+}
+
+ul.progress-reports li .progress-reports-content {
+    margin-bottom: 1.25rem;
+    height: 100%;
+    background-color: #fff;
+    
+    display: table-cell;
+    vertical-align: middle;
+}
+
+ul.progress-reports li .picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.18rem;
+    width: 14.2391875rem;
+    float: left;
+    
+    height: 5.6875rem;
+    overflow: hidden;
+}
+
+ul.progress-reports li .picture img {  
+    width: 100% !important;
+    height: auto !important;
+}
+
+ul.progress-reports li .link {
+    position: absolute;
+    right: -41rem;
+    top: 2rem;
+}
+ul.progress-reports li .link img {
+    height: 3.03125rem;
+    width: 2.29375rem;
+    margin-right: 0rem;
+    float: right;
+    
+    margin-top: -0.75rem;
+  
+}
+ul.progress-reports li .content {
+    float: left;
+    /* width: 41.385813rem; */
+    width: 19.385813rem;
+    
+    display: table;
+    height: 100%;
+    
+    margin-left: 2rem;
+    position: relative;
+}
+ul.progress-reports li .title {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    height: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0.25rem;
+    color: #3c3c3b;
+    
+    display: table-cell;
+    vertical-align: middle;
+    
+    text-align: left;
+}
+ul.progress-reports li .content .additional-info {
+    
+}
+ul.progress-reports li .content .additional-info span.type {
+    font-family: 'AvenirNextRoundedW01-Re';
+    letter-spacing: 0.2rem;
+    font-size: 1.125em;
+    color: #3c3c3b;
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+ul.progress-reports li .content .additional-info span.journal {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.125em;
+    color: #3c3c3b;
+}
+ul.progress-reports li .content .additional-info span.pubdate {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125em;
+}
+
+/* Äußere Slideshow */
+.slideshow-container {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    z-index: 10;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100%;
+    padding-top: 6.74425rem;
+    
+}
+
+.slideshow-container .close {
+    position: absolute;
+    top: 0rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
+    left: 50%;
+    margin-left: -1rem;
+    margin-top: 1rem;
+    
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/slidebox-toggle.svg);
+    text-align: center;
+    width: 2.625rem;
+    height: 2.625rem;
+    transform: rotate(45deg);
+}
+.slideshow-container {
+    display: none;
+}
+
+.timeline-sub-slideshow .prev {
+    left: 2rem !important;
+}
+.timeline-sub-slideshow .next {
+    right: 2rem !important;
+}
+
+.timeline-sub-slideshow {
+    padding: 0 0 0 0;
+    position: relative;
+    text-align: center;
+}
+
+.timeline-sub-slideshow .buttons {
+    border-radius: 2.1875rem;
+    display: block;
+    float: left;
+    position: absolute;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.1875rem;
+    text-decoration: none;
+    font-size: 1.375rem;
+    top: 50%;
+    z-index: 10;
+
+    width: 5.5625rem;
+    height: 5.5625rem;
+
+    margin-top: -2.78125rem;
+
+}
+
+.timeline-sub-slideshow .buttons.prev {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/slideshow-left.svg');
+    left: -8rem;
+    background-repeat: no-repeat;
+}
+.timeline-sub-slideshow .buttons.next {
+    background-image: url('/typo3conf/ext/attoworld/Resources/Public/images/slideshow-right.svg');
+    right: -8rem;
+    background-repeat: no-repeat;
+}
+
+.timeline-sub-slideshow .viewport {
+    overflow: hidden;
+    width: 100%;
+    height: 43.5764375rem;
+    position: relative;
+}
+.timeline-sub-slideshow .viewport ul {
+    list-style: none;
+    position: absolute;
+    padding: 0rem;
+    height: 100%;
+    margin: 0rem;
+}
+.timeline-sub-slideshow .viewport ul li {
+    float: left;
+    padding: 0rem;
+    margin: 0rem;
+    height: 100%;
+    position: relative;
+    width: 80rem;
+    
+    margin-bottom: 1.5511875rem;
+} 
+.timeline-sub-slideshow .viewport ul li .picture {
+    height: 43.5764375rem;
+}
+.timeline-sub-slideshow .viewport ul li .picture img {
+    height: 100%;
+    width: 100%;
+}
+
+.slideshow-container.active .timeline-sub-slideshow .texts-to-slide .text-container {
+    display: none;
+}
+.slideshow-container.active .texts-to-slide {
+    margin-top: 1.5511875rem;
+}
+.slideshow-container.active .texts-to-slide .text-container {
+    width: 85rem;
+    margin: auto;
+    display: none;
+}
+.slideshow-container.active .text-container-headline {
+    font-size: 1.125rem;
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    text-align: center;
+}
+.slideshow-container.active .text-container-content {
+    font-size: 1.125rem;
+    font-family: 'AvenirNextRoundedW01-Re';
+    text-align: center;
+}
+.slideshow-container.active .current-slide-index {
+    margin-top: 1.5511875rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'CaslonClassicoW00-BoldI';
+}
+
+.tx-go-maps-ext {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.copyright-small {
+    font-family: 'AvenirNextRoundedW01-Re';
+    font-size: 1.125rem;
+}
+
+
+/* Virtual Lab-Tour */
+.page-120 .attoworld-content iframe {
+    width: 80rem;
+    height: 40rem;
+}
+.page-120 .attoworld-content h2 {
+    text-align: center;
+    font-size: 3.125rem;
+    font-family: 'Caslon Graphique W01 Regular';
+    padding: 6.40rem 0rem 3.2384375rem 0rem;
+    margin: 0rem;
+    color: #3c3c3b;
+}
+
+.attoworld-gridelements {
+    dispaly: table;
+}
+.attoworld-gridelements .gridelements-row {
+    width: 100%;
+}
+.attoworld-gridelements .gridelements-row .gridelements-column {
+    display: table-cell;
+    vertical-align: middle;
+}
+.attoworld-gridelements .gridelements-row .gridelements-column.column-0,
+.attoworld-gridelements .gridelements-row .gridelements-column.column-2 {
+    width: 20%;
+}
+.attoworld-gridelements .gridelements-row .gridelements-column.column-1 {
+    width: 60%;
+}
+
+.page-54 .attoworld-projectnavigation {
+    display: block !important;
+}
+
+.floatleft {
+    float: left;
+    width: 50%;
+}
+
+.floatright {
+    float: right;
+    width: 50%;
+}
+
+.plugin-slideshow {
+    padding-top: 4.6875rem;
+}
+
+.plugin-slideshow.layout-1 {
+    background-color: #f2f2f2;
+}
+
+.page-118 .buttons {
+    display: block !important;
+}
+
+.slideshow-bullet-menu {
+    position: absolute;
+    bottom: 1.5rem;
+    display: inline-block;
+    margin: auto;
+    z-index: 30;
+    top: auto;
+}
+.slideshow-bullet-menu ul.bullet-list {
+    position: static !important;
+    padding: 0rem;
+    height: 100%;
+    margin: 0rem;
+    
+    width: auto !important;
+}
+.slideshow-bullet-menu ul.bullet-list li {
+    float: left;
+    width: 0.5625rem !important;
+    height: 0.5625rem;
+    
+    border-radius: 0.28125rem;
+    /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+    -webkit-border-radius: 0.28125rem;
+    /* Firefox 1-3.6 */
+    -moz-border-radius: 0.28125rem;
+    
+    background-color: #878786;
+    margin: 0rem 0.703125rem 0rem 0.703125rem;
+    
+    overflow: hidden;
+}
+.plugin-milestones .slideshow-bullet-menu ul.bullet-list li {
+    background-color: #f2f2f2;
+}
+.plugin-milestones .slideshow-bullet-menu {
+    top: 42.5rem;
+    bottom: auto !important;
+}
+
+.slideshow-bullet-menu ul.bullet-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.plugin-coverstories .slideshow-bullet-menu li.active,
+.plugin-coverstories .slideshow-bullet-menu li a.active,
+.plugin-milestones .slideshow-bullet-menu li.active,
+.plugin-milestones .slideshow-bullet-menu li a.active {
+    background-color: #3c3c3b !important;
+}
+
+.plugin-nextappearances h1 {
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 3.125rem;
+    text-align: center;
+    margin: 0rem;
+    color: #3c3c3b;
+    /* margin: 6.250625rem 0rem 4.8384375rem 0rem; */
+}
+
+
+
+.plugin-nextappearances .show-filters {
+    display: block;
+}
+
+.plugin-nextappearances .filter {
+    display: none;
+}
+
+.plugin-nextappearances .text p {
+    /*Previous Semibold Italic*/
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.25rem;
+    text-align: center;
+    color: #3c3c3b;
+}
+
+.plugin-nextappearances .listing ul li.list-element {
+    min-height: 22.5rem;
+    background-color: #f2f2f2;
+    margin-bottom: 1.625rem;
+    overflow: hidden;
+    padding: 0rem;
+    position: relative;
+
+    cursor: auto;
+}
+.plugin-nextappearances .listing ul li.list-element .close {
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/people-detail-close.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    display: none;
+    /*
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    */
+}
+.plugin-nextappearances .listing ul li.list-element .fulltext {
+
+}
+.plugin-nextappearances .listing ul li.list-element .fulltext p,
+.plugin-nextappearances .listing ul li.list-element .fulltext ul li {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #3c3c3b;
+}
+.plugin-nextappearances .listing ul li.list-element .fulltext p {
+    margin: 0rem;
+    padding: 1rem 0rem;
+}
+
+
+.plugin-nextappearances .listing ul li.list-element .fulltext ul {
+    list-style-type: none;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.plugin-nextappearances .listing ul li.list-element .fulltext ul li {
+    padding-left: 1.3em;
+    line-height: 1.75rem;
+
+    padding-top: 0rem !important;
+    padding-bottom: 0rem !important;
+}
+.plugin-nextappearances .listing ul li.list-element .fulltext ul li:before {
+    content: "—";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+
+.plugin-nextappearances .listing ul li.list-element a {
+    margin: 0rem;
+    background-color: transparent;
+    padding: 0rem;
+    display: block;
+    height: 100%;
+    padding-top: 0.75rem;
+}
+
+.plugin-nextappearances .listing ul li.list-element .apply {
+    font-family: 'AvenirNextRoundedW01-Bo1075574';
+    height: 2.875rem;
+    background-color: #dadad9;
+    width: 15.707rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #3c3c3b;
+}
+.plugin-nextappearances .listing ul li.list-element .apply {
+    color: #878786;
+    margin-top: 3rem;
+}
+
+.plugin-nextappearances .col-1 {
+    width: 22.5rem;
+    min-height: 22.5rem;
+    float: left;
+}
+.plugin-nextappearances .col-2 {
+    width: 57.375rem;
+    float: right;
+    
+    padding: 1.375rem 2rem;
+}
+.plugin-nextappearances .col-1 .picture.format-0 img {
+    height: auto;
+    width: 100%;
+}
+.plugin-nextappearances .col-1 .picture.format-1 img {
+    height: 100%;
+    width: auto;
+}
+
+.plugin-nextappearances .col-2 .title {
+    font-family: 'AvenirNextRoundedW01-Re' !important;
+    font-size: 1.125rem !important;
+    letter-spacing: 0.2rem !important;
+    text-transform: lowercase !important;
+    margin-bottom: 0.4rem !important;
+    font-variant: small-caps !important;
+    color: #3c3c3b !important;
+}
+.plugin-nextappearances .col-2 .lecturetitle {
+    font-family: 'AvenirNextRoundedW01-De1075568' !important;
+    font-size: 1.5rem !important;
+    /* height: 2rem; */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    /* white-space: nowrap; */
+    margin-bottom: 1.4375rem !important;
+    color: #3c3c3b !important;
+}
+.plugin-nextappearances .col-2 .date {
+    color: #3c3c3b !important;
+    font-family: 'Adobe Caslon W01 SmBd' !important;
+    font-size: 1.125rem !important;
+}
+.plugin-nextappearances .col-2 .location {
+    color: #3c3c3b !important;
+    font-family: 'AdobeCaslonW01-Regular' !important;
+    font-size: 1.125rem !important;
+    font-variant: normal !important;
+    letter-spacing: 0rem !important;
+    text-transform: none !important;
+    margin-bottom: 0rem !important;
+}
+.plugin-nextappearances .col-2 .description {
+    color: #3c3c3b !important;
+    font-family: 'AdobeCaslonW01-Regular' !important;
+    font-size: 1.125rem !important;
+    font-variant: normal;
+    min-height: 0rem !important;
+}
+.plugin-nextappearances .col-2 .link a {
+    color: #3c3c3b !important;
+    font-family: 'AdobeCaslonW01-SmBdIt' !important;
+    font-size: 1.125rem !important;
+    font-variant: normal;
+    text-decoration: underline;
+}
+
+.plugin-breakingnews .bodytext p {
+    margin: 0rem;
+}
+
+.plugin-publications .deleteFromFilter {
+    height: 0.928875rem;
+    width: auto;
+    position: relative;
+    top: 0.025rem;
+    
+    font-family: 'Adobe Caslon W01 It';
+}
+
+.plugin-publications .deleteFromFilter img.delete-sign {
+    height: 0.75rem;
+    width: auto;
+}
+
+.plugin-publications .reset-collection img.reset-sign {
+    height: 1.6025rem;
+    width: auto;
+    position: relative;
+    top: 0.25rem;
+}
+
+.plugin-publications .reset-collection {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+}

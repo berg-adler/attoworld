@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-01-31T11:01:20Z" product-name="attoworld">
+		<header/>
+		<body>
+			<trans-unit id="surname.description">
+				<source>surname</source>
+			</trans-unit>
+			<trans-unit id="forename.description">
+				<source>forename</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="gender.description">
+				<source>gender</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="curriculumvitae.description">
+				<source>curriculumvitae</source>
+			</trans-unit>
+			<trans-unit id="publicationsbefore.description">
+				<source>publicationsbefore</source>
+			</trans-unit>
+			<trans-unit id="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="member.description">
+				<source>member</source>
+			</trans-unit>
+			<trans-unit id="onwebpage.description">
+				<source>onwebpage</source>
+			</trans-unit>
+			<trans-unit id="isgroupleader.description">
+				<source>isgroupleader</source>
+			</trans-unit>
+			<trans-unit id="subgroup.description">
+				<source>subgroup</source>
+			</trans-unit>
+			<trans-unit id="category.description">
+				<source>category</source>
+			</trans-unit>
+			<trans-unit id="nation.description">
+				<source>nation</source>
+			</trans-unit>
+			<trans-unit id="publications.description">
+				<source>publications</source>
+			</trans-unit>
+			<trans-unit id="position.description">
+				<source>position</source>
+			</trans-unit>
+			<trans-unit id="researchtext.description">
+				<source>researchtext</source>
+			</trans-unit>
+			<trans-unit id="projecttext.description">
+				<source>projecttext</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

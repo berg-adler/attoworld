@@ -1,0 +1,95 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-featuredpublication">
+    <h1>News</h1>
+    
+    <div class="fp-slideshow slideshow">
+        <a class="buttons prev" href="#"></a>
+        <div class="viewport">
+            
+            <ul class="overview" data-startwith="0" style="width: 15240px; left: -7620px;">
+                <f:for each="{news}" as="newsitem" iteration="newsIter">
+                    
+                    <li data-nr="{newsIter.cycle}" data-uid="{newsitem.uid}">
+                        <div class="picture">
+                            <f:image src="<aw:Newspictureforfeaturedpublication image='{newsitem.image}'/>" width="1280c" height="504c"/>
+                        </div>
+                        <div class="content">
+                            <div class="pressrelease">
+                                <div class="date"><aw:Datumformat integer="{newsitem.pubdate}" format="F j, Y"/></div>
+                                <div class="title">{newsitem.title}</div>
+                                <div class="bodytext">
+                                    <f:if condition="{newsitem.isscientific}==0">
+                                        <f:then>
+                                            <span class="firstletters">team —</span>
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{newsitem.isscientific}==1">
+                                                <f:then>
+                                                    <span class="firstletters">research —</span>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{newsitem.isscientific}==2">
+                                                        <f:then>
+                                                            <span class="firstletters">graduate —</span>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:if condition="{newsitem.isscientific}==4">
+                                                                <f:then>
+                                                                    <span class="firstletters">pressrelease —</span>
+                                                                </f:then>
+                                                                <f:else>
+                                                                    <f:if condition="{newsitem.isscientific}==5">
+                                                                        <f:then>
+                                                                            <span class="firstletters">unknown —</span>
+                                                                        </f:then>
+                                                                        <f:else>
+
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </f:else>
+                                                            </f:if>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+                                    <f:if condition="{newsitem.fulltexten}">
+                                        <f:then>
+                                            <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="625" append="&nbsp;…"><f:format.stripTags><aw:Mathjax string="{newsitem.fulltexten}"/></f:format.stripTags></f:format.crop></f:format.html>
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{newsitem.shorttexten}">
+                                                <f:then>
+                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="625" append="&nbsp;…"><f:format.stripTags><aw:Mathjax string="{newsitem.shorttexten}"/></f:format.stripTags></f:format.crop></f:format.html>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="625" append="&nbsp;…"><f:format.stripTags><aw:Mathjax string="{newsitem.bodytext}"/></f:format.stripTags></f:format.crop></f:format.html>
+                                                </f:else>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>    
+                                    
+                                </div>
+                                <div class="readmore hoverText">
+                                    <f:if condition="{newsitem.bodytext}">
+                                        <f:then>
+                                            <f:link.page pageUid="89" additionalParams="{tx_attoworld_pi18 : {uid : '{newsitem.uid}'}}">Read More</f:link.page>
+                                        </f:then>
+                                        <f:else>
+                                            <f:link.page pageUid="98" additionalParams="{tx_attoworld_pi21 : {uid : '{newsitem.uid}'}}">Read More</f:link.page>
+                                        </f:else>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </f:for>
+            </ul>
+            
+        </div>
+        <a class="buttons next" href="#"></a>
+    </div>
+    
+</div>

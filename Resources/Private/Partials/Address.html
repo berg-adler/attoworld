@@ -1,0 +1,73 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="col-1">
+    <f:for each="{pperson.address.locations}" as="address" iteration="addressIterator">
+        
+        <div class="contact contact-{addressIterator.index} {f:if(condition: '{addressIterator.isFirst}',then: 'first')} {f:if(condition: '{addressIterator.isLast}',then: 'last')}">
+            <f:if condition="{address.address.location.0.name}">
+                <f:then>
+                    <div class="name">{address.address.location.0.name}</div>
+                </f:then>
+            </f:if>
+            <f:if condition="{address.address.location.0.addfirstline}">
+                <f:then>
+                    <div class="firstline">{address.address.location.0.addfirstline}</div>
+                </f:then>
+            </f:if>
+            <f:if condition="{address.address.location.0.addsecondline}">
+                <f:then>
+                    <div class="secondline">{address.address.location.0.addsecondline}</div>
+                </f:then>
+            </f:if>
+            <div class="street">{address.address.location.0.street} {address.address.location.0.streetnumber}</div>
+            <div class="city">{address.address.location.0.zipcode} {address.address.location.0.city} <!--<aw:Countryname title="{address.address.location.0.city}"/>--></div>
+        </div>
+        
+    </f:for>
+</div>
+
+<div class="col-2">
+    
+    <f:if condition="{pperson.address.contacts}">
+        <f:then>
+            <f:for each="{pperson.address.contacts}" as="contact" iteration="ContactIterator">
+                <div data-uid="{contact.uid}" class="contact contact-{ContactIterator.index} {f:if(condition: '{ContactIterator.isFirst}',then: 'first')} {f:if(condition: '{ContactIterator.isLast}',then: 'last')}">
+                    <div class="personname">{contact.name}</div>
+                    
+                    <f:for each="{contact.address.locationsjson}" as="location" iteration="LocationIterator">
+                        
+                        <f:for each="{location.locations.0.roomnumbers}" as="roomnumber" iteration="RoomIterator">
+                            <div class="room"><aw:Addresskind string="{roomnumber.kind}" type="room" type2="{roomnumber.type}"/>{roomnumber.number}</div>
+                        </f:for>
+                        <f:for each="{location.locations.0.phonenumbers}" as="phonenumber" iteration="PhoneIterator">
+                            <div class="phone"><aw:Addresskind string="{phonenumber.kind}" type="phone" type2="{phonenumber.type}"/>{phonenumber.number}</div>
+                        </f:for>
+                        <f:for each="{location.locations.0.emails}" as="email" iteration="EmailIterator">
+                            <div class="email">Email: <f:link.email email='{email.number}'/></div>
+                        </f:for>
+
+                    </f:for>
+                </div>
+            </f:for>
+            
+        </f:then>
+        <f:else>
+            
+            <f:for each="{pperson.address.locationsjson}" as="location" iteration="LocationIterator">
+                
+                <div data-uid="{location.locations.0.uid}" class="contact contact-{LocationIterator.index} {f:if(condition: '{LocationIterator.isFirst}',then: 'first')} {f:if(condition: '{LocationIterator.isLast}',then: 'last')}">
+                    <f:for each="{location.locations.0.roomnumbers}" as="roomnumber" iteration="RoomIterator">
+                        <div class="room"><aw:Addresskind string="{roomnumber.kind}" type="room" type2="{roomnumber.type}"/>{roomnumber.number}</div>
+                    </f:for>
+                    <f:for each="{location.locations.0.phonenumbers}" as="phonenumber" iteration="PhoneIterator">
+                        <div class="phone"><aw:Addresskind string="{phonenumber.kind}" type="phone" type2="{phonenumber.type}"/>{phonenumber.number}</div>
+                    </f:for>
+                    <f:for each="{location.locations.0.emails}" as="email" iteration="EmailIterator">
+                        <div class="email">Email: <f:link.email email='{email.number}'/></div>
+                    </f:for>
+                </div>
+            </f:for>
+            
+        </f:else>
+    </f:if>
+    
+</div>

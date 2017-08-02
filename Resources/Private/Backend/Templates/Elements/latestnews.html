@@ -1,0 +1,82 @@
+{namespace aw=Tx_attoworld_ViewHelpers}
+<div class="plugin-latestnews clearfix">
+    <h1>Latest News</h1>
+    <div class="listing clearfix">
+        <f:for each="{firstItems}" as="newsitem" iteration="lnewsIterator">
+            <f:if condition="{newsitem.type}=='job'">
+                <f:then>
+                    <div <f:if condition="{lnewsIterator.cycle} > 3">style="display: none"</f:if> class="<f:if condition="{lnewsIterator.cycle} % 3"><f:then>row-element</f:then></f:if> hoverText plugin-latestnews-item type-jobs designSet-backgroundColor-1 {f:if(condition: lnewsIterator.isFirst, then: 'first', else: '')}{f:if(condition: lnewsIterator.isLast, then: 'last', else: '')}">
+                        <div class="content">
+                            <div class="title"><aw:Jobformat string="{newsitem.object.type}"/> // {newsitem.object.title}</div>
+                            <div class="description"><span class="firstletters">job —</span> {newsitem.object.description}</div>
+                            <div class="readmore">
+                                <f:link.page pageUid="50" additionalParams="{tx_attoworld_pi7 : {uid : '{newsitem.object.uid}'}}">
+                                    <f:translate key="read more"/>
+                                </f:link.page>
+                            </div>
+                        </div>
+                    </div>
+                </f:then>
+            </f:if>
+            <f:if condition="{newsitem.type}=='news'">
+                <f:then>
+                    <f:link.page pageUid="89" additionalParams="{tx_attoworld_pi18 : {uid : '{newsitem.object.uid}'}}">
+                        <div <f:if condition="{lnewsIterator.cycle} > 3">style="display: none"</f:if> class="<f:if condition="{lnewsIterator.cycle} % 3"><f:then>row-element</f:then></f:if> hoverText plugin-latestnews-item type-news designSet-backgroundColor-1 {f:if(condition: lnewsIterator.isFirst, then: 'first', else: '')}{f:if(condition: lnewsIterator.isLast, then: 'last', else: '')}">
+                            <f:if condition="{newsitem.object.image}">
+                                <f:then>
+                                    <div class="picture"><f:image src="fileadmin/user_upload/tx_attoworld/{newsitem.object.image}" width="413c" height="249c"/></div>
+                                </f:then>
+                            </f:if>
+                            <div class="content">
+                                <div class="title">{newsitem.object.title}</div>
+                                <div class="description">
+                                    <f:if condition="{newsitem.object.pressrelease}">
+                                        <f:then>
+                                            <f:if condition="{newsitem.pressrelease.0.description}">
+                                                <f:then>
+                                                    <span class="firstletters">press release —</span> <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="100" append="&nbsp;…">{newsitem.pressrelease.0.description}</f:format.crop></f:format.html>
+                                                </f:then>
+                                                <f:else>
+                                                    <span class="firstletters">news —</span> <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="100" append="&nbsp;…">{newsitem.object.bodytext}</f:format.crop></f:format.html>
+                                                </f:else>
+                                            </f:if>
+                                        </f:then>
+                                        <f:else>
+                                            <span class="firstletters">news —</span> <f:format.crop maxCharacters="100" append="&nbsp;…">{newsitem.object.bodytext}</f:format.crop>
+                                        </f:else>
+                                    </f:if>
+                                </div>
+                                <div class="readmore">
+                                    <f:translate key="read more"/>
+                                </div>
+                            </div>
+                        </div>
+                    </f:link.page>
+                </f:then>
+            </f:if>
+            <f:if condition="{newsitem.type}=='pub'">
+                <f:then>
+                    <f:link.page pageUid="18" additionalParams="{tx_attoworld_pi2 : {uid : '{newsitem.object.uid}'}}">
+                        <div <f:if condition="{lnewsIterator.cycle} > 3">style="display: none"</f:if> class="<f:if condition="{lnewsIterator.cycle} % 3"><f:then>row-element</f:then></f:if> hoverText plugin-latestnews-item type-pub designSet-backgroundColor-1 {f:if(condition: lnewsIterator.isFirst, then: 'first', else: '')}{f:if(condition: lnewsIterator.isLast, then: 'last', else: '')}">
+                            <f:if condition="{newsitem.object.image}">
+                                <f:then>
+                                    <div class="picture"><f:image src="fileadmin/user_upload/tx_attoworld/{newsitem.object.image}" width="413c" height="249c"/></div>
+                                </f:then>
+                            </f:if>
+                            <div class="content">
+                                <div class="title">{newsitem.object.title}</div>
+                                <div class="description"><span class="firstletters">publications —</span> </div>
+                                <div class="readmore">
+                                    <f:translate key="read more"/>
+                                </div>
+                            </div>
+                        </div>
+                    </f:link.page>
+                </f:then>
+            </f:if>
+        </f:for>
+    </div>
+    
+    <div class="show-more-button"><button class="test">Show More</button></div>
+    
+</div>

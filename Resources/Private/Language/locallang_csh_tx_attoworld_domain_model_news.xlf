@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-01-31T11:01:20Z" product-name="attoworld">
+		<header/>
+		<body>
+			<trans-unit id="pubdate.description">
+				<source>pubdate</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="author.description">
+				<source>author</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="pressrelease.description">
+				<source>pressrelease</source>
+			</trans-unit>
+			<trans-unit id="publinktext.description">
+				<source>publinktext</source>
+			</trans-unit>
+			<trans-unit id="bodytext.description">
+				<source>bodytext</source>
+			</trans-unit>
+			<trans-unit id="contacts.description">
+				<source>contacts</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

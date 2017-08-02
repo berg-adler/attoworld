@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 660 480" style="enable-background:new 0 0 660 480;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#0038B8;}
+	.st2{fill-opacity:0;stroke:#0038B8;stroke-width:5.5;}
+</style>
+<desc>Flag of Israel</desc>
+<rect class="st0" width="660" height="480"/>
+<rect y="45" class="st1" width="660" height="75"/>
+<rect y="360" class="st1" width="660" height="75"/>
+<g transform="translate(110,80)">
+	<polygon id="triangle" class="st2" points="330,152.6 254.3,283.7 405.7,283.7 	"/>
+</g>
+<g transform="translate(110,80) rotate(180)">
+	<polygon id="triangle_1_" class="st2" points="330,327.4 405.7,196.3 254.3,196.3 	"/>
+</g>
+</svg>

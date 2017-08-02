@@ -1,0 +1,64 @@
+<div class="plugin-linkonsubpage">
+    <h1>Research Activities</h1>
+    <div class="element-listing clearfix">
+        <f:for each="{elements}" as="element" iteration="elementIterator">
+            <div class="link-element hoverText {f:if(condition:'{elementIterator.isOdd} == 1',then:'link-element-odd',else:'link-element-even')}">
+                
+                    <div class="picture">
+                        <f:image src="fileadmin/user_upload/tx_attoworld/{element.image}" width="631c" height="390c"/>
+                    </div>
+                    <div class="content">
+                        <div class="title" title="{element.title}">
+                            <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="85" append="&nbsp;…">{element.title}</f:format.crop></f:format.html>
+                        </div>
+                        <div class="text">
+                            <f:format.html><f:format.crop maxCharacters="275" append="&nbsp;…">{element.description}</f:format.crop></f:format.html>
+                        </div>
+                        <div class="readmore">
+                            
+                            <f:if condition="{element.type}==1">
+                                <f:then>
+                                    <f:link.action pageUid="55" additionalParams="{tx_attoworld_pi8 : {group : '{projectpageid}'}}">
+                                        read more
+                                    </f:link.action>
+                                </f:then>
+                                <f:else>
+                                    <f:if condition="{element.type}==2">
+                                        <f:then>
+                                            <f:link.action pageUid="5" additionalParams="{tx_attoworld_pi2 : {group : '{projectpageid}'}}">
+                                                read more
+                                            </f:link.action>
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{element.type}==3">
+                                                <f:then>
+                                                    <f:link.action pageUid="1" additionalParams="{tx_attoworld_pi1 : {group : '{projectpageid}'}}">
+                                                        read more
+                                                    </f:link.action>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{element.type}==4">
+                                                        <f:then>
+                                                            <f:link.action pageUid="1" additionalParams="{tx_attoworld_pi1 : {group : '{projectpageid}'}}">
+                                                                read more
+                                                            </f:link.action>
+                                                        </f:then>
+                                                        <f:else>
+                                                            
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                            
+                            
+                        </div>
+                    </div>
+                
+            </div>
+        </f:for>
+    </div>
+</div>

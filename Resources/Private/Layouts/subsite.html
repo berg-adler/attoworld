@@ -1,0 +1,111 @@
+<div id="MathJax_Message" style="display: none;"></div>
+<div class="navigation-fixed">
+    <nav class="attoworld-navigation">
+        <div class="logo">
+            <a href="/">
+                <span class="letter-1">a</span>
+                <span class="letter-2">t</span>
+                <span class="letter-3">t</span>
+                <span class="letter-4">o</span>
+                <span class="letter-5">w</span>
+                <span class="letter-6">o</span>
+                <span class="letter-7">r</span>
+                <span class="letter-8">l</span>
+                <span class="letter-9">d</span>
+            </a>
+            <img class="logo-picture" src="/typo3conf/ext/attoworld/Resources/Public/images/AttoworldLogo.png"/>
+        </div>
+        <div class="centered">
+            <div class="verticalAlign">
+                <f:format.html parseFuncTSPath="lib.parseFunc">{navigation}</f:format.html>
+            </div>
+        </div>
+        <f:if condition="{data.uid}!=18">
+            <f:then>
+            <div class="attoworld-search">
+                <button class="search"></button>
+            </div>
+
+            <div class="search-bar">
+
+                <f:form id="tx_indexedsearch" method="post" id="tx_indexedsearch" pageUid="18">
+
+                    <div class="centered">
+                        <div class="verticalAlign">
+                            <f:form.textfield class="tx-indexedsearch-searchbox-sword sword" placeholder="Search" property="fulltext" name="tx_indexedsearch[sword]"/>
+                        </div>
+                    </div>
+
+                    <input type="image" name="tx_indexedsearch[submit_button]" id="tx-indexedsearch-searchbox-button-submit" class="tx-indexedsearch-searchbox-button submit floatright" src="/typo3conf/ext/attoworld/Resources/Public/images/magnifier.svg">
+                    <button class="close"></button>
+                </f:form>
+
+            </div>
+            </f:then>
+        </f:if>
+        
+        
+    </nav>
+    <nav class="attoworld-projectnavigation" style="display: none;">
+        <div class="centered">
+            <div class="verticalAlign">
+                <f:format.html parseFuncTSPath="lib.parseFunc">{projectnavigation}</f:format.html>
+            </div>
+        </div>
+    </nav>
+</div>
+<f:if condition="{headercontent}">
+    <div class="attoworld-header">
+        <f:format.html parseFuncTSPath="lib.parseFunc">{headercontent}</f:format.html>
+    </div>
+</f:if>
+<div class="attoworld-content">
+
+    <!--
+    <f:format.html parseFuncTSPath="">{beforecontent}</f:format.html>
+    -->
+    
+    <!--TYPO3SEARCH_begin-->
+    <!--  CONTENT ELEMENT, uid:10/list [begin] -->
+    <div id="c10" class="csc-default">
+        <!--  Plugin inserted: [begin] -->
+        <div id="maincontent">
+            <div class="content-middle">
+                
+                <f:format.html parseFuncTSPath="">{bodycontent}</f:format.html>
+
+            </div>
+        </div>
+        <!--  Plugin inserted: [end] -->
+    </div>
+    <!--  CONTENT ELEMENT, uid:10/list [end] -->
+    <!--TYPO3SEARCH_end-->
+</div>
+<footer>
+
+    <nav class="table">
+        <div class="verticalAlign textCenter">
+            <div class="centered">
+                <div class="footer-navi-1">
+                    <f:format.html parseFuncTSPath="lib.parseFunc">{footernavigation}</f:format.html>
+                </div>
+                <div class="footer-navi-2">
+                    <f:format.html parseFuncTSPath="lib.parseFunc">{footernavigation2}</f:format.html>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-to-top">
+
+        </div>
+    </nav>
+
+    <div class="copyright">
+
+        <div class="verticalAlign textCenter">
+            <div class="centered">
+                <f:format.html parseFuncTSPath="lib.parseFunc">{footercontent}</f:format.html>
+            </div>
+        </div>
+    </div>
+</footer>

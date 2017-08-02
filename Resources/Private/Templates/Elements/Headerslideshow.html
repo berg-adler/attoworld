@@ -1,0 +1,245 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<f:if condition="{counter} > 0">
+    <f:then>
+        <div id="header-slideshow">
+            <div class="viewport">
+                <div class="button-overlay-left">
+                    <a class="buttons prev" href="#"></a>
+                </div>
+                <ul class="overview" data-startwith="{active}" style="width: 13335px; left: 0px;">
+                    
+                    <f:if condition="{projects}">
+                        <f:then>
+                            <f:for each="{projects}" as="project" iteration="projectIterator">
+                                <li data-uid="{project.uid}" data-pid="<f:uri.page pageUid='{project.pagepid}' section='{project.anchor}'/>">
+                                    <div class="text"><f:format.html parseFuncTSPath="">{project.oneliner}</f:format.html></div>
+                                <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                <f:if condition="{project.oneliner}">
+                                    <div class="dark-overlay"></div>
+                                </f:if>
+                                </li>
+                            </f:for>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{slides}">
+                                <f:then>
+                                    <!--
+                                        Types:
+                                        0: Others
+                                        1: Team
+                                        2: Publications
+                                        3: Research Activities
+                                        4: Learn More
+                                        5: News
+                                        6: Intern Link
+                                        7: Pressrelease
+                                    -->
+                                    <f:for each="{slides}" as="project" iteration="projectIterator">
+                                        <f:if condition="{project.type}==0">
+                                            <f:then>
+                                                <li data-type="{project.type}" data-uid="{project.uid}" data-pid="/lap-staff/?tx_attoworld_pi8%5Bgroup%5D=77&tx_attoworld_pi11%5Bcontroller%5D=Elements">
+                                                    <f:if condition="{project.titleinpicture}">
+                                                        <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                    </f:if>
+                                                    <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                    <f:if condition="{project.titleinpicture}">
+                                                        <div class="dark-overlay"></div>
+                                                    </f:if>
+                                                </li>
+                                            </f:then>
+                                            <f:else>
+                                                <f:if condition="{project.type}==1">
+                                                    <f:then>
+                                                        <li data-type="{project.type}" data-uid="{project.uid}" data-pid="<f:uri.page pageUid="55" additionalParams="{tx_attoworld_pi8 : {group : '{project.pagepid}'}}"/>">
+                                                            <f:if condition="{project.titleinpicture}">
+                                                                <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                            </f:if>
+                                                            <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                            <f:if condition="{project.titleinpicture}">
+                                                                <div class="dark-overlay"></div>
+                                                            </f:if>
+                                                        </li>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{project.type}==2">
+                                                            <f:then>
+                                                                <li data-type="{project.type}" data-uid="{project.uid}" data-pid="<f:uri.page pageUid="5" additionalParams="{tx_attoworld_pi2 : {uid : '{project.newsid}'}}"/>">
+                                                                    <f:if condition="{project.titleinpicture}">
+                                                                        <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                                    </f:if>
+                                                                    <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                                    <f:if condition="{project.titleinpicture}">
+                                                                        <div class="dark-overlay"></div>
+                                                                    </f:if>
+                                                                </li>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{project.type}==3">
+                                                                    <f:then>
+                                                                        <li data-type="{project.type}" data-uid="{project.uid}" data-pid="/lap-staff/?tx_attoworld_pi8%5Bgroup%5D=77&tx_attoworld_pi11%5Bcontroller%5D=Elements">
+                                                                            <f:if condition="{project.titleinpicture}">
+                                                                                <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                                            </f:if>
+                                                                            <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                                            <f:if condition="{project.titleinpicture}">
+                                                                                <div class="dark-overlay"></div>
+                                                                            </f:if>
+                                                                        </li>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <f:if condition="{project.type}==4">
+                                                                            <f:then>
+                                                                                <li data-type="{project.type}" data-uid="{project.uid}" data-pid="/lap-staff/?tx_attoworld_pi8%5Bgroup%5D=77&tx_attoworld_pi11%5Bcontroller%5D=Elements">
+                                                                                    <f:if condition="{project.titleinpicture}">
+                                                                                        <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                                                    </f:if>
+                                                                                    <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                                                    <f:if condition="{project.titleinpicture}">
+                                                                                        <div class="dark-overlay"></div>
+                                                                                    </f:if>
+                                                                                </li>
+                                                                            </f:then>
+                                                                            <f:else>
+                                                                                <f:if condition="{project.type}==5">
+                                                                                    <f:then>
+                                                                                        <li data-type="{project.type}" data-uid="{project.uid}" data-pid="<f:uri.page pageUid="98" additionalParams="{tx_attoworld_pi21 : {uid : '{project.newsid}'}}"/>">
+                                                                                            <f:if condition="{project.titleinpicture}">
+                                                                                                <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                                                            </f:if>
+                                                                                            <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                                                            <f:if condition="{project.titleinpicture}">
+                                                                                                <div class="dark-overlay"></div>
+                                                                                            </f:if>
+                                                                                        </li>
+                                                                                    </f:then>
+                                                                                    <f:else>
+                                                                                        <f:if condition="{project.type}==6">
+                                                                                            <f:then>
+                                                                                                <li data-type="{project.type}" data-uid="{project.uid}" data-pid="<f:uri.page pageUid="{project.pagepid}" section="{project.anchor}"/>">
+                                                                                                    <f:if condition="{project.titleinpicture}">
+                                                                                                        <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                                                                    </f:if>
+                                                                                                    <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                                                                    <f:if condition="{project.titleinpicture}">
+                                                                                                        <div class="dark-overlay"></div>
+                                                                                                    </f:if>
+                                                                                                </li>
+                                                                                            </f:then>
+                                                                                            <f:else>
+                                                                                                
+                                                                                                <f:if condition="{project.type}==7">
+                                                                                                    <f:then>
+                                                                                                        <li data-type="{project.type}" data-uid="{project.uid}" data-pid="<f:uri.page pageUid="89" additionalParams="{tx_attoworld_pi18 : {uid : '{project.newsid}'}}"/>">
+                                                                                                            <f:if condition="{project.titleinpicture}">
+                                                                                                                <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                                                                            </f:if>
+                                                                                                            <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                                                                            <f:if condition="{project.titleinpicture}">
+                                                                                                                <div class="dark-overlay"></div>
+                                                                                                            </f:if>
+                                                                                                        </li>
+                                                                                                    </f:then>
+                                                                                                    <f:else>
+
+                                                                                                    </f:else>
+                                                                                                </f:if>
+                                                                                                
+                                                                                            </f:else>
+                                                                                        </f:if>
+                                                                                    </f:else>
+                                                                                </f:if>
+                                                                            </f:else>
+                                                                        </f:if>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+
+
+                                        <!--
+                                        <f:if condition="{projectIterator.index}==2">
+                                            <f:then>
+                                                <li data-pid="/lap-staff/?tx_attoworld_pi8%5Bgroup%5D=77&tx_attoworld_pi11%5Bcontroller%5D=Elements">
+                                                    <f:if condition="{project.titleinpicture}">
+                                                        <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                    </f:if>
+                                                <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                <f:if condition="{project.titleinpicture}">
+                                                    <div class="dark-overlay"></div>
+                                                </f:if>
+                                                </li>
+
+                                            </f:then>
+                                            <f:else>
+                                                <f:if condition="{projectIterator.index}==3">
+                                                    <f:then>
+
+                                                        <li data-pid="/newssystem/?tx_attoworld_pi21%5Buid%5D=51">
+                                                                    <f:if condition="{project.titleinpicture}">
+                                                                        <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                                    </f:if>
+                                                                <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                                <f:if condition="{project.titleinpicture}">
+                                                                    <div class="dark-overlay"></div>
+                                                                </f:if>
+                                                                </li>
+
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{projectIterator.index}==4">
+                                                            <f:then>
+
+                                                                <li data-pid="/newssystem/?tx_attoworld_pi21%5Buid%5D=53">
+                                                                    <f:if condition="{project.titleinpicture}">
+                                                                        <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                                    </f:if>
+                                                                <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                                <f:if condition="{project.titleinpicture}">
+                                                                    <div class="dark-overlay"></div>
+                                                                </f:if>
+                                                                </li>
+
+                                                            </f:then>
+                                                            <f:else>
+
+                                                                <li data-pid="<f:uri.page pageUid='{project.pagepid}' section='{project.anchor}'/>">
+                                                                    <f:if condition="{project.titleinpicture}">
+                                                                        <div class="text"><f:format.html parseFuncTSPath="">{project.titleinpicture}</f:format.html></div>
+                                                                    </f:if>
+                                                                <f:image alt="{project.title}" src="{project.image}" width="1920c" height="755c"/>
+                                                                <f:if condition="{project.titleinpicture}">
+                                                                    <div class="dark-overlay"></div>
+                                                                </f:if>
+                                                                </li>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>    
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+                                        -->
+
+
+
+
+
+                                    </f:for>
+                                </f:then>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                    
+                    
+                    
+                </ul>
+                <div class="button-overlay-right">
+                    <a class="buttons next" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </f:then>
+</f:if>

@@ -1,0 +1,16 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="view-portrait">
+    <div class="picture">
+        <f:if condition="{pperson.model.image}">
+            <f:then>
+                <f:render partial="Personimage" arguments="{pperson: pperson, width: '308', height: '308'}"/>
+
+                <!-- <f:image treatIdAsReference="1" src="{pperson.model.image}" alt="{pperson.model.title} {pperson.model.forename} {pperson.model.surname}" width="308c" height="308c"/> -->
+            </f:then>
+        </f:if>
+    </div>
+    <div class="content hoverText">
+        <div class="name">{pperson.model.forename} {pperson.model.surname}</div>
+        <div class="position"><f:for each="{pperson.model.position}" as="position" iteration="posIter"><f:if condition="{position.title}!='Automatic'"><f:then><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><aw:Ucfirst string="{position.title}"/></f:format.html></f:then></f:if></f:for></div>
+    </div>
+</div>

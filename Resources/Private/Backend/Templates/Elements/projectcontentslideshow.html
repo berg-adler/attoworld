@@ -1,0 +1,20 @@
+<div class="slide-box hoverText">
+    
+    <f:for each="{projects}" as="project" iteration="projectIterator">
+        <div class="data-set" data-slide="{projectIterator.index}" style="display: none;">
+
+            <div class="content">
+                <f:format.html><f:format.crop maxCharacters="1000" append="&nbsp;…">{project.description}</f:format.crop></f:format.html>
+            </div>
+            <div class="info-box">
+                <div class="button">
+                    <f:link.page pageUid="{project.pagepid}">
+                        More Information
+                    </f:link.page>
+                </div>
+            </div>
+
+        </div>
+    </f:for>
+
+</div>

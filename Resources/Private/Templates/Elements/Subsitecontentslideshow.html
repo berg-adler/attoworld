@@ -1,0 +1,22 @@
+<div class="plugin-subsitecontentslideshow">
+    <div class="subsite-content-slideshow">
+        <div class="viewport">
+            <div class="button-overlay-left">
+                <a class="buttons prev" href="#"></a>
+            </div>
+            <ul class="overview">
+
+                <f:for each="{slides}" as="slide" iteration="slideIterator">
+                    <li class="slide-{slideIterator.index}">
+                        <f:image alt="{slide.title}" src="{slide.image}"/>
+                        <!-- <div class="dark-overlay"></div> -->
+                    </li>
+                </f:for>
+
+            </ul>
+            <div class="button-overlay-right">
+                <a class="buttons next" href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>

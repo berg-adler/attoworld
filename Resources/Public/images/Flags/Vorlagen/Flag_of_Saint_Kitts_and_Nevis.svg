@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 750 500" style="enable-background:new 0 0 750 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#009E49;}
+	.st1{fill:#CE1126;}
+	.st2{stroke:#FCD116;stroke-width:210;}
+	.st3{stroke:#000000;stroke-width:150;}
+	.st4{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M750,0H0v500"/>
+<path class="st1" d="M0,500h750V0"/>
+<path class="st2" d="M0,500L750,0"/>
+<path class="st3" d="M0,500L750,0"/>
+<g>
+	<g id="c">
+		<path id="t" class="st4" d="M0-70L-21.6-3.4L11.7,7.4"/>
+		<g transform="scale(-1,1)">
+			<path id="t_1_" class="st4" d="M0-70L21.6-3.4L-11.7,7.4"/>
+		</g>
+	</g>
+	<g>
+		<g id="c_1_">
+			<path id="t_2_" class="st4" d="M66.6-21.6l-70,0l0,35"/>
+			<g transform="rotate(72)">
+				<path id="t_3_" class="st4" d="M66.6-21.6L9.9,19.5L-10.6-8.8"/>
+			</g>
+		</g>
+		<g>
+			<g id="c_2_">
+				<path id="t_4_" class="st4" d="M41.1,56.6L19.5-9.9L-13.8,0.9"/>
+				<g transform="rotate(144)">
+					<path id="t_5_" class="st4" d="M41.1,56.6l-56.6-41.1L5.1-12.8"/>
+				</g>
+			</g>
+			<g>
+				<g id="c_3_">
+					<path id="t_6_" class="st4" d="M-41.1,56.6l56.6-41.1L-5.1-12.8"/>
+					<g transform="rotate(216)">
+						<path id="t_7_" class="st4" d="M-41.1,56.6l21.6-66.6L13.8,0.9"/>
+					</g>
+				</g>
+				<g id="star" transform="translate(517.5,155) rotate(-33.69)">
+					<g id="c_4_">
+						<path id="t_8_" class="st4" d="M-66.6-21.6l56.6,41.1L10.6-8.8"/>
+						<g transform="rotate(288)">
+							<path id="t_9_" class="st4" d="M-66.6-21.6l70,0l0,35"/>
+						</g>
+					</g>
+				</g>
+				<g>
+					<g>
+						<g id="c_5_">
+							<path id="t_10_" class="st4" d="M-590.8-664.3l-54.9,43.4l21.7,27.5"/>
+							<g transform="scale(-1,1)">
+								<path id="t_11_" class="st4" d="M-590.8-664.3l-18.9,67.4l-33.7-9.5"/>
+							</g>
+						</g>
+						<g>
+							<g id="c_6_">
+								<path id="t_12_" class="st4" d="M-562.2-587.1l-58.2-38.8l-19.4,29.1"/>
+								<g transform="rotate(72)">
+									<path id="t_13_" class="st4" d="M-562.2-587.1l-69.9,2.8l-1.4-35"/>
+								</g>
+							</g>
+							<g>
+								<g id="c_7_">
+									<path id="t_14_" class="st4" d="M-626.8-536.1l18.9-67.4l-33.7-9.5"/>
+									<g transform="rotate(144)">
+										<path id="t_15_" class="st4" d="M-626.8-536.1l-24.3-65.6l32.8-12.1"/>
+									</g>
+								</g>
+								<g>
+									<g id="c_8_">
+										<path id="t_16_" class="st4" d="M-695.3-581.7l69.9-2.8l-1.4-35"/>
+										<g transform="rotate(216)">
+											<path id="t_17_" class="st4" d="M-695.3-581.7l54.9-43.4l21.7,27.5"/>
+										</g>
+									</g>
+									<g id="star_1_" transform="translate(517.5,155) rotate(-33.69)">
+										<g id="c_9_">
+											<path id="t_18_" class="st4" d="M-673-661l24.3,65.6l32.8-12.1"/>
+											<g transform="translate(-285,190)">
+												<path id="t_19_" class="st4" d="M-673-661l58.2,38.8l-19.4,29.1"/>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

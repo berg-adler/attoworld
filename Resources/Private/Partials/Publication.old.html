@@ -1,0 +1,91 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<f:for each="{publications}" as="publication" iteration="PublicationIterator">
+
+    <li data-sorting="{publication.pubtstamp}" class="hoverText" data-nr="{PublicationIterator.index}" data-uid="{publication.uid}" class="list-element">
+        <f:if condition="{publication.resource}!=''">
+            <f:then>
+                <div class="container">
+                    <div class="title">
+                        <f:if condition="{publication.resource}">
+                            <f:then>
+                                <a href="{publication.resource}" target="_blank"><aw:Mathjax string="{publication.title}"/></a>
+                            </f:then>
+                            <f:else>
+                                <aw:Mathjax string="{publication.title}"/>
+                            </f:else>
+                        </f:if>
+                    </div>
+                    <div class="authors">
+                        <f:if condition="<f:count subject='{publication.authors}' />==1">
+                            <f:then>
+                                <span class="title">Author:</span>
+                            </f:then>
+                            <f:else>
+                                <span class="title">Authors:</span>
+                            </f:else>
+                        </f:if>
+
+                        <f:for each="{publication.authors}" as="author" iteration="AuthorIterator"><f:if condition="{AuthorIterator.index}>0"><f:then>,</f:then></f:if><span class="author" data-uid="{author.uid}"><aw:Pubauthorname author="{author}"/></span></f:for>
+                    </div>
+
+                    <div class="journal">
+                        <f:render partial="Publicationreference" arguments="{ppublication: publication}"/>
+                    </div>
+
+                    <div class="doi-isbn">
+                        <f:if condition="{0:'{publication.journal}'} == {0:'bookarticle'}">
+                            <f:then>
+                                <span class="title">ISBN:</span>
+                                <span class="doi">{publication.doi}</span>
+                            </f:then>
+                            <f:else>
+                                <!--
+                                <span class="title">DOI:</span>
+                                <span class="doi">{publication.doi}</span>
+                                -->
+                            </f:else>
+                        </f:if>
+
+                    </div>
+
+                    <!--<render partial="Additionalinformation" arguments="{ppublication: publication}"/>-->
+
+                </div>
+            </f:then>
+            <f:else>
+                <div class="container nolink">
+                    <div class="title"><aw:Mathjax string="{publication.title}"/></div>
+
+                    <div class="authors">
+                        <span class="title">Authors:</span>
+                        <f:for each="{publication.authors}" as="author" iteration="AuthorIterator"><f:if condition="{AuthorIterator.index}>0"><f:then>,</f:then></f:if><span class="author" data-uid="{author.uid}"><aw:Pubauthorname author="{author}"/></span></f:for>
+                    </div>
+
+                    <div class="journal">
+                        <f:render partial="Publicationreference" arguments="{ppublication: publication}"/>
+                    </div>
+
+                    <div class="doi-isbn">
+                        <f:if condition="{0:'{publication.journal}'} == {0:'bookarticle'}">
+                            <f:then>
+                                <span class="title">ISBN:</span>
+                                <span class="doi">{publication.doi}</span>
+                            </f:then>
+                            <f:else>
+                                <!--
+                                <span class="title">DOI:</span>
+                                <span class="doi">{publication.doi}</span>
+                                -->
+                            </f:else>
+                        </f:if>
+
+                    </div>
+
+                    <!--<render partial="Additionalinformation" arguments="{ppublication: publication}"/>-->
+                    
+                </div>
+            </f:else>
+        </f:if>
+
+    </li>
+</f:for>

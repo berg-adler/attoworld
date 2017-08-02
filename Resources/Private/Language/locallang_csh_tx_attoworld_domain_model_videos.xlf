@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-01-31T11:01:21Z" product-name="attoworld">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="videocategory.description">
+				<source>videocategory</source>
+			</trans-unit>
+			<trans-unit id="mediathekcategory.description">
+				<source>mediathekcategory</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="image21zu9.description">
+				<source>image21zu9</source>
+			</trans-unit>
+			<trans-unit id="videomp4mobile.description">
+				<source>videomp4mobile</source>
+			</trans-unit>
+			<trans-unit id="videomp4sd.description">
+				<source>videomp4sd</source>
+			</trans-unit>
+			<trans-unit id="videomp4hd.description">
+				<source>videomp4hd</source>
+			</trans-unit>
+			<trans-unit id="videowebmmobile.description">
+				<source>videowebmmobile</source>
+			</trans-unit>
+			<trans-unit id="videowebmsd.description">
+				<source>videowebmsd</source>
+			</trans-unit>
+			<trans-unit id="videowebmhd.description">
+				<source>videowebmhd</source>
+			</trans-unit>
+			<trans-unit id="videoogvmobile.description">
+				<source>videoogvmobile</source>
+			</trans-unit>
+			<trans-unit id="videoogvsd.description">
+				<source>videoogvsd</source>
+			</trans-unit>
+			<trans-unit id="videoogvhd.description">
+				<source>videoogvhd</source>
+			</trans-unit>
+			<trans-unit id="keywords.description">
+				<source>keywords</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

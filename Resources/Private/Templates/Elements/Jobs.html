@@ -1,0 +1,59 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-jobs mainFilter">
+    <div class="show-filters">
+        <button><span class="button-text">Filter Topics</span></button>
+    </div>
+    <div class="text">
+        <p>Discover our Jobs-Openings.</p>
+    </div>
+    <div class="filter clearfix">
+        <button class="single-filter first relative transformlowercase" data-filter="bsc,msc">B.Sc. / M.Sc.</button>
+        <button class="single-filter relative transformlowercase" data-filter="phd">Ph.D.</button>
+        <button class="single-filter relative" data-filter="postdoc">Postdoc</button>
+        <button class="single-filter relative" data-filter="others">Others</button>
+        <!-- <button class="single-filter relative smallerfontsize" data-filter="unsolapp">Unsolicited applications <span class="counter"></span></button> -->
+        <button class="relative project" data-filter="project"><span class="button-text">Research Groups <span class="counter"></span></span></button>
+    </div>
+    <div class="filter-contents">
+        <div class="filter-content project" data-filter="project">
+            <ul>
+                <f:for each="{projects}" as="project" iteration="ProjectIterator">
+                    <li data-uid="{project.uid}" class="<f:for each="{members}" as="member"><f:if condition="{member.uid}=={project.uid}"><f:then>active</f:then></f:if></f:for>"><span class="title"><aw:Ucfirst string="{project.title}"/></span><span class="jobs"></span></li>
+                </f:for>
+            </ul>
+        </div>
+    </div>
+    <div class="listing">
+        <ul class="list">
+            <f:for each="{jobs}" as="job" iteration="PublicationIterator">
+                <li data-uid="{job.uid}" class="list-element <f:if condition="{uid}=={job.uid}"><f:then>active</f:then></f:if>" <f:if condition="{uid}=={job.uid}"><f:then>style="height: auto;"</f:then></f:if>>
+                <f:if condition="{job.gwdglink}!=''">
+                    <f:then>
+                        <div class="close" <f:if condition="{uid}=={job.uid}"><f:then>style="display: block;"</f:then></f:if>></div>
+                        <div class="title"><aw:Jobformat string="{job.type}"/> // {job.title}</div> 
+                        <div class="location">{job.location}</div>
+                        <f:if condition="{job.personsubgroup}">
+                            <f:then>
+                                <div class="group"><span class="title">Group:</span> {job.personsubgroup}</div>
+                            </f:then>
+                        </f:if>
+                        <div class="description">{job.description}</div>
+                        <div class="fulltext">
+                            <f:format.html>{job.fulltextdescription}</f:format.html>
+                        </div>
+                        <div class="apply noToggle hoverText">
+                            <a class="noToggle" href="{job.gwdglink}" target="_blank">
+                                PDF
+                            </a>
+                        </div>
+                        
+                    </f:then>
+                </f:if>
+
+                </li>
+            </f:for>
+        </ul>
+    </div>
+
+
+</div>

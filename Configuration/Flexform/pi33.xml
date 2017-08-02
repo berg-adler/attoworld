@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <overview>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Konfiguration</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    
+                    <settings.title>
+                        <TCEforms>
+                            <label>Title</label>
+                            <config>
+                                <type>input</type>
+                                <size>255</size>
+                            </config>
+                        </TCEforms>
+                    </settings.title>
+                    
+                    <settings.image>
+                        <TCEforms>
+                            <label>Image</label>
+                            <config type="array">
+                                <type>group</type>    
+                                <internal_type>file</internal_type>
+                                <allowed>jpg,jpeg,gif,png</allowed>                   
+                                <max_size>10000</max_size>                 
+                                <show_thumbs>1</show_thumbs>
+                                <size>1</size>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                            </config>
+                        </TCEforms>
+                    </settings.image>
+          
+                    <settings.subtitle>
+                        <TCEforms>
+                            <label>Link-Title</label>
+                            <config>
+                                <type>input</type>
+                                <size>255</size>
+                            </config>
+                        </TCEforms>
+                    </settings.subtitle>
+                    
+                    <settings.slideshow>
+                        <TCEforms>
+                            <label>Slideshow-ID</label>
+                            <config>
+                                <type>input</type>
+                                <size>255</size>
+                            </config>
+                        </TCEforms>
+                    </settings.slideshow>
+                    
+                    <settings.slide>
+                        <TCEforms>
+                            <label>Slide-ID</label>
+                            <config>
+                                <type>input</type>
+                                <size>255</size>
+                            </config>
+                        </TCEforms>
+                    </settings.slide>
+                    
+                </el>
+            </ROOT>
+        </overview>
+    </sheets>
+</T3DataStructure>

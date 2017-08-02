@@ -1,0 +1,5 @@
+<div class="plugin-projectadresses clearfix">
+    <f:for each="{projects}" as="project" iteration="projectIterator"><f:if condition="{project.uid}!=6"><f:then><div data-uid="{project.uid}" class="project project-{projectIterator.index} <f:if condition="{projectIterator.cycle} % 3"><f:then>row-element</f:then></f:if>">
+                    <div class="title">{project.title}</div><div class="content"><f:format.html parseFuncTSPath="">{project.address}</f:format.html></div>
+    </div></f:then></f:if></f:for>
+</div>

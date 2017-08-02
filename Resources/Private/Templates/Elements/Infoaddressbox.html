@@ -1,0 +1,11 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-infoaddressbox hoverText">
+    
+    <f:link.action pageUid="55" additionalParams="{tx_attoworld_pi8 : {uid : '{settings.person}', type : 'contact'}}">
+        <div class="title">{settings.title}</div>
+        <div class="name">{settings.name}</div>
+        <div class="content"><f:format.html>{settings.bodytext}</f:format.html></div>
+    </f:link.action>
+    <div class="dark-overlay"></div> 
+    
+</div>

@@ -1,0 +1,33 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="additionalstaff">
+    <ul>
+        <f:if condition="{ppublication.publications}">
+            <f:then>
+                <f:for each="{ppublication.publications}" as="addinfo">
+                    <li class="publication" data-uid="{addinfo.uid}"><span class="type">{addinfo.type}</span>: <a class="inline-link" target="_blank" href="{addinfo.file}">{addinfo.title}</a></li>
+                </f:for>
+            </f:then>
+        </f:if>
+        <f:if condition="{ppublication.newspapers}">
+            <f:then>
+                <f:for each="{ppublication.newspapers}" as="addinfo">
+            <li class="newspaper" data-uid="{addinfo.uid}"><span class="type">{addinfo.type}</span>: <a class="inline-link" target="_blank" href="{addinfo.file}">{addinfo.title}</a></li>
+        </f:for>
+            </f:then>
+        </f:if>
+        <f:if condition="{ppublication.pressreleases}">
+            <f:then>
+                <f:for each="{ppublication.pressreleases}" as="addinfo">
+            <li class="pressrelease" data-uid="{addinfo.uid}"><span class="type">{addinfo.type}</span>: <a class="inline-link" target="_blank" href="{addinfo.file}">{addinfo.title}</a></li>
+        </f:for>
+            </f:then>
+        </f:if>
+        <f:if condition="{ppublication.magazins}">
+            <f:then>
+                <f:for each="{ppublication.magazins}" as="addinfo">
+                    <li class="magazin" data-uid="{addinfo.uid}"><span class="type">{addinfo.type}</span>: <a class="inline-link" target="_blank" href="{addinfo.file}">{addinfo.title}</a></li>
+                </f:for>
+            </f:then>
+        </f:if>
+    </ul>
+</div>

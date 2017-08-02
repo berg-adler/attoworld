@@ -1,0 +1,101 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<f:if condition="{newarray}">
+    <f:then>
+        <f:if condition="{newarray.respmessage}">
+            <f:then>
+                <div class="message">{newarray.respmessage}</div>
+            </f:then>
+            <f:else>
+                <f:for each="{newarray}" as="newsitem" iteration="NewsIterator">
+
+                    <li class="list-element clearfix news-element hoverText news-element-{newsitem.model.uid} hoverText" data-nr="<f:cObject typoscriptObjectPath='lib.math' data='{NewsIterator.index}+{position}' />" data-uid="{newsitem.model.uid}" class="list-element">
+                        <div class="picture">
+                            <f:image src="{newsitem.model.image}" width="359c" height="222c"/>
+                        </div>
+                        <div class="content">
+                            <div class="date"><aw:Datumformat integer="{newsitem.model.pubdate}" format="F j, Y"/></div>
+                            <div class="title">
+                                <f:if condition="{newsitem.model.bodytext}">
+                                    <f:then>
+                                        <f:link.page pageUid="89" additionalParams="{tx_attoworld_pi18 : {uid : '{newsitem.model.uid}'}}">
+                                            <aw:Newstext string="{newsitem.model.title}"/> 
+                                        </f:link.page>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{newsitem.model.file}">
+                                            <f:then>
+                                                <a href="{newsitem.model.file}" target="_blank">
+                                                    <aw:Newstext string="{newsitem.model.title}"/>
+                                                </a>
+                                            </f:then>
+                                            <f:else>
+                                                <aw:Newstext string="{newsitem.model.title}"/> 
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </div>
+                            <div class="text">
+                                <p>
+                                    <f:if condition="{newsitem.model.isscientific}==0">
+                                        <f:then>
+                                            <span class="firstletters">Team —</span>
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{newsitem.model.isscientific}==1">
+                                                <f:then>
+                                                    <span class="firstletters">Research —</span>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{newsitem.model.isscientific}==2">
+                                                        <f:then>
+                                                            <span class="firstletters">Graduate —</span>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:if condition="{newsitem.model.isscientific}==4">
+                                                                <f:then>
+                                                                    <span class="firstletters">pressrelease —</span>
+                                                                </f:then>
+                                                                <f:else>
+                                                                    <f:if condition="{newsitem.model.isscientific}==5">
+                                                                        <f:then>
+                                                                            <span class="firstletters">unknown —</span>
+                                                                        </f:then>
+                                                                        <f:else>
+
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </f:else>
+                                                            </f:if>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+
+                                    <f:if condition="{newsitem.model.fulltexten}">
+                                        <f:then>
+                                            <aw:Newstext string="{newsitem.model.fulltexten}"/>
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{newsitem.model.shorttexten}">
+                                                <f:then>
+                                                    <aw:Newstext string="{newsitem.model.shorttexten}"/>
+                                                </f:then>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                </f:for>
+            </f:else>
+        </f:if>
+        
+    </f:then>
+</f:if>
+
+

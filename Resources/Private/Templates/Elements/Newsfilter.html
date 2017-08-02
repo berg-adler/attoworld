@@ -1,0 +1,182 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-newsfilter mainFilter">
+    <div class="search">
+        <input type="text" name="tx_attoworld_pi20[sword]" class="search-bar" placeholder="Search"/>
+        <input type="submit" name="tx_attoworld_pi20[submit]" class="search-button" value=""/>
+    </div>
+    <div class="text">
+        <p>Discover our News-Section</p>
+    </div>
+    <div class="filter clearfix">
+        <button class="single-filter first {f:if(condition:'{uid}',then:'',else:'first')} {f:if(condition:'{prefilter}==1',then:'active',else:'')}" data-filter="research">Research</button>
+        <button class="single-filter {f:if(condition:'{prefilter}==2',then:'active',else:'')}" data-filter="team">Team</button>
+        <button class="single-filter {f:if(condition:'{prefilter}==3',then:'active',else:'')}" data-filter="graduation">Graduation</button>
+        
+        <button class="relative project" data-filter="project"><span class="button-text">Research Groups</span></button>
+        <button class="relative" data-filter="year"><span class="button-text">Year</span></button>
+    </div>
+    <div class="filter-contents">
+        
+        <div class="filter-content layout-5-col" data-filter="year">
+            <ul>
+                <f:for each="{years}" as="year" iteration="YearIterator">
+                    <li data-uid="{year.date}"><span class="title">{year.date}</span><span class="publications"></span></li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="filter-content project" data-filter="project">
+            <ul>
+                <f:for each="{projects}" as="project" iteration="ProjectIterator">
+                    <f:if condition="{project.uid}!=7">
+                        <li data-uid="{project.uid}"><span class="title">{project.title}</span><span class="publications"></span></li>
+                    </f:if>
+                </f:for>
+            </ul>
+        </div>
+        
+    </div><div class="listing">
+        <ul class="list">
+
+            <f:for each="{news}" as="newsitem" iteration="NewsIterator">
+                <li class="list-element clearfix news-element hoverText news-element-{newsitem.model.uid} hoverText" data-nr="{NewsIterator.index}" data-uid="{newsitem.model.uid}" class="list-element">
+                    <div class="picture">
+                        <f:image src="{newsitem.model.image}" width="359c" height="222c"/>
+                    </div>
+                    <div class="content">
+                        <div class="date"><aw:Datumformat integer="{newsitem.model.pubdate}" format="F j, Y"/></div>
+                        <div class="title">
+                            <f:if condition="{newsitem.model.bodytext}">
+                                <f:then>
+                                    <f:link.page pageUid="89" additionalParams="{tx_attoworld_pi18 : {uid : '{newsitem.model.uid}'}}">
+                                        <aw:Newstext string="{newsitem.model.title}"/> 
+                                    </f:link.page>
+                                </f:then>
+                                <f:else>
+                                    <f:if condition="{newsitem.model.file}">
+                                        <f:then>
+                                            <a href="{newsitem.model.file}" target="_blank">
+                                                <aw:Newstext string="{newsitem.model.title}"/>
+                                            </a>
+                                        </f:then>
+                                        <f:else>
+                                            <aw:Newstext string="{newsitem.model.title}"/> 
+                                        </f:else>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                            
+                            
+                        </div>
+                        <div class="text">
+                            <p>
+                                <f:if condition="{newsitem.model.isscientific}==0">
+                                    <f:then>
+                                        <span class="firstletters">team —</span>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{newsitem.model.isscientific}==1">
+                                            <f:then>
+                                                <span class="firstletters">research —</span>
+                                            </f:then>
+                                            <f:else>
+                                                <f:if condition="{newsitem.model.isscientific}==2">
+                                                    <f:then>
+                                                        <span class="firstletters">graduate —</span>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{newsitem.model.isscientific}==4">
+                                                            <f:then>
+                                                                <span class="firstletters">pressrelease —</span>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{newsitem.model.isscientific}==5">
+                                                                    <f:then>
+                                                                        <span class="firstletters">unknown —</span>
+                                                                    </f:then>
+                                                                    <f:else>
+
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                                
+                                <f:if condition="{newsitem.model.fulltexten}">
+                                    <f:then>
+                                        <aw:Newstext string="{newsitem.model.fulltexten}"/>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{newsitem.model.shorttexten}">
+                                            <f:then>
+                                                <aw:Newstext string="{newsitem.model.shorttexten}"/>
+                                            </f:then>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </f:for>
+            
+            <!--
+            <li class="news-element hoverText news-element-51" data-nr="{NewsIterator.index}" data-uid="{newsitem.model.uid}" class="list-element clearfix">
+                <div class="picture">
+                    <f:image src="fileadmin/user_upload/tx_attoworld/PicturesNews/2017_03_01_Dr_HaniehFattahi_on_Minerva_Fast_Track_Programme.jpg" width="359c" height="222c"/>
+                </div>
+                <div class="content">
+                    <div class="date">01 March 2017</div>
+                    <div class="title">Dr. Fattahi on Minerva Fast Track Programme</div>
+                    <div class="text">
+                        <p><span class="firstletters">team —</span> Dr. Hanieh Fattahi (Photo: Thorsten Naeser), a young physicist at the Laboratory for Attosecond Physics (LAP) at the Ludwig-Maximilians-Universität Munich and the Max Planck Institute of Quantum Optics, has been chosen for the Max Planck Society’s Minerva Fast Track Programme. On an annual basis, the programme currently supports two outstanding postdoctoral female scientists from the fields of the CPTS (Chemistry, Physics and Technology) Section to plan their careers in a more targeted way.</p>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="news-element hoverText news-element-52" data-nr="{NewsIterator.index}" data-uid="{newsitem.model.uid}" class="list-element clearfix">
+                <div class="picture">
+                    <f:image src="fileadmin/user_upload/tx_attoworld/PicturesNews/2015_09_18_FOUP_Workshop.jpg" width="359c" height="222c"/>
+                </div>
+                <div class="content">
+                    <div class="date">18 Septemer 2015</div>
+                    <div class="title">Workshop on the future of ultrafast pulses</div>
+                    <div class="text">
+                        <p><span class="firstletters">team —</span> At the Max Planck Institute of Quantum Optics, to discuss the future of ultrafast laser pulses. Cutting edge research and possibilities for technical developments were the central themes of discussions. A particular goal of the workshop was to bring together young scientists with renowned senior scientists in the field. The workshop is part of a series set to continue in 2016 and 2017. For more pictures from the workshop, visit</p>
+                    </div>
+                </div>
+            </li>
+            
+            <li class="news-element hoverText news-element-53" data-nr="{NewsIterator.index}" data-uid="{newsitem.model.uid}" class="list-element clearfix">
+                <div class="picture">
+                    <f:image src="fileadmin/user_upload/tx_attoworld/PicturesNews/AS3_Attosekundenerzeugung_Bild2.jpg" width="359c" height="222c"/>
+                </div>
+                <div class="content">
+                    <div class="date">24 July 2014</div>
+                    <div class="title">Future of ultrashort laser pulses</div>
+                    <div class="text">
+                        <p><span class="firstletters">research —</span> Next-generation approaches to the production of ultrashort flashes of laser light – the so-called third generation of femtosecond laser pulses – are stimulating further advances in the investigation of ultrafast processes in the realm of the microcosmos. In the foreseeable future, the new techniques will permit the motions of subatomic particles to be observed in far greater detail than has been possible hitherto. In the new journal Optica, published under the auspices of the Optical Society of America, researchers led by Prof. Ferenc Krausz of the Laboratory for Attosecond Physics (LAP) at the Max Planck Institute for Quantum Optics (MPQ), together with a team based at Ludwig-Maximilians Universität (LMU), in Munich describe the underlying technology and the prospects that it will open up.</p>
+                    </div>
+                </div>
+            </li>
+            -->
+            
+        </ul>
+    </div>
+    
+    <div class="show-more-button" {f:if(condition:'{prefilter}==0',then:'style="display: none;"',else:'')}><button class="test">Show More</button></div>
+    
+</div>
+
+<f:if condition="{newsitemid}">
+    <f:then>
+        <script type="text/javascript">
+            var newsItemId = {newsitemid};
+        </script>
+    </f:then>
+</f:if>
+    

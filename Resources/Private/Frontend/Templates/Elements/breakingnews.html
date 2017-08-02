@@ -1,0 +1,18 @@
+<div class="plugin-breakingnews hoverText">
+    
+    <div class="plugin-breakingnews-inner-container clearfix">
+        <div class="picture">
+            <f:image treatIdAsReference="1" src="fileadmin/user_upload/tx_attoworld/{settings.image}" height="390c" width="522c" />
+        </div>
+        <div class="content">
+            <div class="title">{settings.title}</div>
+            <div class="bodytext">
+                <f:format.html><f:format.crop maxCharacters="580" append="&nbsp;…">{settings.bodytext}</f:format.crop></f:format.html>
+            </div>
+            <div class="moreinformation">
+                <a href="{settings.link}">More Information</a>
+            </div>
+        </div>
+    </div>
+    
+</div>

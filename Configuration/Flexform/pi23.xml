@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <overview>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Konfiguration</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    
+                    <settings.image>
+                        <TCEforms>
+                            <label>Image</label>
+                            <config type="array">
+                                <type>group</type>    
+                                <internal_type>file</internal_type>
+                                <allowed>jpg,jpeg,gif,png</allowed>                   
+                                <max_size>10000</max_size>                 
+                                <uploadfolder>fileadmin/user_upload/tx_attoworld</uploadfolder>
+                                <show_thumbs>1</show_thumbs>
+                                <size>1</size>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                            </config>
+                        </TCEforms>
+                    </settings.image>
+                    
+                    <settings.height>
+                        <TCEforms>
+                            <label>Höhe</label>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                            </config>
+                        </TCEforms>
+                    </settings.height>
+                    
+                    <settings.width>
+                        <TCEforms>
+                            <label>Breite</label>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                            </config>
+                        </TCEforms>
+                    </settings.width>
+                    
+                </el>
+            </ROOT>
+        </overview>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,26 @@
+<div class="plugin-linkonsubgroup">
+    
+    <h1>Associated Groups</h1>
+    
+    <div class="links">
+        <f:for each="{links}" as="link" iteration="linkSuGroupIter">
+
+            <div class="link-single hoverText clearfix <f:if condition="{linkSuGroupIter.isEven}==1"><f:then>even</f:then><f:else>odd</f:else></f:if>">
+                    <div class="picture">
+                        <f:image src="fileadmin/user_upload/tx_attoworld/{link.image}" width="522c" height="390c"/>
+                    </div>
+                    <div class="content">
+                        <h2>{link.title}</h2>
+                        <div class="text">
+                            <f:format.html parseFuncTSPath="">{link.bodytext}</f:format.html>
+                        </div>
+                        <div class="button">
+                            <a href="{link.uri}">Webpage</a>
+                        </div>
+                    </div>
+                </div>
+
+        </f:for>
+    </div>
+    
+</div>

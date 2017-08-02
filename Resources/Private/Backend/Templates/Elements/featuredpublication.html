@@ -1,0 +1,40 @@
+{namespace aw=Tx_attoworld_ViewHelpers}
+<div class="plugin-featuredpublication">
+    <h1>Featured Publications</h1>
+    
+    <div class="fp-slideshow slideshow">
+        <a class="buttons prev" href="#"></a>
+        <div class="viewport">
+            
+            <ul class="overview" data-startwith="0" style="width: 15240px; left: -7620px;">
+                <f:for each="{news}" as="newsitem" iteration="newsIter">
+                    
+                    <f:if condition="{newsitem.pressrelease.0.publications.0.featured} == 1">
+                        <f:then>
+                            <li class="hoverText">
+                                <div class="picture">
+                                    <f:image src="{newsitem.image}" width="1280c" height="390c"/>
+                                </div>
+                                <div class="content hoverText">
+                                    <div class="pressrelease">
+                                        <div class="date"><aw:Datumformat integer="{newsitem.pressrelease.0.pubtstamp}" format="j F Y"/></div>
+                                        <div class="title">{newsitem.title}</div>
+                                        <div class="bodytext"><span class="firstletters">press release —</span><f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="625" append="&nbsp;…">{newsitem.bodytext}</f:format.crop></f:format.html></div>
+                                        <div class="readmore">
+                                            <f:link.page pageUid="89" additionalParams="{tx_attoworld_pi18 : {uid : '{newsitem.uid}'}}">Read More</f:link.page>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </f:then>
+                    </f:if>
+
+                    
+                </f:for>
+            </ul>
+            
+        </div>
+        <a class="buttons next" href="#"></a>
+    </div>
+    
+</div>

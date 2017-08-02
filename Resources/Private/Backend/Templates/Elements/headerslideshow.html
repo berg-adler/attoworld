@@ -1,0 +1,46 @@
+<f:if condition="{counter} > 0">
+    <f:then>
+        <div id="header-slideshow">
+            <div class="viewport">
+                <div class="button-overlay-left">
+                    <a class="buttons prev" href="#"></a>
+                </div>
+                <ul class="overview" data-startwith="{active}" style="width: 13335px; left: 0px;">
+                    
+                    <f:if condition="{projects}">
+                        <f:then>
+                            <f:for each="{projects}" as="project" iteration="projectIterator">
+                                <li data-pid="<f:uri.page pageUid='{project.pagepid}'/>">
+                                    <div class="text"><f:format.html parseFuncTSPath="">{project.oneliner}</f:format.html></div>
+                                <f:image alt="{project.title}" src="fileadmin/user_upload/tx_attoworld/{project.image}" width="1920c" height="755c"/>
+                                <f:if condition="{project.oneliner}">
+                                    <div class="dark-overlay"></div>
+                                </f:if>
+                                </li>
+                            </f:for>
+                        </f:then>
+                    </f:if>
+                    
+                    <f:if condition="{slides}">
+                        <f:then>
+                            <f:for each="{slides}" as="project" iteration="projectIterator">
+                                
+                                <li data-pid="<f:uri.page pageUid='{project.pagepid}'/>">
+                                    <div class="text">{project.oneliner}</div>
+                                <f:image alt="{project.title}" src="fileadmin/user_upload/tx_attoworld/slides/{project.image}" width="1920c" height="755c"/>
+                                <f:if condition="{project.oneliner}">
+                                    <div class="dark-overlay"></div>
+                                </f:if>
+                                </li>
+                            </f:for>
+                        </f:then>
+                    </f:if>
+                    
+                </ul>
+                <div class="button-overlay-right">
+                    <a class="buttons next" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </f:then>
+</f:if>

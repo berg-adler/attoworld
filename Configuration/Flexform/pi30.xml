@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <overview>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Konfiguration</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    
+                    <settings.bodytext>
+                        <TCEforms type="array">
+                            <config type="array">
+                                <type>text</type>
+                                <cols>48</cols>
+                                <rows>5</rows>
+                            </config>
+                            <label>Bodytext</label>
+                            <defaultExtras>richtext[*]:rte_transform[flag=rte_enabled|mode=ts_css]</defaultExtras>
+                        </TCEforms>
+                    </settings.bodytext>
+                    
+                    <settings.source>
+                        <TCEforms>
+                            <label>Source</label>
+                            <config>
+                                <type>input</type>
+                                <size>255</size>
+                            </config>
+                        </TCEforms>
+                    </settings.source>
+                    
+                    <settings.cite>
+                        <TCEforms>
+                            <label>Cite</label>
+                            <config>
+                                <type>input</type>
+                                <size>255</size>
+                            </config>
+                        </TCEforms>
+                    </settings.cite>
+                    
+                    
+                </el>
+            </ROOT>
+        </overview>
+    </sheets>
+</T3DataStructure>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-01-31T11:01:20Z" product-name="attoworld">
+		<header/>
+		<body>
+			<trans-unit id="gwdglink.description">
+				<source>gwdglink</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="location.description">
+				<source>location</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="fulltextdescription.description">
+				<source>fulltextdescription</source>
+			</trans-unit>
+			<trans-unit id="type.description">
+				<source>type</source>
+			</trans-unit>
+			<trans-unit id="personsubgroup.description">
+				<source>personsubgroup</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

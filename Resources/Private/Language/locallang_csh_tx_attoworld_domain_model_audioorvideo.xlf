@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-01-31T11:01:20Z" product-name="attoworld">
+		<header/>
+		<body>
+			<trans-unit id="featured.description">
+				<source>featured</source>
+			</trans-unit>
+			<trans-unit id="pubdate.description">
+				<source>pubdate</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="type.description">
+				<source>type</source>
+			</trans-unit>
+			<trans-unit id="file.description">
+				<source>file</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="journal.description">
+				<source>journal</source>
+			</trans-unit>
+			<trans-unit id="pageref.description">
+				<source>pageref</source>
+			</trans-unit>
+			<trans-unit id="volume.description">
+				<source>volume</source>
+			</trans-unit>
+			<trans-unit id="publications.description">
+				<source>publications</source>
+			</trans-unit>
+			<trans-unit id="authors.description">
+				<source>authors</source>
+			</trans-unit>
+			<trans-unit id="publicationcategory.description">
+				<source>publicationcategory</source>
+			</trans-unit>
+			<trans-unit id="picture.description">
+				<source>picture</source>
+			</trans-unit>
+			<trans-unit id="pubtstamp.description">
+				<source>pubtstamp</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

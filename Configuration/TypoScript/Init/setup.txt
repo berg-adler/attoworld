@@ -1,0 +1,4 @@
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:attoworld/Configuration/TypoScript/Page/Setup/config.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:attoworld/Configuration/TypoScript/Page/Setup/layout.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:attoworld/Configuration/TypoScript/Page/Setup/page.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE: EXT:attoworld/Configuration/TypoScript/Page/Setup/meta.ts">

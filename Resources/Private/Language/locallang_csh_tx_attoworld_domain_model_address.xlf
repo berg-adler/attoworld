@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-01-31T11:01:20Z" product-name="attoworld">
+		<header/>
+		<body>
+			<trans-unit id="zipcode.description">
+				<source>zipcode</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="street.description">
+				<source>street</source>
+			</trans-unit>
+			<trans-unit id="streetnumber.description">
+				<source>streetnumber</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

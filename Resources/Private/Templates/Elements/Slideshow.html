@@ -1,0 +1,78 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<!--
+<div id="header-slideshow">
+
+    <div class="viewport">
+        <a class="buttons prev" href="#">&lt;</a>
+        <ul class="overview">
+            <f:for each="{projects}" as="project" iteration="ProjectIterator">
+                <li>
+                    <f:image src="{project.image}" alt="{project.title}"/>
+                </li>
+            </f:for>
+        </ul>
+        <a class="buttons next" href="#">&gt;</a>
+    </div>
+
+    <div class="bullet-menu">
+        <ul class="bullets clearfix">
+
+            <f:if condition="{projects}">
+                <f:then>
+                    <f:for each="{projects}" as="project" iteration="ProjectIterator">
+                        <li class="{f:if(condition:'{ProjectIterator.isFirst}',then:'first',else:'')}{f:if(condition:'{ProjectIterator.isLast}',then:'last',else:'')}">
+                            <a href="#" class="bullet{f:if(condition:'{ProjectIterator.isFirst}',then:' active',else:'')}" data-slide="{ProjectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered">{project.title}</div></div></div><div class="content"><f:image src="{project.image}" alt="{project.image}"/></div></div></a>
+                        </li>
+                    </f:for>
+                </f:then>
+            </f:if>
+
+            <f:if condition="{slides}">
+                <f:then>
+                    <f:for each="{slides}" as="project" iteration="ProjectIterator">
+                        <li class="{f:if(condition:'{ProjectIterator.isFirst}',then:'first',else:'')}{f:if(condition:'{ProjectIterator.isLast}',then:'last',else:'')}">
+                            <a href="#" class="bullet{f:if(condition:'{ProjectIterator.isFirst}',then:' active',else:'')}" data-slide="{ProjectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered">{project.title}</div></div></div><div class="content"><f:image src="{project.image}" alt="{project.image}"/></div></div></a>
+                        </li>
+                    </f:for>
+                </f:then>
+            </f:if>
+
+        </ul>
+        <div class="background-white"></div>
+    </div>
+
+    <f:link.page pageUid="18" additionalParams="{tx_attoworld_pi2: {project: '{pid}'}}">Test</f:link.page>
+</div>
+-->
+
+<div class="plugin-slideshow layout-{settings.type}">
+
+    <div class="sub-slideshow" data-id="ss1">
+        <a class="buttons prev" href="#"></a>
+        <div class="viewport">
+
+            <ul class="overview" data-startwith="{f:if(condition:'{entry.startwith}',then:'{entry.startwith}',else:'0')}">
+                
+                <f:for each="{data}" as="entry" iteration="Iterator">
+                    <li data-entryuid="{entry.uid}" data-uid="{Iterator.cycle}">
+                        <div class="picture">
+                            <img src="{entry.image}" alt="{entry.title}">
+                        </div>
+                        <div class="picturecaption">
+                            <div class="picturecaption-headline">{entry.title}</div>
+                            <f:if condition="{entry.description}">
+                                <f:then>
+                                    <div class="picturecaption-text">{entry.description}</div>
+                                </f:then>
+                            </f:if>
+                        </div>    
+                    </li>
+                </f:for>
+                
+            </ul>  
+
+        </div>
+        <a class="buttons next" href="#"></a>
+    </div>
+
+</div>

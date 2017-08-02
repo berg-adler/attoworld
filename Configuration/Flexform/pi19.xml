@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <overview>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Konfiguration</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.title>
+                        <TCEforms>
+                            <label>Title</label>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                            </config>
+                        </TCEforms>
+                    </settings.title>
+                    
+                    <settings.name>
+                        <TCEforms>
+                            <label>Name</label>
+                            <config>
+                                <type>input</type>
+                                <size>10</size>
+                            </config>
+                        </TCEforms>
+                    </settings.name>
+                    
+                    <settings.person>
+                        <TCEforms>
+                            <label>Person</label>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"></numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                                <foreign_table>tx_attoworld_domain_model_person</foreign_table>
+                                <foreign_table_where>
+                                    ORDER BY surname
+                                </foreign_table_where>
+                            </config>
+                        </TCEforms>
+                    </settings.person>
+
+                    <settings.bodytext>
+                        <TCEforms type="array">
+                            <config type="array">
+                                <type>text</type>
+                                <cols>48</cols>
+                                <rows>5</rows>
+                            </config>
+                            <label>Bodytext</label>
+                            <defaultExtras>richtext[*]:rte_transform[flag=rte_enabled|mode=ts_css]</defaultExtras>
+                        </TCEforms>
+                    </settings.bodytext>
+                    
+                </el>
+            </ROOT>
+        </overview>
+    </sheets>
+</T3DataStructure>

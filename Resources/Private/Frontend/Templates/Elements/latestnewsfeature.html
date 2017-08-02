@@ -1,0 +1,67 @@
+{namespace aw=Tx_attoworld_ViewHelpers}
+<div class="plugin-latestnewsfeature">
+    
+    <h1>Latest News</h1>
+    
+    <div class="listing clearfix">
+        <f:for each="{all.news}" as="newsitem" iteration="newsIterator"><div class="news-item hoverText <f:if condition="{newsIterator.cycle} % 3"><f:then>row-element</f:then></f:if> <f:if condition="{newsIterator.cycle} > 6"><f:then>hidden</f:then></f:if>">
+            
+            <f:if condition="{newsIterator.cycle} == 3">
+                <f:then>
+                    <div class="special-box">
+                        <div class="content">
+
+                            <div class="title">In the Press</div>
+
+                            <ul class="listing">
+                                <li>
+                                    <div class="title">Ultrashort light pulses shake …</div>
+                                    <div class="info"><span class="type">magazine:</span> <span class="magazin">Nature</span>, <span class="date">February 2016</span></div>
+                                </li>
+                                <li>
+                                    <div class="title">Saudi Arabia opens top-notch …</div>
+                                    <div class="info"><span class="type">magazine:</span> <span class="magazin">Nature</span>, <span class="date">February 2016</span></div>
+                                </li>
+                                <li>
+                                    <div class="title">Attosecond prints of electrons</div>
+                                    <div class="info"><span class="type">magazine:</span> <span class="magazin">Nature</span>, <span class="date">February 2016</span></div>
+                                </li>
+                            </ul>
+
+                            <div class="readmore">
+                                <f:link.page pageUid="88" additionalParams="{tx_attoworld_pi18 : {uid : '{newsitem.uid}'}}">More</f:link.page>
+                            </div>
+                        </div>
+                    </div>
+                </f:then>
+                <f:else>
+                    <f:link.page pageUid="89" additionalParams="{tx_attoworld_pi18 : {uid : '{newsitem.uid}'}}">
+                        <div class="picture">
+                            <f:if condition="{newsitem.image}">
+                                <f:then>
+                                    <f:image src="fileadmin/user_upload/tx_attoworld/{newsitem.image}" width="413c" height="249c" />
+                                </f:then>
+                            </f:if>
+                        </div>
+                        <div class="content">
+                            <div class="date"><aw:Datumformat integer="{newsitem.pubdate}" format="j F Y"/></div>
+                            <div class="title">{newsitem.title}</div>
+                            <div class="content">
+                                <f:if condition="{newsitem.pressrelease}">
+                                    <f:then>
+                                        <span class="firstletters">press release —</span> <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="100" append="&nbsp;…">{newsitem.bodytext}</f:format.crop></f:format.html>
+                                    </f:then>
+                                </f:if>
+                            </div>
+                        </div>
+                    </f:link.page>
+                </f:else>
+            </f:if>
+                
+            
+        </div></f:for>
+    </div>
+    
+    <div class="show-more-button"><button class="test">Show More</button></div>
+    
+</div>

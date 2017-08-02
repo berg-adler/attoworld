@@ -1,0 +1,4 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<f:for each="{pperson.address.locationsjson}" as="location" iteration="LocationIterator">data-phonenumbers='[<f:for each="{location.locations.0.phonenumbers}" as="phonenumber" iteration="PhoneIterator">
+    "<aw:Addresskind string="{phonenumber.kind}" type="phone" type2="{phonenumber.type}"/>{phonenumber.number}",
+</f:for>]' data-emails='[<f:for each="{location.locations.0.emails}" as="email" iteration="EmailIterator">"Email: {email.number}",</f:for>]'</f:for>

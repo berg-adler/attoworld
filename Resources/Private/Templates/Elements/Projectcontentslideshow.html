@@ -1,0 +1,38 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="slide-box">
+    
+    <f:for each="{projects}" as="project" iteration="projectIterator">
+        <div class="data-set" data-slide="{projectIterator.index}" style="display: none;">
+            <f:if condition="{projectIterator.index}==6">
+                <f:then>
+                    <div class="content">
+                        <f:format.html><f:format.crop maxCharacters="575" append="&nbsp;…">{project.description}</f:format.crop></f:format.html>
+                    </div>
+                    <div class="info-box hoverText">
+                        <div class="button">
+                            <f:link.page pageUid="{project.pagepid}">
+                                More Information
+                            </f:link.page>
+                        </div>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="content">
+                        <f:format.html><f:format.crop maxCharacters="490" append="&nbsp;…">{project.description}</f:format.crop></f:format.html>
+                    </div>
+                    <div class="info-box hoverText">
+                        <div class="button">
+                            <f:link.page pageUid="{project.pagepid}">
+                                More Information
+                            </f:link.page>
+                        </div>
+                    </div>
+                </f:else>
+            </f:if>
+            
+            
+
+        </div>
+    </f:for>
+
+</div>

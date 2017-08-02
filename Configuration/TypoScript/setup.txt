@@ -1,0 +1,265 @@
+
+plugin.tx_attoworld_pi1 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi1.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi1.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi1.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi1.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi2 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi2.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi2.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi2.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi2.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi3 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi3.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi3.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi3.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi3.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi4 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi4.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi4.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi4.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi4.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi5 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi5.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi5.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi5.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi5.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi6 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi6.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi6.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi6.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi6.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi7 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi7.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi7.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi7.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi7.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi8 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi8.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi8.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi8.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi8.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi9 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi9.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi9.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi9.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi9.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi10 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi10.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi10.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi10.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi10.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi11 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi11.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi11.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi11.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi11.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi12 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi12.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi12.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi12.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi12.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi13 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi13.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi13.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi13.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi13.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi14 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi14.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi14.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi14.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi14.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi15 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi15.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi15.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi15.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi15.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi16 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi16.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi16.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi16.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi16.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi17 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi17.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi17.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi17.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi17.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi18 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi18.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi18.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi18.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi18.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi19 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi19.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi19.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi19.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi19.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi20 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi20.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi20.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi20.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi20.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld_pi23 {
+	view {
+		templateRootPaths.0 = {$plugin.tx_attoworld_pi23.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_attoworld_pi23.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_attoworld_pi23.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_attoworld_pi23.persistence.storagePid}
+	}
+}
+
+plugin.tx_attoworld._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-attoworld table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-attoworld table th {
+		font-weight:bold;
+	}
+
+	.tx-attoworld table td {
+		vertical-align:top;
+	}
+
+	.typo3-messages .message-error {
+		color:red;
+	}
+
+	.typo3-messages .message-ok {
+		color:green;
+	}
+
+)

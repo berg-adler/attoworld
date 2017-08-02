@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-01-31T11:01:20Z" product-name="attoworld">
+		<header/>
+		<body>
+			<trans-unit id="tx_attoworld_domain_model_elements">
+				<source>Elements</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_ajax">
+				<source>Ajax</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_address.zipcode">
+				<source>Zipcode</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_address.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_address.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_address.streetnumber">
+				<source>Streetnumber</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_address.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo">
+				<source>Audioorvideo</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.featured">
+				<source>Featured</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.pubdate">
+				<source>Pubdate</source>
+			</trans-unit>
+                        <trans-unit id="tx_attoworld_domain_model_milestone">
+				<source>Milestone</source>
+			</trans-unit>
+                        <trans-unit id="tx_attoworld_domain_model_coverstory">
+				<source>Coverstory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.journal">
+				<source>Journal</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.pageref">
+				<source>Pageref</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.volume">
+				<source>Volume</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.publications">
+				<source>Publications</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.authors">
+				<source>Authors</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.publicationcategory">
+				<source>Publicationcategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.picture">
+				<source>Picture</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_audioorvideo.pubtstamp">
+				<source>Pubtstamp</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book">
+				<source>Book</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.featured">
+				<source>Featured</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.pubdate">
+				<source>Pubdate</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.journal">
+				<source>Journal</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.pageref">
+				<source>Pageref</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.volume">
+				<source>Volume</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.publications">
+				<source>Publications</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.authors">
+				<source>Authors</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.publicationcategory">
+				<source>Publicationcategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.picture">
+				<source>Picture</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_book.pubtstamp">
+				<source>Pubtstamp</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_breakingnews">
+				<source>Breakingnews</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_breakingnews.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_breakingnews.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_breakingnews.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_breakingnews.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_content.header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_content.contet_type">
+				<source>Contet Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement">
+				<source>Filterelement</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.size">
+				<source>Size</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.linkjobs">
+				<source>Linkjobs</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.linknews">
+				<source>Linknews</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.linknextappearance">
+				<source>Linknextappearance</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.linkextern">
+				<source>Linkextern</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.oneliner">
+				<source>Oneliner</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.pageid">
+				<source>Pageid</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.linkreference">
+				<source>Linkreference</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_filterelement.anchor">
+				<source>Anchor</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_jobs">
+				<source>Jobs</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_jobs.gwdglink">
+				<source>Gwdglink</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_jobs.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_jobs.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_jobs.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_jobs.fulltextdescription">
+				<source>Fulltextdescription</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_jobs.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_jobs.personsubgroup">
+				<source>Personsubgroup</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubgroup">
+				<source>Linkonsubgroup</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubgroup.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubgroup.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubgroup.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubgroup.pageid">
+				<source>Pageid</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubgroup.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubgroup.uri">
+				<source>Uri</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubpage">
+				<source>Linkonsubpage</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubpage.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubpage.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubpage.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubpage.pageid">
+				<source>Pageid</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_linkonsubpage.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_location.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_location.addfirstline">
+				<source>Addfirstline</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_location.addsecondline">
+				<source>Addsecondline</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_location.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_location.streetnumber">
+				<source>Streetnumber</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_location.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_location.zipcode">
+				<source>Zipcode</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_location.country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin">
+				<source>Magazin</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.featured">
+				<source>Featured</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.pubdate">
+				<source>Pubdate</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.journal">
+				<source>Journal</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.pageref">
+				<source>Pageref</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.volume">
+				<source>Volume</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.publications">
+				<source>Publications</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.authors">
+				<source>Authors</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.publicationcategory">
+				<source>Publicationcategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.picture">
+				<source>Picture</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_magazin.pubtstamp">
+				<source>Pubtstamp</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nation">
+				<source>Nation</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nation.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_news">
+				<source>News</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_news.pubdate">
+				<source>Pubdate</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_news.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_news.author">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_news.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_news.pressrelease">
+				<source>Pressrelease</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_news.publinktext">
+				<source>Publinktext</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_news.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_news.contacts">
+				<source>Contacts</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper">
+				<source>Newspaper</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.featured">
+				<source>Featured</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.pubdate">
+				<source>Pubdate</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.journal">
+				<source>Journal</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.pageref">
+				<source>Pageref</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.volume">
+				<source>Volume</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.publications">
+				<source>Publications</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.authors">
+				<source>Authors</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.publicationcategory">
+				<source>Publicationcategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.picture">
+				<source>Picture</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_newspaper.pubtstamp">
+				<source>Pubtstamp</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nextappearance">
+				<source>Nextappearance</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nextappearance.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nextappearance.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nextappearance.organizer">
+				<source>Organizer</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nextappearance.elementtitle">
+				<source>Elementtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nextappearance.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nextappearance.time">
+				<source>Time</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_nextappearance.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.surname">
+				<source>Surname</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.forename">
+				<source>Forename</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.gender">
+				<source>Gender</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.curriculumvitae">
+				<source>Curriculumvitae</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.publicationsbefore">
+				<source>Publicationsbefore</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.member">
+				<source>Member</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.onwebpage">
+				<source>Onwebpage</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.isgroupleader">
+				<source>Isgroupleader</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.subgroup">
+				<source>Subgroup</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.nation">
+				<source>Nation</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.publications">
+				<source>Publications</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.position">
+				<source>Position</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.researchtext">
+				<source>Researchtext</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_person.projecttext">
+				<source>Projecttext</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personaddress">
+				<source>Personaddress</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personaddress.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personaddress.phonenumber">
+				<source>Phonenumber</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personaddress.roomnumber">
+				<source>Roomnumber</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personaddress.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personaddress.txattoworlddomainmodelperson">
+				<source>Txattoworlddomainmodelperson</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personcategory">
+				<source>Personcategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personcategory.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personemail">
+				<source>Personemail</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personemail.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personemail.identifier">
+				<source>Identifier</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personemail.txattoworlddomainmodelperson">
+				<source>Txattoworlddomainmodelperson</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personemail.person">
+				<source>Person</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personposition">
+				<source>Personposition</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personposition.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personsubgroup">
+				<source>Personsubgroup</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personsubgroup.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_personsubgroup.identifier">
+				<source>Identifier</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease">
+				<source>Pressrelease</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.featured">
+				<source>Featured</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.pubdate">
+				<source>Pubdate</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.journal">
+				<source>Journal</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.pageref">
+				<source>Pageref</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.volume">
+				<source>Volume</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.publications">
+				<source>Publications</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.authors">
+				<source>Authors</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.publicationcategory">
+				<source>Publicationcategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.picture">
+				<source>Picture</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_pressrelease.pubtstamp">
+				<source>Pubtstamp</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project">
+				<source>Project</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.shorttitle">
+				<source>Shorttitle</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.oneliner">
+				<source>Oneliner</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.active">
+				<source>Active</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.member">
+				<source>Member</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.page">
+				<source>Page</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_project.pageid">
+				<source>Pageid</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication">
+				<source>Publication</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.featured">
+				<source>Featured</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.pubdate">
+				<source>Pubdate</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.file">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.journal">
+				<source>Journal</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.pageref">
+				<source>Pageref</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.volume">
+				<source>Volume</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.publications">
+				<source>Publications</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.authors">
+				<source>Authors</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.publicationcategory">
+				<source>Publicationcategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.picture">
+				<source>Picture</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.doi">
+				<source>Doi</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publication.pubtstamp">
+				<source>Pubtstamp</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publicationcategory">
+				<source>Publicationcategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_publicationcategory.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_slide">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_slide.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_slide.shorttitle">
+				<source>Shorttitle</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_slide.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_slide.active">
+				<source>Active</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos">
+				<source>Videos</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videocategory">
+				<source>Videocategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.mediathekcategory">
+				<source>Mediathekcategory</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.image21zu9">
+				<source>Image21zu9</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videomp4mobile">
+				<source>Videomp4mobile</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videomp4sd">
+				<source>Videomp4sd</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videomp4hd">
+				<source>Videomp4hd</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videowebmmobile">
+				<source>Videowebmmobile</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videowebmsd">
+				<source>Videowebmsd</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videowebmhd">
+				<source>Videowebmhd</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videoogvmobile">
+				<source>Videoogvmobile</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videoogvsd">
+				<source>Videoogvsd</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.videoogvhd">
+				<source>Videoogvhd</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.keywords">
+				<source>Keywords</source>
+			</trans-unit>
+			<trans-unit id="tx_attoworld_domain_model_videos.description">
+				<source>Description</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

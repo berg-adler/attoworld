@@ -1,0 +1,254 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<span class="title"><aw:Publicationtype publication="{ppublication}"/>:</span>
+<f:if condition="{0:'{ppublication.type}'} == {0:'thesis_phd'}">
+    <f:then>
+        <span class="journal">{ppublication.locations.0.name}</span>, <span class="year">{ppublication.pubdate}</span>
+    </f:then>
+    <f:else>
+        <f:if condition="{0:'{ppublication.type}'} == {0:'thesis_master'}">
+            <f:then>
+                <span class="journal">{ppublication.locations.0.name}</span>, <span class="pageref">{ppublication.locations.0.addsecondline}</span> <span class="year">{ppublication.pubdate}</span>
+            </f:then>
+            <f:else>
+                <f:if condition="{0:'{ppublication.type}'} == {0:'thesis_diploma'}">
+                    <f:then>
+                        <span class="journal">{ppublication.locations.0.name}</span>, <span class="pageref">{ppublication.locations.0.addsecondline}</span> <span class="year">{ppublication.pubdate}</span>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{0:'{ppublication.type}'} == {0:'thesis_bachelor'}">
+                            <f:then>
+                                <span class="journal">{ppublication.locations.0.name}</span>, <span class="pageref">{ppublication.locations.0.addsecondline}</span> <span class="year">{ppublication.pubdate}</span>
+                            </f:then>
+                            <f:else>
+
+                                <f:if condition="{ppublication.journal}">
+                                    <f:then>
+                                        <f:if condition="{ppublication.pageref}">
+                                            <f:then>
+                                                <f:if condition="{ppublication.volume}">
+                                                    <f:then>
+                                                        <f:if condition="{ppublication.pubdate}">
+                                                            <f:then>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume},</span> <span class="pageref">{ppublication.pageref}</span> <span class="year">({ppublication.pubdate})</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume},</span> <span class="pageref">{ppublication.pageref}</span> <span class="year">({ppublication.pubdate})</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume},</span> <span class="pageref">{ppublication.pageref}</span> <span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume},</span> <span class="pageref">{ppublication.pageref}</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{ppublication.pubdate}">
+                                                            <f:then>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="pageref">{ppublication.pageref}</span> <span class="year">({ppublication.pubdate})</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="pageref">{ppublication.pageref}</span> <span class="year">({ppublication.pubdate})</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="pageref">{ppublication.pageref}</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="pageref">{ppublication.pageref}</span></span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:then>
+                                            <f:else>
+                                                <f:if condition="{ppublication.volume}">
+                                                    <f:then>
+                                                        <f:if condition="{ppublication.pubdate}">
+                                                            <f:then>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume}</span> <span class="year">({ppublication.pubdate})</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume}</span> <span class="year">({ppublication.pubdate})</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume}</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume}</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{ppublication.pubdate}">
+                                                            <f:then>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span>, <!--<span class="volume">ISBN: {ppublication.doi}</span>, --><span class="year">({ppublication.pubdate})</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                        <div class="doi-isbn"><span class="title">ISBN:</span> {ppublication.doi}</div>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="volume">{ppublication.doi}</span>, <span class="year">({ppublication.pubdate})</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span>, <!--<span class="volume">ISBN: {ppublication.doi}</span>, --><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                        <div class="doi-isbn"><span class="title">ISBN:</span> {ppublication.doi}</div>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="volume">{ppublication.doi}</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{ppublication.pageref}">
+                                            <f:then>
+                                                <f:if condition="{ppublication.volume}">
+                                                    <f:then>
+                                                        <f:if condition="{ppublication.pubdate}">
+                                                            <f:then>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume},</span> <span class="pageref">{ppublication.pageref}</span> <span class="year">({ppublication.pubdate})</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume},</span> <span class="pageref">{ppublication.pageref}</span> <span class="year">({ppublication.pubdate})</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume},</span> <span class="pageref">{ppublication.pageref}</span> <span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume},</span> <span class="pageref">{ppublication.pageref}</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{ppublication.pubdate}">
+                                                            <f:then>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="pageref">{ppublication.pageref}</span> <span class="year">({ppublication.pubdate})</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="pageref">{ppublication.pageref}</span> <span class="year">({ppublication.pubdate})</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="pageref">{ppublication.pageref}</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="pageref">{ppublication.pageref}</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:then>
+                                            <f:else>
+                                                <f:if condition="{ppublication.volume}">
+                                                    <f:then>
+                                                        <f:if condition="{ppublication.pubdate}">
+                                                            <f:then>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume}</span> <span class="year">({ppublication.pubdate})</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume}</span> <span class="year">({ppublication.pubdate})</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume}</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span> <span class="volume">{ppublication.volume}</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{ppublication.pubdate}">
+                                                            <f:then>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span>, <!--<span class="volume">ISBN: {ppublication.doi}</span> --><span class="year">({ppublication.pubdate})</span><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                        <div class="doi-isbn"><span class="title">ISBN:</span> {ppublication.doi}</div>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="volume">{ppublication.doi}</span> <span class="year">({ppublication.pubdate})</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{ppublication.editors}">
+                                                                    <f:then>
+                                                                        <span class="journal">{ppublication.journal}</span>, <!--<span class="volume">ISBN: {ppublication.doi}</span>--><span class="editors">, Editors: {ppublication.editors}</span>
+                                                                        <div class="doi-isbn"><span class="title">ISBN:</span> {ppublication.doi}</div>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <span class="journal">{ppublication.journal}</span>, <span class="volume">{ppublication.doi}</span>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                                
+                            </f:else>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>

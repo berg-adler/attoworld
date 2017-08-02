@@ -1,0 +1,93 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-nextappearances">
+    <h1>Next appearances</h1>
+
+    <div class="listing">
+        <ul class="list">
+            <f:for each="{data}" as="entry" iteration="NaIterator">
+                
+                <li data-uid="{NaIterator.cycle}" class="list-element clearfix">
+
+                    <f:if condition="{entry.model.link}">
+                        <f:then>
+                            <div class="col-1">
+                                <div class="picture format-{entry.model.elementtitle}">
+                                    <img src="{entry.model.image}"/>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <f:if condition="{entry.model.title}">
+                                    <f:then>
+                                        <div class="title">{entry.model.title}</div>
+                                    </f:then>
+                                </f:if>
+                                <f:if condition="{entry.model.subtitle}">
+                                    <f:then>
+                                        <div class="lecturetitle">{entry.model.subtitle}</div>
+                                    </f:then>
+                                </f:if>
+                                <f:if condition="{entry.model.time}">
+                                    <f:then>
+                                        <div class="date"><aw:Datumformat integer="{entry.model.time}" format="F j, Y"/></div>
+                                    </f:then>
+                                </f:if>
+                                <f:if condition="{entry.model.location}">
+                                    <f:then>
+                                        <div class="location"><f:format.stripTags>{entry.model.location}</f:format.stripTags></div>
+                                    </f:then>
+                                </f:if>
+                                <f:if condition="{entry.model.description}">
+                                    <f:then>
+                                        <div class="description"><f:format.html>{entry.model.description}</f:format.html></div>
+                                    </f:then>
+                                </f:if>
+                                <div class="link"><a href="{entry.model.link}" target="_blank">More Information …</a></div>
+                            </div>    
+                        </f:then>
+                        <f:else>
+                            <div class="col-1">
+                                <div class="picture format-{entry.model.elementtitle}">
+                                    <img src="{entry.model.image}"/>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <f:if condition="{entry.model.title}">
+                                    <f:then>
+                                        <div class="title">{entry.model.title}</div>
+                                    </f:then>
+                                </f:if>
+                                <f:if condition="{entry.model.subtitle}">
+                                    <f:then>
+                                        <div class="lecturetitle">{entry.model.subtitle}</div>
+                                    </f:then>
+                                </f:if>
+                                <f:if condition="{entry.model.time}">
+                                    <f:then>
+                                        <div class="date"><aw:Datumformat integer="{entry.model.time}" format="F j, Y, \a\t H:i a"/></div>
+                                    </f:then>
+                                    
+                                    <!--
+                                    <p class="date"><Datumformat integer="{appearance.date}" format="%e %B %G, %I:%M" />—<fk:Datumformat integer="{appearance.enddate}" format="%I:%M %p" /></p>
+                                    <p class="date"><Datumformat integer="{appearance.date}" format="%e %B %G, %I:%M %p" /></p>
+                                    -->
+                                    
+                                </f:if>
+                                <f:if condition="{entry.model.location}">
+                                    <f:then>
+                                        <div class="location"><f:format.stripTags>{entry.model.location}</f:format.stripTags></div>
+                                    </f:then>
+                                </f:if>
+                                <f:if condition="{entry.model.description}">
+                                    <f:then>
+                                        <div class="description"><f:format.html>{entry.model.description}</f:format.html></div>
+                                    </f:then>
+                                </f:if>
+                            </div>
+                        </f:else>
+                    </f:if>
+
+                </li>
+            </f:for>
+        </ul>
+    </div>
+</div>

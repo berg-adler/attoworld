@@ -1,0 +1,397 @@
+{namespace aw=Tx_attoworld_ViewHelpers}
+<div class="plugin-filtermaincontent">
+    <div class="show-filters">
+        <button class="button">Filter Topics</button>
+        <p>Discover Laboratory for Attosecond Physics.</p>
+    </div>
+    <h1>Discover us</h1>
+    <div class="filters">
+        <div class="ui-group">
+            <div class="button-group js-radio-button-group" data-filter-group="color">
+                <button class="button is-checked" data-filter="">Alle</button>
+                <button class="button" data-filter=".yellow">News</button>
+                <button class="button" data-filter=".blue">Jobs</button>
+                <button class="button" data-filter=".red">Publikationen</button>
+            </div>
+        </div>
+    </div>
+    <div class="grid" style="position: relative; height: 2125px;">
+        <f:for each="{filterelements}" as="filterelement">
+            <f:if condition="{filterelement.linkreference}">
+                <f:then>
+                    <f:link.page pageUid="{filterelement.linkreference}">
+                        <f:if condition="{filterelement.linknextappearance.0}">
+                            <f:then>
+                                <f:if condition="{filterelement.image}">
+                                    <f:then>
+                                        <div class="color-shape size-{filterelement.size} square" data-href="">
+                                            <div class="container-content linknextappearance">
+                                                <div class="dark-overlay"></div>
+                                                <img class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}"/>
+                                                <div class="content">
+                                                    <h2>{filterelement.linknextappearance.0.title}</h2>
+                                                    <h3>{filterelement.linknextappearance.0.subtitle}</h3>
+                                                    <div class="na-content">
+                                                        <div class="organizer"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.organizer}</f:format.html></div>
+                                                        <div class="elementtitle"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.elementtitle}</f:format.html></div>
+                                                        <div class="description"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.description}</f:format.html></div>
+                                                        <div class="time"><f:format.html parseFuncTSPath=""><aw:Datumformat integer="{filterelement.linknextappearance.0.time}" format="j F Y, \a\t h:m a"/></f:format.html></div>
+                                                        <div class="location"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.location}</f:format.html></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </f:then>
+                                    <f:else>
+                                        <div class="color-shape size-{filterelement.size} square" data-href="">
+                                            <div class="container-content linknextappearance">
+                                                <div class="dark-overlay"></div>
+                                                <div class="content">
+                                                    <h2>{filterelement.linknextappearance.0.title}</h2>
+                                                    <h3>{filterelement.linknextappearance.0.subtitle}</h3>
+                                                    <div class="na-content">
+                                                        <div class="organizer"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.organizer}</f:format.html></div>
+                                                        <div class="elementtitle"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.elementtitle}</f:format.html></div>
+                                                        <div class="description"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.description}</f:format.html></div>
+                                                        <div class="time"><f:format.html parseFuncTSPath=""><aw:Datumformat integer="{filterelement.linknextappearance.0.time}" format="j F Y, \a\t h:m a"/></f:format.html></div>
+                                                        <div class="location"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.location}</f:format.html></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </f:else>
+                                </f:if>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{filterelement.linknews}">
+                                    <f:then>
+                                        <f:if condition="{filterelement.image}">
+                                            <f:then>
+
+                                                <div class="color-shape size-{filterelement.size} square" data-href="">
+                                                    <div class="container-content linknews">
+                                                        <div class="dark-overlay"></div>
+                                                        <img class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}"/>
+                                                        <div class="content">
+                                                            <h2>{filterelement.linknews.title}</h2>
+                                                            <h3>{filterelement.linknews.subtitle}</h3>
+                                                            <div class="na-content">
+                                                                <div class="organizer"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.organizer}</f:format.html></div>
+                                                                <div class="elementtitle"><f:format.html parseFuncTSPath="">filterelement.linknews.0.elementtitle}</f:format.html></div>
+                                                                <div class="description"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.description}</f:format.html></div>
+                                                                <div class="time"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.time}</f:format.html></div>
+                                                                <div class="location"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.location}</f:format.html></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="color-shape size-{filterelement.size} square" data-href="">
+                                                    <div class="container-content linknews nopicture">
+                                                        <div class="dark-overlay"></div>
+                                                        <div class="content">
+                                                            <h2>{filterelement.linknews.title}</h2>
+                                                            <h3>{filterelement.linknews.subtitle}</h3>
+                                                            <div class="na-content">
+                                                                <div class="organizer"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.organizer}</f:format.html></div>
+                                                                <div class="elementtitle"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.elementtitle}</f:format.html></div>
+                                                                <div class="description"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.description}</f:format.html></div>
+                                                                <div class="time"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.time}</f:format.html></div>
+                                                                <div class="location"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.location}</f:format.html></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </f:else>
+                                        </f:if>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{filterelement.linkjobs}">
+                                            <f:then>
+                                                <f:if condition="{filterelement.image}">
+                                                    <f:then>
+                                                        <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkjobs"><div class="dark-overlay"></div><img class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkjobs"><div class="dark-overlay"></div><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:then>
+                                            <f:else>
+
+                                                <f:if condition="{filterelement.linkextern}">
+                                                    <f:then>
+                                                        <f:if condition="{filterelement.image}">
+                                                            <f:then>
+                                                                <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><img class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{filterelement.linktopage}">
+                                                            <f:then>
+                                                                <f:link.page pageUid="{filterelement.linktopage}">
+                                                                    <f:if condition="{filterelement.image}">
+                                                                        <f:then>
+                                                                            <f:if condition="{filterelement.size}==0">
+                                                                                <f:then>
+                                                                                    <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="414c" height="207c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                                </f:then>
+                                                                                <f:else>
+                                                                                    <f:if condition="{filterelement.size}==1">
+                                                                                        <f:then>
+                                                                                            <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="414c" height="434c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                                        </f:then>
+                                                                                        <f:else>
+                                                                                            <f:if condition="{filterelement.size}==2">
+                                                                                                <f:then>
+                                                                                                    <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src=fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="848c" height="434c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                                                </f:then>
+                                                                                            </f:if>
+                                                                                        </f:else>
+                                                                                    </f:if>
+                                                                                </f:else>
+                                                                            </f:if>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </f:link.page>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <f:if condition="{filterelement.image}">
+                                                                    <f:then>
+                                                                        <f:if condition="{filterelement.size}==0">
+                                                                            <f:then>
+                                                                                <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="414c" height="207c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                            </f:then>
+                                                                            <f:else>
+                                                                                <f:if condition="{filterelement.size}==1">
+                                                                                    <f:then>
+                                                                                        <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="414c" height="434c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                                    </f:then>
+                                                                                    <f:else>
+                                                                                        <f:if condition="{filterelement.size}==2">
+                                                                                            <f:then>
+                                                                                                <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="848c" height="434c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                                            </f:then>
+                                                                                        </f:if>
+                                                                                    </f:else>
+                                                                                </f:if>
+                                                                            </f:else>
+                                                                        </f:if>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </f:link.page>
+                </f:then>
+                <f:else>
+                    <f:if condition="{filterelement.linknextappearance.0}">
+                        <f:then>
+                            <f:if condition="{filterelement.image}">
+                                <f:then>
+                                    <div class="color-shape size-{filterelement.size} square" data-href="">
+                                        <div class="container-content linknextappearance">
+                                            <div class="dark-overlay"></div>
+                                            <img class="background" src="fileadmin/user_upload/tx_attoworld//filterelements/{filterelement.image}"/>
+                                            <div class="content">
+                                                <h2>{filterelement.linknextappearance.0.title}</h2>
+                                                <h3>{filterelement.linknextappearance.0.subtitle}</h3>
+                                                <div class="na-content">
+                                                    <div class="organizer"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.organizer}</f:format.html></div>
+                                                    <div class="elementtitle"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.elementtitle}</f:format.html></div>
+                                                    <div class="description"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.description}</f:format.html></div>
+                                                    <div class="time"><f:format.html parseFuncTSPath=""><aw:Datumformat integer="{filterelement.linknextappearance.0.time}" format="j F Y, \a\t h:m a"/></f:format.html></div>
+                                                    <div class="location"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.location}</f:format.html></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </f:then>
+                                <f:else>
+                                    <div class="color-shape size-{filterelement.size} square" data-href="">
+                                        <div class="container-content linknextappearance">
+                                            <div class="dark-overlay"></div>
+                                            <div class="content">
+                                                <h2>{filterelement.linknextappearance.0.title}</h2>
+                                                <h3>{filterelement.linknextappearance.0.subtitle}</h3>
+                                                <div class="na-content">
+                                                    <div class="organizer"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.organizer}</f:format.html></div>
+                                                    <div class="elementtitle"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.elementtitle}</f:format.html></div>
+                                                    <div class="description"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.description}</f:format.html></div>
+                                                    <div class="time"><f:format.html parseFuncTSPath=""><aw:Datumformat integer="{filterelement.linknextappearance.0.time}" format="j F Y, \a\t h:m a"/></f:format.html></div>
+                                                    <div class="location"><f:format.html parseFuncTSPath="">{filterelement.linknextappearance.0.location}</f:format.html></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </f:else>
+                            </f:if>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{filterelement.linknews}">
+                                <f:then>
+                                    <f:if condition="{filterelement.image}">
+                                        <f:then>
+
+                                            <div class="color-shape size-{filterelement.size} square" data-href="">
+                                                <div class="container-content linknews">
+                                                    <div class="dark-overlay"></div>
+                                                    <img class="background" src="fileadmin/user_upload/tx_attoworld//filterelements/{filterelement.image}"/>
+                                                    <div class="content">
+                                                        <h2>{filterelement.linknews.title}</h2>
+                                                        <h3>{filterelement.linknews.subtitle}</h3>
+                                                        <div class="na-content">
+                                                            <div class="organizer"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.organizer}</f:format.html></div>
+                                                            <div class="elementtitle"><f:format.html parseFuncTSPath="">filterelement.linknews.0.elementtitle}</f:format.html></div>
+                                                            <div class="description"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.description}</f:format.html></div>
+                                                            <div class="time"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.time}</f:format.html></div>
+                                                            <div class="location"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.location}</f:format.html></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </f:then>
+                                        <f:else>
+                                            <div class="color-shape size-{filterelement.size} square" data-href="">
+                                                <div class="container-content linknews nopicture">
+                                                    <div class="dark-overlay"></div>
+                                                    <div class="content">
+                                                        <h2>{filterelement.linknews.title}</h2>
+                                                        <h3>{filterelement.linknews.subtitle}</h3>
+                                                        <div class="na-content">
+                                                            <div class="organizer"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.organizer}</f:format.html></div>
+                                                            <div class="elementtitle"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.elementtitle}</f:format.html></div>
+                                                            <div class="description"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.description}</f:format.html></div>
+                                                            <div class="time"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.time}</f:format.html></div>
+                                                            <div class="location"><f:format.html parseFuncTSPath="">{filterelement.linknews.0.location}</f:format.html></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </f:else>
+                                    </f:if>
+                                </f:then>
+                                <f:else>
+                                    <f:if condition="{filterelement.linkjobs}">
+                                        <f:then>
+                                            <f:if condition="{filterelement.image}">
+                                                <f:then>
+                                                    <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkjobs"><div class="dark-overlay"></div><img class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                </f:then>
+                                                <f:else>
+                                                    <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkjobs"><div class="dark-overlay"></div><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                </f:else>
+                                            </f:if>
+                                        </f:then>
+                                        <f:else>
+
+                                            <f:if condition="{filterelement.linkextern}">
+                                                <f:then>
+                                                    <f:if condition="{filterelement.image}">
+                                                        <f:then>
+                                                            <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><img class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{filterelement.linktopage}">
+                                                        <f:then>
+                                                            <f:link.page pageUid="{filterelement.linktopage}">
+                                                                <f:if condition="{filterelement.image}">
+                                                                    <f:then>
+                                                                        <f:if condition="{filterelement.size}==0">
+                                                                            <f:then>
+                                                                                <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="414c" height="207c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                            </f:then>
+                                                                            <f:else>
+                                                                                <f:if condition="{filterelement.size}==1">
+                                                                                    <f:then>
+                                                                                        <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="414c" height="434c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                                    </f:then>
+                                                                                    <f:else>
+                                                                                        <f:if condition="{filterelement.size}==2">
+                                                                                            <f:then>
+                                                                                                <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="848c" height="434c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                                            </f:then>
+                                                                                        </f:if>
+                                                                                    </f:else>
+                                                                                </f:if>
+                                                                            </f:else>
+                                                                        </f:if>
+                                                                    </f:then>
+                                                                    <f:else>
+                                                                        <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                    </f:else>
+                                                                </f:if>
+                                                            </f:link.page>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:if condition="{filterelement.image}">
+                                                                <f:then>
+                                                                    <f:if condition="{filterelement.size}==0">
+                                                                        <f:then>
+                                                                            <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="414c" height="207c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                        </f:then>
+                                                                        <f:else>
+                                                                            <f:if condition="{filterelement.size}==1">
+                                                                                <f:then>
+                                                                                    <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="414c" height="434c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                                </f:then>
+                                                                                <f:else>
+                                                                                    <f:if condition="{filterelement.size}==2">
+                                                                                        <f:then>
+                                                                                            <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><f:image class="background" src="fileadmin/user_upload/tx_attoworld/filterelements/{filterelement.image}" width="848c" height="434c"/><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                                        </f:then>
+                                                                                    </f:if>
+                                                                                </f:else>
+                                                                            </f:if>
+                                                                        </f:else>
+                                                                    </f:if>
+                                                                </f:then>
+                                                                <f:else>
+                                                                    <div class="color-shape size-{filterelement.size} square" data-href=""><div class="container-content linkextern"><div class="dark-overlay"></div><div class="content"><h2>{filterelement.title}</h2><h3>{filterelement.subtitle}</h3></div></div></div>
+                                                                </f:else>
+                                                            </f:if>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:else>
+            </f:if>
+                
+            
+
+
+
+        </f:for>
+
+    </div>
+    <div class="show-more-button"><button class="test">Show More</button></div>
+</div>    

@@ -1,0 +1,526 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15.12.2016, 11:12:11
+    Author     : ferenckrausz
+*/
+
+.plugin-singlenewsitem 
+{ 
+
+}
+.plugin-singlenewsitem h1
+{
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 3.125rem;
+    color: #3c3c3b;
+    text-align: center;
+}
+
+.plugin-coverstories .picture img,
+.plugin-singlenewsitem .picture img {
+    width: 100%;
+    height: auto;
+}
+
+.plugin-singlenewsitem div.picture
+{
+    width: 80rem;
+    height: 31.4583125rem;
+    overflow:hidden;
+}
+
+
+
+
+.plugin-singlenewsitem div.row-1
+{
+    padding: 1.3125rem 0rem 0rem 0rem;
+
+}
+
+.plugin-coverstories .date_author,
+.plugin-singlenewsitem div.date_author {
+    padding: 3.2rem 0rem 0rem 3.75rem;
+
+}
+
+.plugin-coverstories span.date,
+.plugin-singlenewsitem span.date 
+{
+    font-size: 1.125rem;
+    font-family: 'CaslonClassico W00'; 
+    line-height: 1.75rem;
+    letter-spacing:0.02rem;
+
+
+}
+.plugin-coverstories span.author,
+.plugin-singlenewsitem span.author{
+    font-size: 1.125rem;
+    font-family: 'CaslonClassicoW00-BoldI';
+}
+.plugin-coverstories span.kursiv,
+.plugin-singlenewsitem .publication-link span.kursiv 
+{
+    color: #3c3c3b;
+    font-size: 1.25rem;
+    font-family: 'CaslonClassicoW00-BoldI';
+    letter-spacing: 0.01rem;
+    line-height: 1.75rem;
+
+    display: none;
+}
+
+.plugin-singlenewsitem div.col-1 
+{
+    background-color: #f2f2f2;
+    width: 52.921875rem;
+    display: inline-block;
+
+}
+
+
+
+
+
+.plugin-singlenewsitem div.text
+{
+    width: 100%;
+    font-family: 'CaslonClassico W00';
+    color: #3c3c3b;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+    padding: 0rem 3.75rem 3.75rem 3.75rem;
+
+
+}
+
+.plugin-singlenewsitem div.text span.intro
+{
+
+    font-family: 'AvenirNextRoundedW01-De1075568';
+
+}
+.plugin-coverstories span.nobreak,
+.plugin-singlenewsitem span.nobreak, 
+.page-60 span.nobreak {
+
+    white-space: nowrap;
+}
+
+
+
+.displayinline {
+    float: left;
+    margin: 0rem;
+    display: inline;
+    line-height: 1.75rem;
+
+    margin-right: 0.5rem;
+}
+
+.displayinline + p {
+    /*display: inline;*/
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
+
+.plugin-singlenewsitem div.col-2  
+{ 
+    width: 25.81125rem;
+    display: inline-block;
+    color: #878786;
+    vertical-align: top;
+    margin-left: 1.26rem;
+
+}     
+
+.plugin-singlenewsitem div.contacts {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 0rem 1.25rem  0.01rem 2.53125rem;
+
+
+}
+
+.plugin-singlenewsitem div.contacts div.contact {
+    margin-bottom: 1.375rem;
+}
+
+.plugin-singlenewsitem div.contact *,
+.plugin-singlenewsitem div.contact p,
+.plugin-singlenewsitem div.contact p span.bold,
+.plugin-singlenewsitem div.contact p span.kursiv{
+    -webkit-transition: color 0.5s linear; 
+    -moz-transition: color 0.5s linear; 
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+}
+.plugin-singlenewsitem div.contact:hover *,
+.plugin-singlenewsitem div.contact:hover p,
+.plugin-singlenewsitem div.contact:hover p span.bold,
+.plugin-singlenewsitem div.contact:hover p span.kursiv
+{
+    color:  #3c3c3b !important;
+}
+.plugin-singlenewsitem div.contacts h2 {
+    -webkit-transition: color 0.5s linear; 
+    -moz-transition: color 0.5s linear; 
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+}
+.plugin-singlenewsitem div.contacts:hover h2
+{
+    color:  #3c3c3b !important;
+}
+
+
+
+.plugin-singlenewsitem div.publication-link {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 0rem 1.25rem  2.53125rem 2.53125rem;
+    margin-bottom: 1.3125rem;
+
+}
+
+
+
+
+.plugin-singlenewsitem  h2
+{
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 2rem;
+    line-height: 1.6rem;
+    padding: 2.625rem 2.53125rem  0rem 0rem;
+    margin-top: 0rem;
+
+    color: #878786;
+
+}   
+
+.plugin-singlenewsitem div.publication-link p{
+    width: 100%;
+    color: #878786;
+
+}
+.plugin-coverstories span.kursiv,
+.plugin-singlenewsitem div.publication-link span.kursiv
+{
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.125rem;
+
+}
+.plugin-singlenewsitem div.publication-link p {
+    line-height: 1.75rem;
+    font-family: 'AdobeCaslonW01-Regular';
+    font-size: 1.125rem;
+
+}
+
+.plugin-coverstories span.bold,
+.plugin-singlenewsitem .col-1 span.bold
+{
+    font-family: 'AvenirNextRoundedW01-De1075568';
+
+}
+.plugin-coverstories span.kursiv,
+.plugin-singlenewsitem .col-1 span.kursiv {
+    font-family: 'CaslonClassicoW00-BoldI';
+
+}
+.plugin-coverstories span.kursiv,
+.plugin-singlenewsitem .col-1 .text-content p:first-child span.kursiv {
+
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+.plugin-coverstories span.moewchen,
+.plugin-singlenewsitem .col-1 .text-content p:first-child span.moewchen
+{
+
+}
+
+.plugin-coverstories span.bold,
+.plugin-singlenewsitem div.publication-link span.bold
+{
+    font-size: 1.5rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    color: #878786;
+}
+
+.plugin-singlenewsitem div.col-1 p{
+    margin-top: 1.12446875rem;
+    font-family: 'CaslonClassico W00';
+    margin-bottom: 1.12446875rem;
+    line-height: 1.75rem;
+    font-size: 1.125rem;
+}
+
+
+
+
+
+.plugin-singlenewsitem div.contacts p,
+.plugin-singlenewsitem div.contacts p span.bold
+/*.plugin-singlenewsitem div.contacts p span.kursiv*/
+{
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+    color: #878786;
+    margin-top: 0rem;
+
+
+}
+
+.plugin-coverstories span.bolditalic,
+.plugin-singlenewsitem div.col-1 p span.bolditalic {
+
+    font-family: 'CaslonClassicoW00-BoldI';
+}
+.plugin-coverstories span.propername,
+.plugin-singlenewsitem div.col-1 p span.propername,
+.page-59 span.propername,
+.page-60 span.propername
+{
+    font-family: 'CaslonClassico W00 SC';  
+}
+
+.plugin-coverstories span.infoname
+.plugin-singlenewsitem div.contacts div.contact p span.infoname 
+{
+    font-size: 1.5rem;
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    letter-spacing: 0.01rem;
+    line-height: 1.75rem;
+    color: #878786;
+}
+
+.plugin-singlenewsitem .publication-link span.journal {
+    font-family: 'CaslonClassicoW00-BoldI';
+    font-size: 1.125rem;
+    color: #878786;
+}
+.plugin-coverstories span.bold,
+.plugin-singlenewsitem .publication-link span.bold{
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    color: #878786;
+
+
+}
+
+.plugin-coverstories span.volume,
+.plugin-singlenewsitem .publication-link span.volume {
+    font-family: 'Adobe Caslon W01 Bd';
+    font-size: 1.125rem;
+    color: #878786;
+}
+.plugin-coverstories span.pageref,
+.plugin-singlenewsitem .publication-link span.pageref,
+.plugin-singlenewsitem .publication-link span.date {
+    font-family: 'CaslonClassico W00';
+    font-size: 1.125rem;
+}
+.plugin-singlenewsitem div.publication-link *,
+.plugin-singlenewsitem div.publication-link p,
+.plugin-singlenewsitem div.publication-link p span.bold,
+.plugin-singlenewsitem div.publication-link p span.kursiv
+{
+    -webkit-transition: color 0.5s linear; 
+    -moz-transition: color 0.5s linear; 
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+}
+.plugin-singlenewsitem div.publication-link:hover *,
+.plugin-singlenewsitem div.publication-link:hover p,
+.plugin-singlenewsitem div.publication-link:hover p span.bold,
+.plugin-singlenewsitem div.publication-link:hover p span.kursiv
+{
+    color: #3c3c3b;
+
+}
+
+.plugin-singlenewsitem div.pressrelease-download{
+    background-color: #f2f2f2;
+    padding: 0rem 0rem 2rem 2.53125rem;
+    margin-top: 1.3125rem;
+    color: #878786;
+}
+
+
+
+
+.plugin-singlenewsitem span.pdfimage {
+    width: 2.345rem;
+    height: 3.105375rem;
+    background: url(/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg);
+    display: inline-block;
+    /*geht es ?*/
+    float: left;
+    margin-top: 0.1rem;
+}
+
+.plugin-singlenewsitem span.title-element {
+    float: left;
+    width: 80%;
+    margin-left: 1rem;
+    line-height: 1.8rem;
+    overflow: hidden;
+    color: #878786;
+    font-size: 1.5rem;
+
+}
+
+.plugin-singlenewsitem .pressrelease-download * {
+    -webkit-transition: color 0.5s linear; 
+    -moz-transition: color 0.5s linear; 
+    -o-transition: color 0.5s linear;
+    transition: color 0.5s linear;
+}
+.plugin-singlenewsitem .pressrelease-download:hover * {
+    color: #3c3c3b;
+}
+
+
+.plugin-singlenewsitem .pressrelease-download span.pdfimage {
+    -webkit-transition: all 0.5s linear; 
+    -moz-transition: all 0.5s linear; 
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+.plugin-singlenewsitem .pressrelease-download:hover span.pdfimage {
+    background-image: url(/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo_hover.svg);
+    background-repeat: no-repeat;
+}
+.plugin-singlenewsitem a {
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+
+
+}
+
+.plugin-singlenewsitem .row-1 .col-2 a.attoworld-pressrelease-downloadlink {
+    display: block;
+    margin-top: 1.3125rem;
+    background-color: #f2f2f2;
+    padding-bottom: 2rem;
+}
+
+
+.page-59, .page-60{
+    color: #3c3c3b;
+
+}
+
+.page-59 h1,
+.page-60 h1
+{
+    font-family: 'Caslon Graphique W01 Regular';
+    font-size: 3.125rem;
+    text-align: center;
+    padding:6.40rem 0rem 2.5rem 0rem;
+}
+
+.page-59 div.impressum-content
+
+{
+    width: 80rem;
+    background-color: #f2f2f2;
+    position: relative;
+    margin: auto;
+    padding: 4rem;
+
+}
+
+.page-60 div.data-protection-content-top,
+.page-60 div.data-protection-content-bottom{
+    width: 80rem;
+    background-color: #f2f2f2;
+    position: relative;
+    margin: auto;
+    padding: 4rem 4rem 2rem 4rem;
+    
+}
+
+
+.page-59 div.impressum-content-heading,
+.page-60 div.data-protection-top-part-heading,
+.page-60 div.data-protection-bottom-part-heading{
+
+    font-family: 'AvenirNextRoundedW01-De1075568';
+    text-align:left;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding-bottom: 0.8rem;
+
+}
+.page-59 div.impressum-textcentre-top,
+.page-60 div.data-protection-middle-part-paragraph{
+
+    text-align: center;
+    width: 41.1rem;
+    margin:auto;
+    font-family: 'CaslonClassico W00';
+    font-size: 1.5rem;
+    line-height: 2.125rem;
+    letter-spacing: 0.02rem;
+    padding: 1.03125rem 0rem 4rem 0rem;
+
+}
+
+
+
+.page-59 div.impressum-content-paragraph,
+.page-60 div.data-protection-top-part-paragraph,
+.page-60 div.data-protection-bottom-part-paragraph
+{
+    font-size: 1.125rem;
+    font-family: 'CaslonClassico W00';
+    padding-bottom: 2rem;
+    line-height: 1.75rem;
+    text-align:left;
+
+}
+
+.page-59 div.impressum-content-paragraph-bold,
+.page-60 div.data-protection-bottom-part-paragraph-bold
+{
+    font-size: 1.125rem;
+    font-family: 'Adobe Caslon W01 Bd';
+    letter-spacing: 0.02rem;
+    line-height: 1.75rem;
+    text-align:left;
+
+}
+.page-60 div.data-protection-bottom-part-paragraph-bold-1{
+   font-size: 1.125rem;
+    font-family: 'Adobe Caslon W01 Bd';
+    letter-spacing: 0.02rem;
+    line-height: 1.75rem;
+    text-align:left;
+    padding-bottom: 1.5rem;
+}
+
+.attoworld-navigation .logos-mpq-lmu {
+    width: 9rem;
+    height: 5rem;
+    float: right;
+    margin: 0.625rem 1.75rem 0rem 0rem;
+}
+.attoworld-navigation .logos-mpq-lmu .logo-picture-MPQ{
+    height: 5rem;
+    float: left;
+}
+.attoworld-navigation .logos-mpq-lmu .logo-picture-LMU{
+    height: 5rem;
+    float: right;
+    
+}

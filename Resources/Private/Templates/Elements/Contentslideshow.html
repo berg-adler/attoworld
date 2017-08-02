@@ -1,0 +1,94 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="bullet-menu">
+    <ul class="bullets clearfix">
+        <f:if condition="{projects}">
+            <f:then>
+                 <f:for each="{projects}" as="project" iteration="projectIterator">
+                     
+                    <f:if condition="{settings.switchtitlesbyclick}==1">
+                         <f:then>
+                             
+                            <f:if condition="{settings.cropnottext}==1">
+                                <f:then>
+                                    <li data-uid="{project.uid}" class="{f:if(condition:'{projectIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{projectIterator.isLast} == 1',then:'last',else:'')}" data-short="{project.shorttitle}" data-full="{project.shorttitle}">
+                                        <a href="#" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><!--<img alt="{project.image}" src="{project.image}" width="c1920" height="c755">--></div></div></a>
+                                    </li>
+                                </f:then>
+                                <f:else>
+                                    <li data-uid="{project.uid}" class="{f:if(condition:'{projectIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{projectIterator.isLast} == 1',then:'last',else:'')}" data-short="{project.shorttitle}" data-full="<f:format.crop maxCharacters='30' append='&nbsp;…'>{project.shorttitle}</f:format.crop>">
+                                        <a href="#" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><!--<img alt="{project.image}" src="{project.image}" width="c1920" height="c755">--></div></div></a>
+                                    </li>
+                                </f:else>
+                            </f:if>
+                            
+                         </f:then>
+                         <f:else>
+                             
+                             <f:if condition="{settings.cropnottext}==1">
+                                <f:then>
+                                    <li data-uid="{project.uid}" class="{f:if(condition:'{projectIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{projectIterator.isLast} == 1',then:'last',else:'')}" data-short="{project.shorttitle}" data-full="{project.title}">
+                                        <a href="#" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><!--<img alt="{project.image}" src="{project.image}" width="c1920" height="c755">--></div></div></a>
+                                    </li>
+                                </f:then>
+                                <f:else>
+                                    <li data-uid="{project.uid}" class="{f:if(condition:'{projectIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{projectIterator.isLast} == 1',then:'last',else:'')}" data-short="{project.shorttitle}" data-full="<f:format.crop maxCharacters='30' append='&nbsp;…'>{project.title}</f:format.crop>">
+                                        <a href="#" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><!--<img alt="{project.image}" src="{project.image}" width="c1920" height="c755">--></div></div></a>
+                                    </li>
+                                </f:else>
+                             </f:if>
+                             
+                         </f:else>
+                    </f:if>
+                     
+                </f:for>
+            </f:then>
+        </f:if>
+       
+        
+        
+        
+        
+        <f:if condition="{slides}">
+            <f:then>
+                <f:for each="{slides}" as="project" iteration="projectIterator">
+                    <f:if condition="{settings.switchtitlesbyclick}==1">
+                        <f:then>
+                            <li data-uid="{project.uid}" class="{f:if(condition:'{projectIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{projectIterator.isLast} == 1',then:'last',else:'')}" data-short="{project.shorttitle}" data-full="{project.shorttitle}">
+                                <!--
+                                <f:if condition="{project.pagepid}">
+                                    <f:then>
+                                        <a href="<f:uri.page pageUid='{project.pagepid}' section='{project.anchor}'/>" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><img alt="{project.image}" src="{project.image}" width="c1920" height="c755"></div></div></a>
+                                    </f:then>
+                                    <f:else>
+                                        <a href="#" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><img alt="{project.image}" src="{project.image}" width="c1920" height="c755"></div></div></a>
+                                    </f:else>
+                                </f:if>
+                                -->
+                                <a href="#" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><img alt="{project.image}" src="{project.image}" width="c1920" height="c755"></div></div></a>
+                                    
+                            </li>
+                        </f:then>
+                        <f:else>
+                            <li data-uid="{project.uid}" class="{f:if(condition:'{projectIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{projectIterator.isLast} == 1',then:'last',else:'')}" data-short="{project.shorttitle}" data-full="{project.title}">
+                                <!--
+                                <f:if condition="{project.pagepid}">
+                                    <f:then>
+                                        <a href="<f:uri.page pageUid='{project.pagepid}' section='{project.anchor}'/>" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><img alt="{project.image}" src="{project.image}" width="c1920" height="c755"></div></div></a>
+                                    </f:then>
+                                    <f:else>
+                                        <a href="#" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><img alt="{project.image}" src="{project.image}" width="c1920" height="c755"></div></div></a>
+                                    </f:else>
+                                </f:if>
+                                -->
+                                <a href="#" class="bullet {f:if(condition:'{project.active} == 1',then:'active',else:'')}" data-slide="{projectIterator.index}"><div class="box"><div class="headline table"><div class="verticalAlign textCentered"><div class="centered designSet-textColor-1">{project.shorttitle}</div></div></div><div class="content"><img alt="{project.image}" src="{project.image}" width="c1920" height="c755"></div></div></a>
+                            
+                            </li>
+                        </f:else>
+                    </f:if>
+                </f:for>
+            </f:then>
+        </f:if>
+        
+    </ul>
+    <div class="background-white"></div>
+</div>

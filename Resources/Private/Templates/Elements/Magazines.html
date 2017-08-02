@@ -1,0 +1,76 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-magazin mainFilter">
+    
+    <div class="search">
+        <input type="text" name="tx_attoworld_pi2[sword]" class="search-bar" placeholder="Search"/>
+        <input type="submit" name="tx_attoworld_pi2[submit]" class="search-button" value=""/>
+    </div>
+    <div class="text">
+        <p>Find us in the Press.</p>
+    </div>
+    <div class="filter clearfix">
+        <button class="first single-filter <f:if condition="{uid}"><f:then></f:then><f:else>active</f:else></f:if>" data-filter="printonline"><span class="button-text">Print/Online</span></button>
+        <button class="single-filter" data-filter="audioorvideo"><span class="button-text">Audio/Video</span></button>
+        <button class="relative" data-filter="dailypress"><span class="button-text">Dailypress</span></button>
+        <button class="relative" data-filter="magazine"><span class="button-text">Magazine</span></button>
+        <button class="relative" data-filter="year"><span class="button-text">Year</span></button>
+    </div>
+    <div class="filter-contents">
+        
+        <div class="filter-content" data-filter="year">
+            <ul>
+                <f:for each="{years}" as="year" iteration="YearIterator">
+                    <li data-uid="{year.date}" class="<f:for each="{prefilteredYears}" as="prefilteredyear"><f:if condition="{prefilteredyear}=={year.date}"><f:then>active</f:then></f:if></f:for>"><span class="title">{year.date}</span> <span class="publications">({year.counts} publications)</span></li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="filter-content" data-filter="dailypress">
+            <ul>
+                <f:for each="{journalsdailypress}" as="journal" iteration="journalIterator">
+                    <li data-uid="{journal.uid}" class=""><span class="title">{journal.title}</span><span class="publications"></span></li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="filter-content" data-filter="magazine">
+            <ul>
+                <f:for each="{journalsmagazin}" as="journal" iteration="journalIterator">
+                    <li data-uid="{journal.uid}" class=""><span class="title">{journal.title}</span><span class="publications"></span></li>
+                </f:for>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="listing">
+        <ul class="list">
+            <f:for each="{po}" as="magazin" iteration="magazinIterator">
+                
+                <li data-nr="{magazinIterator.index}" data-uid="{magazin.type}-{magazin.model.uid}">
+                    <div class="magazin magazin-{magazinIterator.index} clearfix verticalAlign">
+                        <div class="picture">
+                            <f:image src="{magazin.model.picture}" />
+                        </div>
+                        <div class="content">
+                            <div class="title">{magazin.model.title}</div>
+                            <div class="additional-info"><span class="type"><aw:Correct string="{magazin.model.type}"/>:</span> <span class="journal">{magazin.model.journal}</span><f:if condition="{magazin.model.journal}"><f:then>,</f:then></f:if> <span class="pubdate">{magazin.model.pubdate}</span></div>
+                        </div>
+                        <div class="download">
+                            <f:if condition="{magazin.model.file}">
+                                <f:then>
+                                    <a href="{magazin.model.file}" target="_blank">
+                                        <img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/>
+                                    </a>
+                                </f:then>
+                            </f:if>
+
+                        </div>
+
+                    </div>
+                </li>
+
+            </f:for>
+            
+        </ul>
+    </div>
+    <div class="show-more-button hoverText"><button class="test">Show More</button></div>
+    
+</div>

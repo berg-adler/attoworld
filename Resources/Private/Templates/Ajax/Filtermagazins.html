@@ -1,0 +1,27 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<f:for each="{data}" as="magazin" iteration="magazinIterator">
+    
+    <li data-nr="<f:cObject typoscriptObjectPath='lib.math' data='{magazinIterator.index}+{position}' />" data-uid="{magazin.type}-{magazin.model.uid}">
+        <div class="magazin magazin-{magazinIterator.index} clearfix verticalAlign">
+            <div class="picture">
+                <f:image src="{magazin.model.picture}" />
+            </div>
+            <div class="content">
+                <div class="title">{magazin.model.title}</div>
+                <div class="additional-info"><span class="type"><aw:Correct string="{magazin.model.type}"/>:</span> <span class="journal">{magazin.model.journal}</span><f:if condition="{magazin.model.journal}"><f:then>,</f:then></f:if> <span class="pubdate">{magazin.model.pubdate}</span></div>
+            </div>
+            <div class="download">
+                <f:if condition="{magazin.model.file}">
+                    <f:then>
+                        <a href="{magazin.model.file}" target="_blank">
+                            <img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/>
+                        </a>
+                    </f:then>
+                </f:if>
+
+            </div>
+
+        </div>
+    </li>
+
+</f:for>

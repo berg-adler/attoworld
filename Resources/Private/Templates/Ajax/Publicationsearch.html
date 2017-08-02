@@ -1,0 +1,10 @@
+<f:if condition="{publicationcounter}>0">
+    <f:then>
+        <div class="ajax-request" data-counter="{publicationcounter}">
+            <f:render partial='Publication' arguments='{publications: publications}'/>
+        </div>
+    </f:then>
+    <f:else>
+        <div class="message">No Results</div>
+    </f:else>
+</f:if>

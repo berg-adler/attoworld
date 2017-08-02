@@ -1,0 +1,621 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-people mainFilter">
+    <div class="search">
+        <input type="text" name="tx_attoworld_pi20[sword]" class="search-bar" placeholder="Search"/>
+        <input type="submit" name="tx_attoworld_pi20[submit]" class="search-button" value=""/>
+    </div>
+    <div class="text">
+        <p>Meet Our LAP-Team</p>
+    </div>
+    <div class="filter clearfix">
+        <button class="first single-filter {f:if(condition: group,then: '',else:'active')}" data-filter="all">All</button>
+        <!--<button class="first relative" data-filter="view"><span class="button-text">View</span></button>-->
+        <button class="relative" data-filter="director"><span class="button-text">Director</span></button>
+        <button class="single-filter relative" data-filter="Scientists">Scientists</button>
+        <button class="single-filter relative" data-filter="Technical staff">Technical staff</button>
+        <button class="relative project {f:if(condition: group,then: 'active')}" data-filter="project" {f:if(condition: group,then: 'style="height: 3.5rem;"')}><span class="button-text">Research Groups</span></button>
+    </div>
+    <div class="filter-contents">
+        
+        <div class="filter-content" data-filter="view">
+            <ul>
+                <li data-uid="1"><span class="image"><f:image src="" alt="Portrait"/></span><span class="title">Portrait</span></li>
+                <li data-uid="2"><span class="image"><f:image src="" alt="Alphabetical list"/></span><span class="title">Alphabetical list</span></li>
+            </ul>
+        </div>
+        <div class="filter-content" data-filter="director">
+            <ul>
+                <f:for each="{subgroups}" as="subgroup" iteration="SubgroupIterator">
+                    <li data-uid="{subgroup.uid}"><span class="title"><aw:Ucfirst string="{subgroup.title}"/></span><span class="publications"></span></li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="filter-content project" data-filter="project" {f:if(condition: '{group}',then: 'style="display: block;"')}>
+            <ul>
+                <f:for each="{projects}" as="project" iteration="ProjectIterator">
+                    <f:if condition="{project.uid}!=7">
+                        <f:then>
+                            <li data-uid="{project.uid}" {f:if(condition: '{group}=={project.pagepid}',then: 'class="active"')}><span class="title">{project.title}</span></li>
+                        </f:then>
+                    </f:if>
+                </f:for>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="project-listing" {f:if(condition: group,then: 'style="display: block;"')}>
+        <f:for each="{parray}" as="arrayentry" iteration="arrayentryIterator">
+            <div class="category" data-category="{arrayentry.uid}" data-categorypagepid="{arrayentry.pagepid}" {f:if(condition: '{group}=={arrayentry.pagepid}',then: 'style="display: block;"')}>
+                <h2><aw:Ucfirst string="{arrayentry.title}"/></h2>
+                <div class="inner-container clearfix">
+                    <f:for each="{arrayentry.data}" as="person" iteration="personIterator">
+                        <div class="color-shape square <f:for each="{person.model.subgroup}" as="subgroup"> subgroup-{subgroup.uid}</f:for>">
+                        
+                            <div class="person hoverText person-{person.model.uid}" data-uid="{person.model.uid}" <f:render partial="Alphabeticaldata" arguments="{pperson: person}"/>>
+                                <div class="detail clearfix" data-uid="{person.model.uid}">
+                                    <div class="col-1">
+                                        <div class="image"><f:render partial="Personimage" arguments="{pperson: person, width: '476', height: '476'}"/></div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="name">{person.model.title} {person.model.forename} {person.model.surname}</div>
+                                        <div class="position" title="<f:for each="{person.model.position}" as="position" iteration="posIter"><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><f:format.stripTags><aw:Fullpositionnameofpcs string="{position.title}"/></f:format.stripTags></f:format.html></f:for>"><f:for each="{person.model.position}" as="position" iteration="posIter"><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><f:format.stripTags><aw:Fullpositionnameofpcs string="{position.title}"/></f:format.stripTags></f:format.html></f:for></div>
+                                        <div class="tab-contents">
+                                            <f:if condition="{person.model.address}">
+                                                <f:then>
+                                                    <div class="tab-content contacts">
+
+                                                        <f:render partial="Address" arguments="{pperson: person}"/>
+
+                                                    </div>
+                                                </f:then>
+                                            </f:if>
+                                            <div class="tab-content about">
+                                                <div class="description">
+                                                    <f:format.html>{person.model.description}</f:format.html>
+                                                </div>
+                                                <f:if condition="{person.model.curriculumvitae}">
+                                                    <f:then>
+                                                        <div class="curriculumvitae"><a target="_blank" href="{person.model.curriculumvitae}"><img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/><span>Curriculum vitae</span></a></div>
+                                                    </f:then>
+                                                </f:if>
+                                                <f:if condition="{person.model.publicationsbefore}">
+                                                    <f:then>
+                                                        <div class="publicationsbefore"><a target="_blank" href="{person.model.publicationsbefore}"><img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/><span>Publications list</span></a></div>
+                                                    </f:then>
+                                                </f:if>
+                                            </div>
+                                            <f:if condition="{person.model.researchtext}">
+                                                <f:then>
+                                                     <f:if condition="{person.model.projecttext}">
+                                                        <f:then>
+                                                            <div class="tab-content research">
+                                                                <div class="research-text">
+                                                                    <p>Research activities and field</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="350" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.researchtext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                                <div class="project-text">
+                                                                    <p>Current interests and projects</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="350" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.projecttext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <div class="tab-content research">
+                                                                <div class="research-text">
+                                                                    <p>Research activities and field</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="700" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.researchtext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                            </div>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{person.model.projecttext}">
+                                                        <f:then>
+                                                            <div class="tab-content research">
+                                                                <div class="project-text">
+                                                                    <p>Current interests and projects</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="700" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.projecttext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                        <f:else>
+
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+
+                                            <f:if condition="{person.pubs}">
+                                                <f:then>
+                                                    <div class="tab-content publications">
+                                                        <f:for each="{person.pubs}" as="pub" iteration="pubIterator">
+                                                            <div class="publication {f:if(condition:'{pubIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{pubIterator.isLast} == 1',then:'last',else:'')}">
+                                                                <div class="title">{pub.title}</div>
+                                                                <div class="authors"><span class="title">Authors:</span> <f:for each="{pub.authors}" as="author" iteration="AuthorIterator"><f:if condition="{AuthorIterator.index}>0"><f:then>,</f:then></f:if><span class="author" data-uid="{author.uid}"><aw:Pubauthorname author="{author}"/></span></f:for></div>
+                                                                <div class="journal"><span class="title">Journal:</span> <span class="journal">{pub.journal}</span> <f:if condition="{pub.volume}"><f:then><span class="volume">{pub.volume},</span></f:then></f:if> <f:if condition="{pub.pageref}"><f:then><span class="pageref">{pub.pageref}</span></f:then></f:if> <span class="year">({pub.pubdate})</span></div>
+                                                            </div>
+                                                        </f:for>
+                                                        <div class="linktopublications hoverText"><a href="<f:uri.page pageUid="5" additionalParams="{tx_attoworld_pi2 : {person : '{person.model.uid}'}}"/>">All Publications</a></div>
+                                                    </div>
+                                                </f:then>
+                                            </f:if>
+                                            <f:if condition="{person.members}">
+                                                <f:then>
+                                                    <div class="tab-content team">
+                                                        <ul class="design-listing-gefriert">
+                                                            <f:for each="{person.members}" as="member">
+                                                                <li data-uid="{member.model.uid}"><f:if condition="{member.model.isgroupleader}"><f:then><b>{member.model.forename} {member.model.surname}</b></f:then><f:else>{member.model.forename} {member.model.surname}</f:else></f:if></li>
+                                                            </f:for>
+                                                        </ul>
+                                                    </div>
+                                                </f:then>
+                                            </f:if>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="picture">
+                                    <f:if condition="{person.model.image}">
+                                        <f:then>
+                                            <f:render partial="Personimage" arguments="{pperson: person, width: '308', height: '308'}"/>
+                                            
+                                            <!-- <f:image treatIdAsReference="1" src="{person.model.image}" alt="{person.model.title} {person.model.forename} {person.model.surname}" width="308c" height="308c"/> -->
+                                        </f:then>
+                                    </f:if>
+                                </div>
+                                <div class="content hoverText">
+                                    <div class="name">{person.model.forename} {person.model.surname}</div>
+                                    <div class="position"><f:for each="{person.model.position}" as="position" iteration="posIter"><f:if condition="{position.title}!='Automatic'"><f:then><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><aw:Ucfirst string="{position.title}"/></f:format.html></f:then></f:if></f:for></div>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+        </f:for>
+        
+    </div>
+    <div class="director-listing">
+        
+        <f:for each="{darray}" as="arrayentry" iteration="arrayentryIterator">
+            <div class="category" data-category="{arrayentry.uid}" data-categorypagepid="{arrayentry.uid}">
+                
+                <h2><aw:Ucfirst string="{arrayentry.title}"/></h2>
+                <div class="inner-container clearfix">
+                    <f:for each="{arrayentry.data}" as="person" iteration="personIterator">
+                        <div class="color-shape square <f:for each="{person.model.subgroup}" as="subgroup"> subgroup-{subgroup.uid}</f:for>">
+                        
+                            <div class="person hoverText person-{person.model.uid}" data-uid="{person.model.uid}">
+                                <div class="detail clearfix" data-uid="{person.model.uid}">
+                                    <div class="col-1">
+                                        <div class="image">
+                                            <f:render partial="Personimage" arguments="{pperson: person, width: '476', height: '476'}"/>
+                                            <!-- <f:image src="{person.model.image}" width="476c" height="476c"/> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="name">{person.model.title} {person.model.forename} {person.model.surname}</div>
+                                        <div class="position" title="<f:for each="{person.model.position}" as="position" iteration="posIter"><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><f:format.stripTags><aw:Fullpositionnameofpcs string="{position.title}"/></f:format.stripTags></f:format.html></f:for>"><f:format.stripTags><f:for each="{person.model.position}" as="position" iteration="posIter"><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><aw:Fullpositionnameofpcs string="{position.title}"/></f:format.html></f:for></f:format.stripTags></div>
+                                        <div class="tab-contents">
+                                            <f:if condition="{person.model.address}">
+                                                <f:then>
+                                                    <div class="tab-content contacts">
+
+                                                        <f:render partial="Address" arguments="{pperson: person}"/>
+
+                                                    </div>
+                                                </f:then>
+                                            </f:if>
+                                            <div class="tab-content about">
+                                                <div class="description">
+                                                    <f:format.html>{person.model.description}</f:format.html>
+                                                </div>
+                                                <f:if condition="{person.model.curriculumvitae}">
+                                                    <f:then>
+                                                        <div class="curriculumvitae"><a target="_blank" href="{person.model.curriculumvitae}"><img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/><span>Curriculum vitae</span></a></div>
+                                                    </f:then>
+                                                </f:if>
+                                                <f:if condition="{person.model.publicationsbefore}">
+                                                    <f:then>
+                                                        <div class="publicationsbefore"><a target="_blank" href="{person.model.publicationsbefore}"><img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/><span>Publications list</span></a></div>
+                                                    </f:then>
+                                                </f:if>
+                                            </div>
+                                            <f:if condition="{person.model.researchtext}">
+                                                <f:then>
+                                                     <f:if condition="{person.model.projecttext}">
+                                                        <f:then>
+                                                            <div class="tab-content research">
+                                                                <div class="research-text">
+                                                                    <p>Research activities and field</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="350" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.researchtext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                                <div class="project-text">
+                                                                    <p>Current interests and projects</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="350" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.projecttext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <div class="tab-content research">
+                                                                <div class="research-text">
+                                                                    <p>Research activities and field</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="700" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.researchtext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                            </div>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{person.model.projecttext}">
+                                                        <f:then>
+                                                            <div class="tab-content research">
+                                                                <div class="project-text">
+                                                                    <p>Current interests and projects</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="700" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.projecttext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                        <f:else>
+
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+
+                                            <f:if condition="{person.pubs}">
+                                                <f:then>
+                                                    <div class="tab-content publications">
+                                                        <f:for each="{person.pubs}" as="pub" iteration="pubIterator">
+                                                            <div class="publication {f:if(condition:'{pubIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{pubIterator.isLast} == 1',then:'last',else:'')}">
+                                                                <div class="title">{pub.title}</div>
+                                                                <div class="authors"><span class="title">Authors:</span> <f:for each="{pub.authors}" as="author" iteration="AuthorIterator"><f:if condition="{AuthorIterator.index}>0"><f:then>,</f:then></f:if><span class="author" data-uid="{author.uid}"><aw:Pubauthorname author="{author}"/></span></f:for></div>
+                                                                <div class="journal"><span class="title">Journal:</span> <span class="journal">{pub.journal}</span> <f:if condition="{pub.volume}"><f:then><span class="volume">{pub.volume},</span></f:then></f:if> <f:if condition="{pub.pageref}"><f:then><span class="pageref">{pub.pageref}</span></f:then></f:if> <span class="year">({pub.pubdate})</span></div>
+                                                            </div>
+                                                        </f:for>
+                                                        <div class="linktopublications hoverText"><a href="<f:uri.page pageUid="5" additionalParams="{tx_attoworld_pi2 : {person : '{person.model.uid}'}}"/>">All Publications</a></div>
+                                                    </div>
+                                                </f:then>
+                                            </f:if>
+                                            <f:if condition="{person.members}">
+                                                <f:then>
+                                                    <div class="tab-content team">
+                                                        <ul class="design-listing-gefriert">
+                                                            <f:for each="{person.members}" as="member">
+                                                                <li data-uid="{member.model.uid}"><f:if condition="{member.model.isgroupleader}"><f:then><b>{member.model.forename} {member.model.surname}</b></f:then><f:else>{member.model.forename} {member.model.surname}</f:else></f:if></li>
+                                                            </f:for>
+                                                        </ul>
+                                                    </div>
+                                                </f:then>
+                                            </f:if>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="picture">
+                                    <f:if condition="{person.model.image}">
+                                        <f:then>
+                                            <f:render partial="Personimage" arguments="{pperson: person, width: '308', height: '308'}"/>
+                                            <!-- <f:image treatIdAsReference="1" src="{person.model.image}" alt="{person.model.title} {person.model.forename} {person.model.surname}" width="308c" height="308c"/> -->
+                                        </f:then>
+                                    </f:if>
+                                </div>
+                                <div class="content hoverText">
+                                    <div class="name">{person.model.forename} {person.model.surname}</div>
+                                    <div class="position"><f:format.stripTags><f:for each="{person.model.position}" as="position" iteration="posIter"><f:if condition="{position.title}!='Automatic'"><f:then><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><aw:Ucfirst string="{position.title}"/></f:format.html></f:then></f:if></f:for></f:format.stripTags></div>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+        </f:for>
+    </div>
+    
+    <f:if condition="{nils}">
+        <f:then>
+            <script type="text/javascript">
+                var nilsId = {nils.model.uid};
+            </script>    
+        </f:then>
+    </f:if>
+    
+    <div class="listing" {f:if(condition: group,then: 'style="display: none;"')}>
+        <f:for each="{myarray}" as="arrayentry" iteration="arrayentryIterator">
+            <div class="category {arrayentry.title}" data-category="{arrayentry.title}">
+                <h2><aw:Ucfirst string="{arrayentry.title}"/></h2>
+                <div class="inner-container clearfix">
+                    
+                    <!-- 4 = ID des Technical Staff aus dem Konfigurationsarra der personAction im ElementsController -->
+                    <f:if condition="{arrayentryIterator.index}==5">
+                        <f:then>
+                            <div class="technical-leader color-shape square <f:for each="{nils.model.subgroup}" as="subgroup"> subgroup-{subgroup.uid}</f:for>">
+                                <div class="person hoverText person-{nils.model.uid}"  data-uid="{nils.model.uid}">
+                                    <div class="detail clearfix" data-uid="{nils.model.uid}">
+                                        <div class="col-1">
+                                            <div class="image">
+                                                <f:render partial="Personimage" arguments="{pperson: nils, width: '476', height: '476'}"/>
+                                                <!--<f:image src="{nils.model.image}" width="476c" height="476c"/>-->
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="name">{nils.model.title} {nils.model.forename} {nils.model.surname}</div>
+                                            <div class="position" title="<f:for each="{nils.model.position}" as="position" iteration="posIter"><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><f:format.stripTags><aw:Fullpositionnameofpcs string="{position.title}"/></f:format.stripTags></f:format.html></f:for>"><f:for each="{nils.model.position}" as="position" iteration="posIter"><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><f:format.stripTags><aw:Fullpositionnameofpcs string="{position.title}"/></f:format.stripTags></f:format.html></f:for></div>
+                                            <div class="tab-contents">
+                                                <f:if condition="{nils.model.address}">
+                                                    <f:then>
+                                                        <div class="tab-content contacts">
+
+                                                            <f:render partial="Address" arguments="{pperson: nils}"/>
+
+                                                        </div>
+                                                    </f:then>
+                                                </f:if>
+                                                <div class="tab-content about">
+                                                    <div class="description">
+                                                        <f:format.html>{nils.model.description}</f:format.html>
+                                                    </div>
+                                                    <f:if condition="{nils.model.curriculumvitae}">
+                                                        <f:then>
+                                                            <div class="curriculumvitae"><a target="_blank" href="{nils.model.curriculumvitae}"><img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/><span>Curriculum vitae</span></a></div>
+                                                        </f:then>
+                                                    </f:if>
+                                                    <f:if condition="{nils.model.publicationsbefore}">
+                                                        <f:then>
+                                                            <div class="publicationsbefore"><a target="_blank" href="{nils.model.publicationsbefore}"><img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/><span>Publications list</span></a></div>
+                                                        </f:then>
+                                                    </f:if>
+                                                </div>
+                                                <f:if condition="{nils.model.researchtext}">
+                                                    <f:then>
+                                                         <f:if condition="{nils.model.projecttext}">
+                                                            <f:then>
+                                                                <div class="tab-content research">
+                                                                    <div class="research-text">
+                                                                        <p>Research activities and field</p>
+                                                                        <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="350" append="&nbsp;…"><aw:Makelinebreak type="list" string="{nils.model.researchtext}"/></f:format.crop></f:format.html>
+                                                                    </div>
+                                                                    <div class="project-text">
+                                                                        <p>Current interests and projects</p>
+                                                                        <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="350" append="&nbsp;…"><aw:Makelinebreak type="list" string="{nils.model.projecttext}"/></f:format.crop></f:format.html>
+                                                                    </div>
+                                                                </div>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <div class="tab-content research">
+                                                                    <div class="research-text">
+                                                                        <p>Research activities and field</p>
+                                                                        <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="700" append="&nbsp;…"><aw:Makelinebreak type="list" string="{nils.model.researchtext}"/></f:format.crop></f:format.html>
+                                                                    </div>
+                                                                </div>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:then>
+                                                    <f:else>
+                                                        <f:if condition="{nils.model.projecttext}">
+                                                            <f:then>
+                                                                <div class="tab-content research">
+                                                                    <div class="project-text">
+                                                                        <p>Current interests and projects</p>
+                                                                        <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="700" append="&nbsp;…"><aw:Makelinebreak type="list" string="{nils.model.projecttext}"/></f:format.crop></f:format.html>
+                                                                    </div>
+                                                                </div>
+                                                            </f:then>
+                                                            <f:else>
+
+                                                            </f:else>
+                                                        </f:if>
+                                                    </f:else>
+                                                </f:if>
+
+                                                <f:if condition="{nils.pubs}">
+                                                    <f:then>
+                                                        <div class="tab-content publications">
+                                                            <f:for each="{nils.pubs}" as="pub" iteration="pubIterator">
+                                                                <div class="publication {f:if(condition:'{pubIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{pubIterator.isLast} == 1',then:'last',else:'')}">
+                                                                    <div class="title">{pub.title}</div>
+                                                                    <div class="authors"><span class="title">Authors:</span> <f:for each="{pub.authors}" as="author" iteration="AuthorIterator"><f:if condition="{AuthorIterator.index}>0"><f:then>,</f:then></f:if><span class="author" data-uid="{author.uid}"><aw:Pubauthorname author="{author}"/></span></f:for></div>
+                                                                    <div class="journal"><span class="title">Journal:</span> <span class="journal">{pub.journal}</span> <f:if condition="{pub.volume}"><f:then><span class="volume">{pub.volume},</span></f:then></f:if> <f:if condition="{pub.pageref}"><f:then><span class="pageref">{pub.pageref}</span></f:then></f:if> <span class="year">({pub.pubdate})</span></div>
+                                                                </div>
+                                                            </f:for>
+                                                            <div class="linktopublications hoverText"><a href="<f:uri.page pageUid="5" additionalParams="{tx_attoworld_pi2 : {person : '{nils.model.uid}'}}"/>">All Publications</a></div>
+                                                        </div>
+                                                    </f:then>
+                                                </f:if>
+                                                <f:if condition="{nils.members}">
+                                                    <f:then>
+                                                        <div class="tab-content team">
+                                                            <ul class="design-listing-gefriert">
+                                                                <f:for each="{person.members}" as="member">
+                                                                    <li data-uid="{member.model.uid}"><f:if condition="{member.model.isgroupleader}"><f:then><b>{member.model.forename} {member.model.surname}</b></f:then><f:else>{member.model.forename} {member.model.surname}</f:else></f:if></li>
+                                                                </f:for>
+                                                            </ul>
+                                                        </div>
+                                                    </f:then>
+                                                </f:if>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="picture">
+                                        <f:if condition="{nils.model.image}">
+                                            <f:then>
+                                                <f:render partial="Personimage" arguments="{pperson: nils, width: '308', height: '308'}"/>
+                                                <!--<f:image treatIdAsReference="1" src="{nils.model.image}" alt="{nils.model.title} {nils.model.forename} {nils.model.surname}" width="308c" height="308c"/>-->
+                                            </f:then>
+                                        </f:if>
+                                    </div>
+                                    <div class="content hoverText">
+                                        <div class="name">{nils.model.forename} {nils.model.surname}</div>
+                                        <div class="position"><f:format.stripTags><f:for each="{nils.model.position}" as="position" iteration="posIter"><f:if condition="{position.title}!='Automatic'"><f:then><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><aw:Ucfirst string="{position.title}"/></f:format.html></f:then></f:if></f:for></f:format.stripTags></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </f:then>
+                    </f:if>
+                    
+                    <f:for each="{arrayentry.data}" as="person" iteration="personIterator">
+                        <div class="color-shape square {f:if(condition:'{personIterator.total} == 1',then:'lonely',else:'')} <f:for each="{person.model.subgroup}" as="subgroup"> subgroup-{subgroup.uid}</f:for>">
+                            
+                            <f:if condition="{0:'{arrayentry.title}'} == {0:'Director'}">
+                                <f:then>
+                                    <script type="text/javascript">
+                                        var directorId = {person.model.uid};
+                                    </script>    
+                                </f:then>
+                            </f:if>
+                        
+                            <div class="person hoverText person-{person.model.uid}" data-uid="{person.model.uid}" data-nameid="<aw:Personnameid string='{person.model}'/>">
+                                <div class="detail clearfix" data-uid="{person.model.uid}">
+                                    <div class="col-1">
+                                        <div class="image">
+                                            <f:render partial="Personimage" arguments="{pperson: person, width: '476', height: '476'}"/>
+                                            <!--<f:image src="{person.model.image}" width="476c" height="476c"/>-->
+                                            </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="name">{person.model.title} {person.model.forename} {person.model.surname}</div>
+                                        <div class="position" title="<f:for each="{person.model.position}" as="position" iteration="posIter"><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><f:format.stripTags><aw:Fullpositionnameofpcs string="{position.title}"/></f:format.stripTags></f:format.html></f:for>"><f:for each="{person.model.position}" as="position" iteration="posIter"><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><f:format.stripTags><aw:Fullpositionnameofpcs string="{position.title}"/></f:format.stripTags></f:format.html></f:for></div>
+                                        <div class="tab-contents">
+                                            <f:if condition="{person.address}">
+                                                <f:then>
+                                                    <div class="tab-content contacts">
+                                                        <f:render partial="Address" arguments="{pperson: person}"/>
+                                                    </div>
+                                                </f:then>
+                                            </f:if>
+                                            <div class="tab-content about">
+                                                <div class="description">
+                                                    <f:format.html>{person.model.description}</f:format.html>
+                                                </div>
+                                                <f:if condition="{person.model.curriculumvitae}">
+                                                    <f:then>
+                                                        <div class="curriculumvitae"><a target="_blank" href="{person.model.curriculumvitae}"><img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/><span>Curriculum vitae</span></a></div>
+                                                    </f:then>
+                                                </f:if>
+                                                <f:if condition="{person.model.publicationsbefore}">
+                                                    <f:then>
+                                                        <div class="publicationsbefore"><a target="_blank" href="{person.model.publicationsbefore}"><img src="/typo3conf/ext/attoworld/Resources/Public/images/pdf_logo.svg"/><span>Publications list</span></a></div>
+                                                    </f:then>
+                                                </f:if>
+                                            </div>
+                                            <f:if condition="{person.model.researchtext}">
+                                                <f:then>
+                                                     <f:if condition="{person.model.projecttext}">
+                                                        <f:then>
+                                                            <div class="tab-content research">
+                                                                <div class="research-text">
+                                                                    <p>Research activities and field</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="350" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.researchtext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                                <div class="project-text">
+                                                                    <p>Current interests and projects</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="350" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.projecttext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <div class="tab-content research">
+                                                                <div class="research-text">
+                                                                    <p>Research activities and field</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="700" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.researchtext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                            </div>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{person.model.projecttext}">
+                                                        <f:then>
+                                                            <div class="tab-content research">
+                                                                <div class="project-text">
+                                                                    <p>Current interests and projects</p>
+                                                                    <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="700" append="&nbsp;…"><aw:Makelinebreak type="list" string="{person.model.projecttext}"/></f:format.crop></f:format.html>
+                                                                </div>
+                                                            </div>
+                                                        </f:then>
+                                                        <f:else>
+
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+
+                                            <f:if condition="{person.pubs}">
+                                                <f:then>
+                                                    <div class="tab-content publications">
+                                                        <f:for each="{person.pubs}" as="pub" iteration="pubIterator">
+                                                            <div class="publication {f:if(condition:'{pubIterator.isFirst} == 1',then:'first',else:'')} {f:if(condition:'{pubIterator.isLast} == 1',then:'last',else:'')}">
+                                                                <div class="title">{pub.title}</div>
+                                                                <div class="authors"><span class="title">Authors:</span> <f:for each="{pub.authors}" as="author" iteration="AuthorIterator"><f:if condition="{AuthorIterator.index}>0"><f:then>,</f:then></f:if><span class="author" data-uid="{author.uid}"><aw:Pubauthorname author="{author}"/></span></f:for></div>
+                                                                <div class="journal"><span class="title">Journal:</span> <span class="journal">{pub.journal}</span> <f:if condition="{pub.volume}"><f:then><span class="volume">{pub.volume},</span></f:then></f:if> <f:if condition="{pub.pageref}"><f:then><span class="pageref">{pub.pageref}</span></f:then></f:if> <span class="year">({pub.pubdate})</span></div>
+                                                            </div>
+                                                        </f:for>
+                                                        <div class="linktopublications hoverText"><a href="<f:uri.page pageUid="5" additionalParams="{tx_attoworld_pi2 : {person : '{person.model.uid}'}}"/>">All Publications</a></div>
+                                                    </div>
+                                                </f:then>
+                                            </f:if>
+                                            <f:if condition="{person.members}">
+                                                <f:then>
+                                                    <div class="tab-content team">
+                                                        <ul class="design-listing-gefriert">
+                                                            <f:for each="{person.members}" as="member">
+                                                                <li data-uid="{member.model.uid}"><f:if condition="{member.model.isgroupleader}"><f:then><b>{member.model.forename} {member.model.surname}</b></f:then><f:else>{member.model.forename} {member.model.surname}</f:else></f:if></li>
+                                                            </f:for>
+                                                        </ul>
+                                                    </div>
+                                                </f:then>
+                                            </f:if>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="picture">
+                                    <f:if condition="{person.model.image}">
+                                        <f:then>
+                                            <f:render partial="Personimage" arguments="{pperson: person, width: '308', height: '308'}"/>
+                                            <!-- <f:image treatIdAsReference="1" src="{person.model.image}" alt="{person.model.title} {person.model.forename} {person.model.surname}" width="308c" height="308c"/> -->
+                                        </f:then>
+                                    </f:if>
+                                </div>
+                                <div class="content hoverText">
+                                    <div class="name">{person.model.forename} {person.model.surname}</div>
+                                    <div class="position"><f:format.stripTags><f:for each="{person.model.position}" as="position" iteration="posIter"><f:if condition="{position.title}!='Automatic'"><f:then><f:if condition="{posIter.isFirst}"><f:else>, </f:else></f:if><f:format.html parseFuncTSPath=""><aw:Ucfirst string="{position.title}"/></f:format.html></f:then></f:if></f:for></f:format.stripTags></div>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</div>
+<f:if condition="{group}">
+    <f:then>
+        
+        <script type="text/javascript">
+            var grouppagepid = {group};
+            var activetab = '{activetab}';
+            var twoleaders = {twoleaders};
+            
+            $(document).ready(function() {
+                
+                var groupWithTwoLeaders = false;
+                $.each(twoleaders, function(i, n) {
+                   
+                   if(n == grouppagepid) {
+                       groupWithTwoLeaders = true;
+                   }
+        
+                });
+                
+                if(groupWithTwoLeaders === false) {
+                    var triggervar = $($('.project-listing .category[data-categorypagepid="'+grouppagepid+'"] .person')[0]);
+                }
+                
+                triggervar.trigger('click');
+
+            });
+        </script>
+        
+    </f:then>
+</f:if>

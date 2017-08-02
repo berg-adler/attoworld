@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 500" style="enable-background:new 0 0 1000 500;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0073CF;}
+	.st1{fill:#FFFFFF;}
+</style>
+<rect class="st0" width="1000" height="500"/>
+<rect y="166.7" class="st1" width="1000" height="166.7"/>
+<g>
+	<g id="cone">
+		<polygon id="triangle" class="st0" points="232,102.1 227.7,115.3 234.3,117.5 		"/>
+		<g id="use12" transform="scale(-1,1)">
+			<polygon id="triangle_1_" class="st0" points="232,102.1 236.3,115.3 229.7,117.5 			"/>
+		</g>
+	</g>
+	<g>
+		<g id="cone_1_">
+			<polygon id="triangle_2_" class="st0" points="245.2,111.7 231.3,111.7 231.3,118.7 			"/>
+			<g id="use14" transform="rotate(72)">
+				<polygon id="triangle_3_" class="st0" points="245.2,111.7 234,119.9 229.9,114.3 				"/>
+			</g>
+		</g>
+		<g>
+			<g id="cone_2_">
+				<polygon id="triangle_4_" class="st0" points="218.8,111.7 230,119.9 234.1,114.3 				"/>
+				<g id="use16" transform="rotate(-72)">
+					<polygon id="triangle_5_" class="st0" points="218.8,111.7 232.7,111.7 232.7,118.7 					"/>
+				</g>
+			</g>
+			<g>
+				<g id="cone_3_">
+					<polygon id="triangle_6_" class="st0" points="240.2,127.2 235.9,114 229.3,116.2 					"/>
+					<g id="use18" transform="rotate(144)">
+						<polygon id="triangle_7_" class="st0" points="240.2,127.2 228.9,119.1 233,113.5 						"/>
+					</g>
+				</g>
+				<g id="star" transform="translate(36,18) scale(2)">
+					<g id="cone_4_">
+						<polygon id="triangle_8_" class="st0" points="223.8,127.2 235.1,119.1 231,113.5 						"/>
+						<g id="use20" transform="rotate(-144)">
+							<polygon id="triangle_9_" class="st0" points="223.8,127.2 228.1,114 234.7,116.2 							"/>
+						</g>
+					</g>
+				</g>
+				<g>
+					<g>
+						<g id="cone_5_">
+							<polygon id="triangle_10_" class="st0" points="132.7,30.9 130.6,37.5 133.9,38.6 							"/>
+							<g id="use12_1_" transform="scale(-1,1)">
+								<polygon id="triangle_11_" class="st0" points="132.7,30.9 134.9,37.5 131.6,38.6 								"/>
+							</g>
+						</g>
+						<g>
+							<g id="cone_6_">
+								<polygon id="triangle_12_" class="st0" points="139.3,35.7 132.4,35.7 132.4,39.2 								"/>
+								<g id="use14_1_" transform="rotate(72)">
+									<polygon id="triangle_13_" class="st0" points="139.3,35.7 133.7,39.8 131.7,37 									"/>
+								</g>
+							</g>
+							<g>
+								<g id="cone_7_">
+									<polygon id="triangle_14_" class="st0" points="126.1,35.7 131.7,39.8 133.8,37 									"/>
+									<g id="use16_1_" transform="rotate(-72)">
+										<polygon id="triangle_15_" class="st0" points="126.1,35.7 133.1,35.7 133.1,39.2 										"/>
+									</g>
+								</g>
+								<g>
+									<g id="cone_8_">
+										<polygon id="triangle_16_" class="st0" points="136.8,43.5 134.7,36.9 131.4,38 										"/>
+										<g id="use18_1_" transform="rotate(144)">
+											<polygon id="triangle_17_" class="st0" points="136.8,43.5 131.2,39.4 133.2,36.6 											"/>
+										</g>
+									</g>
+									<g id="star_1_" transform="translate(36,18) scale(2)">
+										<g id="cone_9_">
+											<polygon id="triangle_18_" class="st0" points="128.6,43.5 134.3,39.4 132.2,36.6 											"/>
+											<g id="use20_1_" transform="translate(10,-3.2)">
+												<polygon id="triangle_19_" class="st0" points="128.6,43.5 130.8,36.9 134.1,38 												"/>
+											</g>
+										</g>
+									</g>
+									<g>
+										<g>
+											<g id="cone_10_">
+												<polygon id="triangle_20_" class="st0" points="48.4,16.9 47.3,20.2 48.9,20.7 												"/>
+												<g id="use12_2_" transform="scale(-1,1)">
+													<polygon id="triangle_21_" class="st0" points="48.4,16.9 49.4,20.2 47.8,20.7 													"/>
+												</g>
+											</g>
+											<g>
+												<g id="cone_11_">
+													<polygon id="triangle_22_" class="st0" points="51.7,19.3 48.2,19.3 48.2,21 													"/>
+													<g id="use14_2_" transform="rotate(72)">
+														<polygon id="triangle_23_" class="st0" points="51.7,19.3 48.9,21.3 47.8,19.9 														"/>
+													</g>
+												</g>
+												<g>
+													<g id="cone_12_">
+														<polygon id="triangle_24_" class="st0" points="45.1,19.3 47.9,21.3 48.9,19.9 														"/>
+														<g id="use16_2_" transform="rotate(-72)">
+															<polygon id="triangle_25_" class="st0" points="45.1,19.3 48.5,19.3 48.5,21 															"/>
+														</g>
+													</g>
+													<g>
+														<g id="cone_13_">
+															<polygon id="triangle_26_" class="st0" points="50.4,23.2 49.3,19.9 47.7,20.4 															"/>
+															<g id="use18_2_" transform="rotate(144)">
+																<polygon id="triangle_27_" class="st0" points="50.4,23.2 47.6,21.1 48.6,19.7 																"/>
+															</g>
+														</g>
+														<g id="star_2_" transform="translate(36,18) scale(2)">
+															<g id="cone_14_">
+																<polygon id="triangle_28_" class="st0" points="46.3,23.2 49.1,21.1 48.1,19.7 																"/>
+																<g id="use20_2_" transform="translate(10,2.8)">
+																	<polygon id="triangle_29_" class="st0" points="46.3,23.2 47.4,19.9 49,20.4 																	"/>
+																</g>
+															</g>
+														</g>
+														<g>
+															<g>
+																<g id="cone_15_">
+																	<polygon id="triangle_30_" class="st0" points="-11.2,-5.8 -11.7,-4.1 -10.9,-3.8 																	"/>
+																	<g id="use12_3_" transform="scale(-1,1)">
+																		<polygon id="triangle_31_" class="st0" points="-11.2,-5.8 -10.6,-4.1 -11.5,-3.8 																		"/>
+																	</g>
+																</g>
+																<g>
+																	<g id="cone_16_">
+																		<polygon id="triangle_32_" class="st0" points="-9.5,-4.6 -11.3,-4.6 -11.3,-3.7 																		"/>
+																		<g id="use14_3_" transform="rotate(72)">
+																			<polygon id="triangle_33_" class="st0" points="-9.5,-4.6 -10.9,-3.5 -11.4,-4.2 																			"/>
+																		</g>
+																	</g>
+																	<g>
+																		<g id="cone_17_">
+																			<polygon id="triangle_34_" class="st0" points="-12.8,-4.6 -11.4,-3.5 -10.9,-4.2 																			"/>
+																			<g id="use16_3_" transform="rotate(-72)">
+																				<polygon id="triangle_35_" class="st0" points="-12.8,-4.6 -11.1,-4.6 -11.1,-3.7 																				"/>
+																			</g>
+																		</g>
+																		<g>
+																			<g id="cone_18_">
+																				<polygon id="triangle_36_" class="st0" points="-10.2,-2.6 -10.7,-4.3 -11.5,-4 																				"/>
+																				<g id="use18_3_" transform="rotate(144)">
+																					<polygon id="triangle_37_" class="st0" points="-10.2,-2.6 -11.6,-3.6 -11.1,-4.3 																					"/>
+																				</g>
+																			</g>
+																			<g id="star_3_" transform="translate(36,18) scale(2)">
+																				<g id="cone_19_">
+																					<polygon id="triangle_38_" class="st0" points="-12.2,-2.6 -10.8,-3.6 -11.3,-4.3 																					"/>
+																					<g id="use20_3_" transform="translate(-10,-3.2)">
+																						<polygon id="triangle_39_" class="st0" points="-12.2,-2.6 -11.7,-4.3 -10.8,-4 																						"/>
+																					</g>
+																				</g>
+																			</g>
+																			<g>
+																				<g>
+																					<g id="cone_20_">
+																						<polygon id="triangle_40_" class="st0" points="-23.6,-9.3 -23.9,-8.5 -23.4,-8.3 																						"/>
+																						<g id="use12_4_" transform="scale(-1,1)">
+																							<polygon id="triangle_41_" class="st0" points="-23.6,-9.3 -23.3,-8.5 -23.7,-8.3 																							
+																								"/>
+																						</g>
+																					</g>
+																					<g>
+																						<g id="cone_21_">
+																							<polygon id="triangle_42_" class="st0" points="-22.8,-8.7 -23.6,-8.7 -23.6,-8.2 																							
+																								"/>
+																							<g id="use14_4_" transform="rotate(72)">
+																								<polygon id="triangle_43_" class="st0" points="-22.8,-8.7 -23.5,-8.2 -23.7,-8.5 																								
+																									"/>
+																							</g>
+																						</g>
+																						<g>
+																							<g id="cone_22_">
+																								<polygon id="triangle_44_" class="st0" points="-24.4,-8.7 -23.7,-8.2 -23.5,-8.5 																								
+																									"/>
+																								<g id="use16_4_" transform="rotate(-72)">
+																									<polygon id="triangle_45_" class="st0" points="-24.4,-8.7 -23.5,-8.7 -23.5,-8.2 
+																																																			"/>
+																								</g>
+																							</g>
+																							<g>
+																								<g id="cone_23_">
+																									<polygon id="triangle_46_" class="st0" points="-23.1,-7.7 -23.3,-8.5 -23.8,-8.4 
+																																																			"/>
+																									<g id="use18_4_" transform="rotate(144)">
+																										<polygon id="triangle_47_" class="st0" points="-23.1,-7.7 -23.8,-8.2 -23.5,-8.6 
+																																																					"/>
+																									</g>
+																								</g>
+																								<g id="star_4_" transform="translate(36,18) scale(2)">
+																									<g id="cone_24_">
+																										<polygon id="triangle_48_" class="st0" points="-24.1,-7.7 -23.4,-8.2 -23.7,-8.6 
+																																																					"/>
+																										<g id="use20_4_" transform="translate(-10,2.8)">
+																											<polygon id="triangle_49_" class="st0" points="-24.1,-7.7 -23.8,-8.5 -23.4,-8.4 
+																																																							"/>
+																										</g>
+																									</g>
+																								</g>
+																							</g>
+																						</g>
+																					</g>
+																				</g>
+																			</g>
+																		</g>
+																	</g>
+																</g>
+															</g>
+														</g>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

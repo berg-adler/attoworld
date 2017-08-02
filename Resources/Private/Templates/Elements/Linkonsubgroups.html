@@ -1,0 +1,52 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-linkonsubgroup">
+    
+    <h1>Associated Groups</h1>
+    
+    <div class="links">
+        <f:for each="{links}" as="link" iteration="linkSuGroupIter">
+            
+            <div id="{link.pageidanchor}" data-fulltext="{link.bodytext}" class="link-single hoverText clearfix <f:if condition="{linkSuGroupIter.isEven}==1"><f:then>even</f:then><f:else>odd</f:else></f:if>">
+                    <div class="picture">
+                        <f:image src="{link.image}" width="522c" height="390c"/>
+                    </div>
+                    <div class="content">
+                        <h2>
+                            <div class="title">{link.title}</div>
+                            <f:if condition="{link.leader}">
+                                <f:then>
+                                    <div class="research-group-leader">{link.leader}</div>
+                                </f:then>
+                                <f:else>
+                                    <f:for each="{link.leaderj}" as="leader">
+                                        <div class="research-group-leader">{leader.title} {leader.forename} {leader.surname}</div>
+                                    </f:for>
+                                </f:else>
+                            </f:if>
+                            
+                        </h2>
+                        
+                        <div class="text">
+                            <f:format.html parseFuncTSPath=""><f:format.crop maxCharacters="575" append="&nbsp;…">{link.bodytext}</f:format.crop></f:format.html>
+                        </div>
+                        
+                        <div class="button">
+                            <a target="_blank" href="{link.uri}">Webpage</a>
+                        </div>
+                        
+                        <f:for each="{link.leaderj}" as="leader" iteration="buttonIterator">
+                            <div class="button button-{buttonIterator.cycle}">
+                                <f:link.page pageUid="55" additionalParams="{tx_attoworld_pi7 : {uid : '{leader.uid}'}}">
+                                    <span class="button-text">Contact</span>
+                                </f:link.page>
+                            </div>
+                        </f:for>
+                        
+                        
+                    </div>
+                </div>
+
+        </f:for>
+    </div>
+    
+</div>

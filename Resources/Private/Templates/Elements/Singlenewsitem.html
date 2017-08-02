@@ -1,0 +1,132 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-singlenewsitem">
+    <div class="inner-container">
+        <h1>{newsitem.title}</h1>
+        <div class="picture">
+            <f:image src="<aw:Newspictureforfeaturedpublication image='{newsitem.image}'/>" width="1280c" height="504c"/>
+            <div class="picture-headline">
+
+            </div>
+        </div>
+        <div class="row-1">
+            <div class="col-1">
+                <div class="date_author">
+                    <f:if condition="{newsitem.pressrelease.0}">
+                        <f:then>
+                            <span class="date"><aw:Datumformat integer="{newsitem.pressrelease.0.pubtstamp}" format="F j, Y"/></span>
+                            <f:if condition="{newsitem.author}">
+                                <f:then>
+                                    <span class="pipe">|</span>
+                                    <span class="author">{newsitem.author}</span>
+                                </f:then>
+                            </f:if>
+                        </f:then>
+                        <f:else>
+                            <span class="date"><aw:Datumformat integer="{newsitem.pubdate}" format="F j, Y"/></span>
+                            <f:if condition="{newsitem.author}">
+                                <f:then>
+                                    <span class="pipe">|</span>
+                                    <span class="author">{newsitem.author}</span>
+                                </f:then>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </div>
+                <div class="text">
+                    <!-- <p class="displayinline"><span class="firstletters">featured publications – </span></p> -->
+                    <div class="text-content">
+                        <f:format.html><aw:Setfirstletters string='{newsitem.bodytext}'/></f:format.html>
+                    </div>
+                </div>
+            </div><div class="col-2">
+                <f:if condition="{newsitem.pressrelease.0.publications.0}">
+                    <f:then>
+                        <a href="<aw:Publicationlink publication='{newsitem.pressrelease.0.publications.0}'/>" target="_blank">
+                            <div class="publication-link">
+                                <h2>Publication</h2>
+                                    <f:format.html>{newsitem.publinktext}</f:format.html>
+                                    <p class="bodytext">
+                                        <f:if condition="{newsitem.pressrelease.0.publications.0.volume}">
+                                            <f:then>
+                                                <span class="journal">{newsitem.pressrelease.0.publications.0.journal}</span>
+                                                <span class="volume">{newsitem.pressrelease.0.publications.0.volume},</span>
+                                                <span class="pageref">{newsitem.pressrelease.0.publications.0.pageref}</span>
+                                                <span class="date">({newsitem.pressrelease.0.publications.0.pubdate})</span>
+                                            </f:then>
+                                            <f:else>
+                                                <span class="journal">{newsitem.pressrelease.0.publications.0.journal}</span>
+                                                <span class="date">({newsitem.pressrelease.0.publications.0.pubdate}),</span>
+                                                <span class="doi">{newsitem.pressrelease.0.publications.0.doi}</span>
+                                            </f:else>
+                                        </f:if>
+                                    </p>
+                            </div>
+                        </a>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{newsitem.pendant}">
+                            <f:then>
+                                <f:if condition="{newsitem.pendant.pressrelease.0.publications.0}">
+                                    <f:then>
+                                        <a href="<aw:Publicationlink publication='{newsitem.pendant.pressrelease.0.publications.0}'/>">
+                                            <div class="publication-link">
+                                                <h2>Publication</h2>
+                                                    <f:format.html>{newsitem.publinktext}</f:format.html>
+                                                    <p class="bodytext">
+                                                        <f:if condition="{newsitem.pendant.pressrelease.0.publications.0.volume}">
+                                                            <f:then>
+                                                                <span class="journal">{newsitem.pendant.pressrelease.0.publications.0.journal}</span>
+                                                                <span class="volume">{newsitem.pendant.pressrelease.0.publications.0.volume},</span>
+                                                                <span class="pageref">{newsitem.pendant.pressrelease.0.publications.0.pageref}</span>
+                                                                <span class="date">({newsitem.pendant.pressrelease.0.publications.0.pubdate})</span>
+                                                            </f:then>
+                                                            <f:else>
+                                                                <span class="journal">{newsitem.pendant.pressrelease.0.publications.0.journal}</span>
+                                                                <span class="date">({newsitem.pendant.pressrelease.0.publications.0.pubdate}),</span>
+                                                                <span class="doi">{newsitem.pendant.pressrelease.0.publications.0.doi}</span>
+                                                            </f:else>
+                                                        </f:if>
+                                                    </p>
+                                            </div>
+                                        </a>
+                                    </f:then>
+                                </f:if>
+                            </f:then>
+                        </f:if>
+                        
+                    </f:else>
+                </f:if>
+                
+                <div class="contacts">
+                    <h2>Contact</h2>
+                    <f:format.html>{newsitem.contacts}</f:format.html>
+                </div>
+                <f:if condition="{newsitem.pressrelease.0}">
+                    <f:then>
+                        <a class="clearfix attoworld-pressrelease-downloadlink" href="<aw:Publicationlink publication='{newsitem.pressrelease.0}'/>" target="_blank">
+                            <div class="pressrelease-download">
+                                <h2>Download</h2>
+                                <span class="pdfimage"></span> <span class="title-element">{newsitem.pressrelease.0.title}</span>
+                            </div>
+                        </a>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{newsitem.file}">
+                            <f:then>
+                                <a class="clearfix attoworld-pressrelease-downloadlink" href="<aw:Publicationlink publication='{newsitem}'/>" target="_blank">
+                                    <div class="pressrelease-download">
+                                        <h2>Download</h2>
+                                        <span class="pdfimage"></span> <span class="title-element">{newsitem.title}</span>
+                                    </div>
+                                </a>
+                            </f:then>
+                        </f:if>
+                    </f:else>
+                </f:if>
+                
+            </div>
+        </div>
+
+    </div>
+
+</div>

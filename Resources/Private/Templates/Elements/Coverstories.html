@@ -1,0 +1,88 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-coverstories layout-{f:if(condition:'{settings.type}',then:'{settings.type}',else:'0')}">
+    
+    <h2>Cover stories</h2>
+    
+    <div class="slideshow-withbullets fullwidth">
+        <div class="viewport">
+            
+            <div class="slideshow-bullet-menu bullet-menu">
+                <ul class="bullet-list clearfix bullets">
+                    <f:for each="{data}" as="coverstory" iteration="coverstoryIterator">
+                        <li >
+                            <a href="#" class="bullet" data-slide="{coverstoryIterator.index}"></a>
+                        </li>
+                    </f:for>
+                </ul>
+            </div>
+            
+            <div class="button-overlay-left">
+                <a class="buttons prev" href="#" style="display: none;"></a>
+            </div>
+            
+            <ul class="overview" data-startwith="0">
+
+                <f:for each="{data}" as="coverstory" iteration="coverstoryIterator">
+                    
+                    <li data-uid="{coverstory.uid}">
+
+                        <div class="inner-element clearfix">
+                            <div class="image floatleft">
+                                <f:image alt="{coverstory.title}" src="{coverstory.image}" width="640c" height="836c"/>
+                            </div>
+                            <div class="text-content floatright">
+                                
+                                <f:if condition="{coverstory.journaltext}">
+                                    <f:then>
+                                        <div class="metadata"><span class="journal">{coverstory.journaltext}</span>, <span class="date"><aw:Datumformat integer="{coverstory.coverdate}" format="F Y"/></span></div>
+                                    </f:then>
+                                    <f:else>
+                                        <div class="metadata"><span class="journal">{coverstory.journal.0.title}</span>, <span class="date"><aw:Datumformat integer="{coverstory.coverdate}" format="F Y"/></span></div>
+                                    </f:else>
+                                </f:if>
+                                
+                                
+                                <h4>{coverstory.title}</h4>
+                                
+                                <div class="text-content-bodytext">
+                                    <f:format.html>{coverstory.bodytext}</f:format.html>
+                                </div>
+                                
+                                <f:if condition="{coverstory.pressrelease.0}">
+                                    <f:then>
+                                        <div class="button">
+                                            
+                                            <f:link.page pageUid="89" additionalParams="{tx_attoworld_pi18 : {uid : '{coverstory.pressrelease.0.uid}'}}">
+                                                Read More
+                                            </f:link.page>
+                                            
+                                        </div>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{coverstory.file}">
+                                            <f:then>
+                                                <div class="button">
+                                                    <a href="{coverstory.file}" target="_blank">Read More</a>
+                                                </div>
+                                            </f:then>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </div>
+                                
+                            
+                        </div>
+                           
+
+                    </li>
+                </f:for>
+                
+            </ul>
+            
+            <div class="button-overlay-right">
+                <a class="buttons next" href="#" style="display: none"></a>
+            </div>
+        </div>
+    </div>
+    
+</div>

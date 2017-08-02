@@ -1,0 +1,21 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<!-- IMAGE -->
+<f:if condition="{pperson.model.image}">
+    <f:then>
+        <!-- normal image '{pperson.model.image}' -->
+        <div class="maketoimage" data-uri='<f:uri.image src="{pperson.model.image}" width="{width}c" height="{height}c"/>'></div>
+    </f:then>
+    <f:else>
+        <!-- gender picture -->
+        <f:if condition="{0:'{pperson.model.gender}'} == {0:'male'}">
+            <f:then>
+                <!-- Male -->
+                <div class="maketoimage" data-uri='<f:uri.image src="/typo3conf/ext/attoworld/Resources/Public/images/AvatarMale.svg" width="{width}c" height="{height}c"/>'></div>
+            </f:then>
+            <f:else>
+                <!-- FeMale -->
+                <div class="maketoimage" data-uri='<f:uri.image src="/typo3conf/ext/attoworld/Resources/Public/images/AvatarFemale.svg" width="{width}c" height="{height}c"/>'></div>
+            </f:else>
+        </f:if>
+    </f:else>
+</f:if>

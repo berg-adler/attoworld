@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1800 1200" style="enable-background:new 0 0 1800 1200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FECB00;}
+	.st1{fill:#EA2839;}
+	.st2{fill:#34B233;}
+	.st3{fill:#FFFFFF;}
+</style>
+<rect class="st0" width="1800" height="600"/>
+<rect y="600" class="st1" width="1800" height="600"/>
+<rect y="400" class="st2" width="1800" height="400"/>
+<g transform="translate(9,6.422)scale(4.422)">
+	<polygon id="pt" class="st3" points="169,143.8 201.5,43.8 234,143.8 	"/>
+	<g transform="rotate(-144)">
+		<polygon id="pt_1_" class="st3" points="227.8,162.9 142.7,224.7 175.2,124.7 		"/>
+	</g>
+	<g transform="rotate(-72)">
+		<polygon id="pt_2_" class="st3" points="191.5,174.7 106.4,112.9 211.5,112.9 		"/>
+	</g>
+	<g transform="rotate(72)">
+		<polygon id="pt_3_" class="st3" points="191.5,112.9 296.6,112.9 211.5,174.7 		"/>
+	</g>
+	<g transform="rotate(144)">
+		<polygon id="pt_4_" class="st3" points="227.8,124.7 260.3,224.7 175.2,162.9 		"/>
+	</g>
+</g>
+</svg>

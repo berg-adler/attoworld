@@ -1,0 +1,48 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-milestones layout-{f:if(condition:'{settings.type}',then:'{settings.type}',else:'0')}">
+    <h2>Our Milestones</h2>
+    <div class="slideshow-withbullets fullwidth">
+        <div class="viewport">
+            
+            <div class="slideshow-bullet-menu bullet-menu">
+                <ul class="bullet-list clearfix bullets">
+                    <f:for each="{data}" as="milestone" iteration="milestoneIterator">
+                        <li class="list-bullet" >
+                            <a href="#" class="bullet" data-slide="{milestoneIterator.index}"></a>
+                        </li>
+                    </f:for>
+                </ul>
+            </div>
+            
+            <div class="button-overlay-left">
+                <a class="buttons prev" href="#" style="display: none;"></a>
+            </div>
+            
+            <ul class="overview" data-startwith="0">
+
+                <f:for each="{data}" as="milestone" iteration="milestoneIterator">
+                    <li data-uid="{milestone.uid}">
+
+                        <div class="image">
+                            <f:image alt="{milestone.title}" src="{milestone.image}" width="1920c" height="711c"/>
+                        </div>
+                        <div class="text-content">
+                            <h4>{milestone.title}</h4>
+                            <f:format.html>{milestone.bodytext}</f:format.html>
+                            
+                            
+                            
+                        </div>    
+
+                    </li>
+                </f:for>
+                
+            </ul>
+            
+            <div class="button-overlay-right">
+                <a class="buttons next" href="#" style="display: none"></a>
+            </div>
+        </div>
+    </div>
+
+</div>
