@@ -1,0 +1,164 @@
+{namespace aw=Ferenckrausz\Attoworld\ViewHelpers}
+<div class="plugin-publications mainFilter">
+    <div class="search">
+        <input type="text" name="tx_attoworld_pi2[sword]" class="search-bar" placeholder="Search"/>
+        <input type="submit" name="tx_attoworld_pi2[submit]" class="search-button" value=""/>
+    </div>
+    <div class="text">
+        <p>Discover our Publications.</p>
+    </div>
+    <div class="filter publication-filter clearfix">
+        <button class="first single-filter <f:if condition="{group}"><f:then></f:then><f:else><f:if condition="{person}"><f:then></f:then><f:else>active</f:else></f:if></f:else></f:if>" data-filter="feature"><span class="button-text">Featured</span></button>
+        <button class="single-filter" data-filter="latest"><span class="button-text">Latest</span></button>
+        <button class="relative <f:if condition="{group}"><f:then>beholdColor</f:then><f:else></f:else></f:if> <f:if condition="{person}"><f:then>active</f:then></f:if>" <f:if condition="{person}"><f:then>style="height: 3.5rem;"</f:then><f:else></f:else></f:if> data-filter="author"><span class="button-text">Author <span class="counter"><f:if condition="{memberscount}">({memberscount})</f:if></span></span></button>
+        <button class="relative" data-filter="year"><span class="button-text">Year <span class="counter"></span></span></button>
+        <button class="relative" data-filter="subject"><span class="button-text">Subject <span class="counter"></span></button>
+        <button class="relative project <f:if condition="{group}"><f:then>active</f:then><f:else></f:else></f:if>" <f:if condition="{group}"><f:then>style="height: 3.5rem;"</f:then><f:else></f:else></f:if> data-filter="project"><span class="button-text">Research Groups <span class="counter"></span></button>
+    </div>
+    <div class="filter-contents">
+        <div class="filter-content <f:if condition="{person}"><f:then>show</f:then></f:if>" data-filter="author" data-activeauthor="{author.uid}" data-activemembers="[members]">
+            <ul>
+                <f:for each="{authors}" as="author" iteration="AuthorIterator">
+                    <li data-uid="{author.uid}" class="<f:if condition="{author.uid}=={person}"><f:then>active</f:then></f:if><f:for each="{members}" as="member"><f:if condition="{member.uid}=={author.uid}"><f:then>active</f:then></f:if></f:for>"><span class="title">{author.surname}, {author.forename}</span><span class="publications"></span></li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="filter-content" data-filter="year">
+            <ul>
+                <f:for each="{years}" as="year" iteration="YearIterator">
+                    <li data-uid="{year.date}" class="<f:for each="{prefilteredYears}" as="prefilteredyear"><f:if condition="{prefilteredyear}=={year.date}"><f:then>active</f:then></f:if></f:for>"><span class="title">{year.date}</span> <span class="publications">({year.counts} publications)</span></li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="filter-content" data-filter="subject">
+            <ul>
+                <f:for each="{publicationcategories}" as="publicationcategory" iteration="PublicationcategoryIterator">
+                    <li data-uid="{publicationcategory.uid}" class="<f:for each="{prefilteredCategories}" as="prefilteredcategory"><f:if condition="{prefilteredcategory}=={publicationcategory.uid}"><f:then>active</f:then></f:if></f:for>"><span class="title"><aw:Filtervalues string="{publicationcategory.title}"/></span><span class="publications"></span></li>
+                </f:for>
+            </ul>
+        </div>
+        <div class="filter-content project <f:if condition="{group}"><f:then>show</f:then><f:else></f:else></f:if>" data-filter="project">
+            <ul>
+                <f:for each="{projects}" as="project" iteration="ProjectIterator">
+                    <li data-uid="{project.uid}" class="{f:if(condition:'{project.pagepid} == {group}',then:'active',else:'')}"><span class="title"><aw:Ucfirst string="{project.title}"/></span><span class="publications"></span></li>
+                </f:for>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="listing">
+        <ul class="list" data-counter="{publicationsCounter}">
+            <f:for each="{publications}" as="publication" iteration="PublicationIterator">
+                
+                <li data-sorting="{publication.pubtstamp}" class="hoverText" data-nr="{PublicationIterator.index}" data-uid="{publication.uid}" class="list-element">
+                    <f:if condition="{publication.resource}!=''">
+                        <f:then>
+                            <div class="container">
+                                <div class="title">
+                                    <f:if condition="{publication.resource}">
+                                        <f:then>
+                                            <a href="{publication.resource}" target="_blank"><aw:Mathjax string="{publication.title}"/></a>
+                                        </f:then>
+                                        <f:else>
+                                            <aw:Mathjax string="{publication.title}"/>
+                                        </f:else>
+                                    </f:if>
+                                </div>
+                                <div class="authors">
+                                    <f:if condition="<f:count subject='{publication.authors}' />==1">
+                                        <f:then>
+                                            <span class="title">Author:</span>
+                                        </f:then>
+                                        <f:else>
+                                            <span class="title">Authors:</span>
+                                        </f:else>
+                                    </f:if>
+                                    
+                                    <f:for each="{publication.authors}" as="author" iteration="AuthorIterator"><f:if condition="{AuthorIterator.index}>0"><f:then>,</f:then></f:if><span class="author" data-uid="{author.uid}"><aw:Pubauthorname author="{author}"/></span></f:for>
+                                </div>
+
+                                <div class="journal">
+                                    <f:render partial="Publicationreference" arguments="{ppublication: publication}"/>
+                                </div>
+                                
+                                <div class="doi-isbn">
+                                    <f:if condition="{0:'{publication.journal}'} == {0:'bookarticle'}">
+                                        <f:then>
+                                            <span class="title">ISBN:</span>
+                                            <span class="doi">{publication.doi}</span>
+                                        </f:then>
+                                        <f:else>
+                                            <!--
+                                            <span class="title">DOI:</span>
+                                            <span class="doi">{publication.doi}</span>
+                                            -->
+                                        </f:else>
+                                    </f:if>
+                                    
+                                </div>
+                                
+                                <f:if condition="{publication.additionalpublications}">
+                                    <f:then>
+                                        <div class="additionalstaff">
+                                            <ul>
+                                                <f:for each="{publication.additionalpublications}" as="addinfo">
+                                                    <li class="publication" data-uid="{addinfo.uid}"><span class="type">{addinfo.type}</span>: <a class="inline-link" target="_blank" href="{addinfo.file}">{addinfo.title}</a></li>
+                                                </f:for>
+                                            </ul>
+                                        </div>
+                                    </f:then>
+                                </f:if>
+                                
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <div class="container nolink">
+                                <div class="title"><aw:Mathjax string="{publication.title}"/></div>
+
+                                <div class="authors">
+                                    <span class="title">Authors:</span>
+                                    <f:for each="{publication.authors}" as="author" iteration="AuthorIterator"><f:if condition="{AuthorIterator.index}>0"><f:then>,</f:then></f:if><span class="author" data-uid="{author.uid}"><aw:Pubauthorname author="{author}"/></span></f:for>
+                                </div>
+
+                                <div class="journal">
+                                    <f:render partial="Publicationreference" arguments="{ppublication: publication}"/>
+                                </div>
+                                
+                                <div class="doi-isbn">
+                                    <f:if condition="{0:'{publication.journal}'} == {0:'bookarticle'}">
+                                        <f:then>
+                                            <span class="title">ISBN:</span>
+                                            <span class="doi">{publication.doi}</span>
+                                        </f:then>
+                                        <f:else>
+                                            <!--
+                                            <span class="title">DOI:</span>
+                                            <span class="doi">{publication.doi}</span>
+                                            -->
+                                        </f:else>
+                                    </f:if>
+                                    
+                                </div>
+                                
+                                <f:if condition="{publication.additionalpublications}">
+                                    <f:then>
+                                        <div class="additionalstaff">
+                                            <ul>
+                                                <f:for each="{publication.additionalpublications}" as="addinfo">
+                                                    <li class="publication" data-uid="{addinfo.uid}"><span class="type">{addinfo.type}</span>: <a class="inline-link" target="_blank" href="{addinfo.file}">{addinfo.title}</a></li>
+                                                </f:for>
+                                            </ul>
+                                        </div>
+                                    </f:then>
+                                </f:if>
+                            </div>
+                        </f:else>
+                    </f:if>
+                    
+                </li>
+            </f:for>
+        </ul>
+    </div>
+    <div class="show-more-button-publication hoverText" {f:if(condition:'{publicationsCounter} <= {publicationsLimit}',then:'style="display: none;"',else:'')}><button class="test">Show More</button></div>
+    
+</div>
